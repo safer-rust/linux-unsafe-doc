@@ -88,4 +88,4 @@ Note: `source_url` is not included.
 
 ### GitHub Display Suggestion
 
-To publish the generated page on GitHub, enable GitHub Pages and publish the contents of your output directory (for example, `/site` on your default branch).
+To publish the generated page on GitHub, enable GitHub Pages and publish the contents of your output directory (for example, `/docs` on your default branch).
