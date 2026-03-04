@@ -1,71 +1,71 @@
 ## Linux Unsafe Doc Generator
 
-这个目录提供一个完整脚本，用于（仅离线模式）：
+This directory provides a complete script in offline-only mode:
 
-1. 指定本地已 clone 仓库目录。
-2. 递归扫描该目录中的 Rust 文件（`.rs`）以及子目录。
-3. 分析所有 Rust 文件中的公开 `unsafe` 项，包含以下四类：
-   - `function`: `pub unsafe fn`（可外部调用）
-   - `method`: `impl` 中的 `pub unsafe fn`（可外部调用）
-   - `trait`: `pub unsafe trait`（可外部实现）
-   - `trait_method`: `pub unsafe trait` 内定义的 `unsafe fn`（API 名称格式为 `TraitName::MethodName`）
-4. 提取每个项对应的完整注释块（`full_doc`，包含描述、Examples、Safety 等全部文档注释内容）。
-5. 额外提取仅 `# Safety` 段（`safety_doc`）作为独立字段。
-6. 生成可在 GitHub Pages 展示的前端页面（HTML 表格 + 确认按钮）。
-7. 页面支持 `Type` 多选筛选（显示每种类型数量）、`Module Path` 与 `API Name` 模糊搜索。
-8. 页面支持导出 JSON（下载当前筛选结果）。
+1. Select a local cloned repository directory.
+2. Recursively scan all Rust files (`.rs`) under that directory.
+3. Analyze public unsafe items in four categories:
+   - `function`: `pub unsafe fn`
+   - `method`: `pub unsafe fn` inside `impl`
+   - `trait`: `pub unsafe trait`
+   - `trait_method`: `unsafe fn` defined inside a `pub unsafe trait` (no `pub` required; API name format is `TraitName::MethodName`)
+4. Extract full documentation comments for each item as `full_doc` (description, examples, safety section, etc.).
+5. Extract the `# Safety` section only as a separate field `safety_doc`.
+6. Generate a frontend report page suitable for GitHub Pages (HTML table + confirmation button).
+7. Provide Type multi-select filtering (with per-type counts) and fuzzy search for Module Path and API Name.
+8. Support JSON export from the webpage (exports currently filtered rows).
 
-### 文件说明
+### Files
 
-- `unsafe_doc_generator.py`: 主脚本
-- 运行后默认生成：
+- `unsafe_doc_generator.py`: main script
+- Default outputs after running:
   - `site/index.html`
   - `site/unsafe_items.json`
 
-### 使用方法
+### Usage
 
-在当前目录执行（离线扫描）：
-
-```bash
-python3 unsafe_doc_generator.py \
-	--local-dir "/path/to/local/repo/subdir" \
-	--remote-repo-url "https://github.com/<owner>/<repo>" \
-	--remote-ref "<branch-or-tag>" \
-	--remote-path-prefix "<optional/path/prefix>" \
-	--output-dir site
-```
-
-示例（你的场景）：
+Run in this directory (offline scan):
 
 ```bash
 python3 unsafe_doc_generator.py \
-	--local-dir "/home/chenyl/projects/linux/rust/kernel" \
-	--remote-repo-url "https://github.com/Rust-for-Linux/linux" \
-	--remote-ref "rust-next" \
-	--remote-path-prefix "rust/kernel" \
-	--output-dir linux_kernel
+  --local-dir "/path/to/local/repo/subdir" \
+  --remote-repo-url "https://github.com/<owner>/<repo>" \
+  --remote-ref "<branch-or-tag>" \
+  --remote-path-prefix "<optional/path/prefix>" \
+  --output-dir site
 ```
 
-参数说明：
+Example:
 
-- `--local-dir`：本地扫描目录（必填）。
-- `--remote-repo-url` + `--remote-ref`：用于在页面中把 API 名称渲染成可点击超链接，跳转到远程仓库对应文件与行号（`.../blob/<ref>/<path>#L<line>`）。
-- `--remote-path-prefix`：可选，手动指定远程路径前缀（例如 `rust/kernel`）。默认会自动从本地 Git 仓库根目录推导路径。
-- `--output-dir`：生成报告目录。
+```bash
+python3 unsafe_doc_generator.py \
+  --local-dir "/home/chenyl/projects/linux/rust/kernel" \
+  --remote-repo-url "https://github.com/Rust-for-Linux/linux" \
+  --remote-ref "rust-next" \
+  --remote-path-prefix "rust/kernel" \
+  --output-dir linux_kernel
+```
 
-### 生成页面字段
+### Arguments
 
-`index.html` 中表格字段：
+- `--local-dir`: local scan directory (required).
+- `--remote-repo-url` + `--remote-ref`: used to generate clickable API links to remote repository lines (`.../blob/<ref>/<path>#L<line>`).
+- `--remote-path-prefix`: optional manual remote path prefix (e.g. `rust/kernel`). If omitted, the script tries to infer it from local git repository root.
+- `--output-dir`: output directory.
 
-- 序号
-- module 路径
-- API 名称（`trait` 类型显示 trait 名；若提供 `--remote-repo-url`，该列为可点击超链接）
-- 类型（`function | method | trait | trait_method`）
+### Report Fields
+
+Fields shown in `index.html`:
+
+- index
+- module path
+- API name (clickable when remote repo URL is provided)
+- type (`function | method | trait | trait_method`)
 - full doc
-- safety doc（仅 `# Safety` 段）
-- `Confirmed` 按钮（状态保存在浏览器 `localStorage`；默认显示 `Not Confirmed`，点击后变为 `Confirmed ✓`）
+- safety doc (only `# Safety` section)
+- `Confirmed` button (state stored in browser `localStorage`; default is `Not Confirmed`, clicked state is `Confirmed ✓`)
 
-`unsafe_items.json` 中每条记录字段：
+Fields in `unsafe_items.json`:
 
 - `index`
 - `module_path`
@@ -77,13 +77,15 @@ python3 unsafe_doc_generator.py \
 - `source_line`
 - `api_link`
 
-页面交互功能：
+Note: `source_url` is not included.
 
-- 顶部 `Source URL` 显示远程仓库链接（若提供 `--remote-repo-url`）。
-- `Type` 支持多选筛选，并显示每个类型计数。
-- `Module Path`、`API Name` 支持部分关键词模糊搜索。
-- 支持一键导出当前筛选后的数据为 JSON 文件。
+### Web Interactions
 
-### GitHub 展示建议
+- Top `Source URL` displays remote repository URL when `--remote-repo-url` is provided.
+- Multi-select Type filter with per-type counts.
+- Fuzzy search for Module Path and API Name.
+- One-click JSON export for currently filtered rows.
 
-如果你要在 GitHub 上展示页面，建议开启 GitHub Pages 并将 `site/` 目录内容发布（例如发布 `main` 分支的 `/site`）。
+### GitHub Display Suggestion
+
+To publish the generated page on GitHub, enable GitHub Pages and publish the contents of your output directory (for example, `/site` on your default branch).
