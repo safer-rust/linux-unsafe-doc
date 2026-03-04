@@ -39,8 +39,8 @@ jobs:
             --remote-repo-url https://github.com/Rust-for-Linux/linux \
             --remote-ref "$(git -C rust-for-linux-src rev-parse HEAD)" \
             --remote-path-prefix rust/kernel \
-            --output-dir rust-for-linux
-          git -C rust-for-linux-src rev-parse HEAD > rust-for-linux/latest_commit.txt
+            --output-dir docs
+          git -C rust-for-linux-src rev-parse HEAD > docs/latest_commit.txt
           rm -rf rust-for-linux-src
 
       - name: Setup Pages
@@ -49,7 +49,7 @@ jobs:
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: rust-for-linux
+          path: docs
 
       - name: Deploy to GitHub Pages
         id: deployment
