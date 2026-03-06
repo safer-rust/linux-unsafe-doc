@@ -1,0 +1,56 @@
+name: Deploy GitHub Pages
+
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: true
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Checkout Rust-for-Linux
+        uses: actions/checkout@v4
+        with:
+          repository: Rust-for-Linux/linux
+          path: rust-for-linux-src
+          fetch-depth: 1
+
+      - name: Generate latest rust-for-linux report
+        run: |
+          python3 unsafe_doc_generator.py \
+            --local-dir rust-for-linux-src/rust/kernel \
+            --remote-repo-url https://github.com/Rust-for-Linux/linux \
+            --remote-ref "$(git -C rust-for-linux-src rev-parse HEAD)" \
+            --remote-path-prefix rust/kernel \
+            --output-dir docs
+          git -C rust-for-linux-src rev-parse HEAD > docs/latest_commit.txt
+          rm -rf rust-for-linux-src
+
+      - name: Setup Pages
+        uses: actions/configure-pages@v5
+
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: docs
+
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
