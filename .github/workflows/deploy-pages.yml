@@ -4,10 +4,12 @@ on:
   push:
     branches:
       - main
+  schedule:
+    - cron: '0 2 * * *'
   workflow_dispatch:
 
 permissions:
-  contents: read
+  contents: write
   pages: write
   id-token: write
 
@@ -54,3 +56,13 @@ jobs:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
+
+      - name: Commit and push updated docs
+        run: |
+          git config --global user.email 'action@github.com'
+          git config --global user.name 'GitHub Action'
+          git remote set-url origin https://${{ secrets.GITHUB_TOKEN }}@github.com/safer-rust/linux-unsafe-doc.git
+          git add -A docs/
+          git commit -m 'Update docs [ci skip]' || echo 'No changes to commit'
+          git pull --rebase origin main
+          git push
