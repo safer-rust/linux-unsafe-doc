@@ -554,7 +554,13 @@ RUST_SAFETY_TAGS = [
     ("PostToFunc",         r"after\b.*\bhas\s+been\s+called|after\b.*\bbefore\b|called\s+before\b.*\bcalled\b|called\s+after\b.*\bis\s+called|must\s+not\s+be\s+used\s+before|called\s+on\s+the\s+bsp|called\s+on\s+the\s+ap|must\s+have\s+been\s+invoked|preceding\s+call\s+to|must\s+be\s+called\s+after|must\s+first\s+call|subsequent\s+to|prior\s+call\s+to|must\s+precede\b|can\s+only\s+be\s+called\s+before|must\s+be\s+called\s+before|can\s+only\s+be\s+called\s+after"),
     ("CalledBy",           r"called\s+(?:from|by)\s+(?:the\s+)?(?:kernel|driver|interrupt|irq|softirq|tasklet|workqueue|timer|callback|notifier|probe|remove|suspend|resume|ioctl|syscall|exception|trap|NMI|atomic|process|user|hardware|firmware|bootloader|an?\s+irq|an?\s+interrupt)"),
     ("CurThread",          r"current\s+thread|calling\s+thread|same\s+thread|on\s+the\s+current\s+CPU|only\s+this\s+thread|this\s+cpu|current\s+cpu|current\s+processor|current\s+task\s+is\s+pinned|no\s+preemption\s+can\s+occur|must\s+not\s+be\s+preempted|cpu[-\s]?local|only\s+available\s+on\s+the\s+current|per[-\s]?cpu"),
-    ("OriginateFrom",      r"returned\s+by\b.*\bcall\b|must\s+(?:come|be|originate)\s+from\b.*\bcall|must\s+be\s+a\s+preceding\s+call|must\s+be\s+the\s+result\s+of|must\s+have\s+been\s+obtained\s+(?:from|by)|must\s+have\s+been\s+created\s+(?:by|with|using)|previously\s+(?:forgotten|prepared|created|allocated|obtained)|must\s+be.*\s+that\s+was\s+(?:previously|earlier)\s+(?:forgotten|prepared|created)"),
+    ("OriginateFrom",      r"returned\s+by\b.*\bcall\b|must\s+(?:come|be|originate)\s+from\b.*\bcall|must\s+be\s+a\s+preceding\s+call|must\s+be\s+the\s+result\s+of|must\s+have\s+been\s+obtained\s+(?:from|by)|must\s+have\s+been\s+created\s+(?:by|with|using)|previously\s+(?:forgotten|prepared|created|allocated|obtained)|must\s+be.*\s+that\s+was\s+(?:previously|earlier)\s+(?:forgotten|prepared|created)"),    ("NotPostToFunc",      r"should\s+not\s+be\s+called\s+(?:post|after)|must\s+not\s+be\s+called\s+(?:post|after)|cannot\s+be\s+called\s+(?:after|post)"),
+    ("NotPriorToFunc",     r"should\s+not\s+be\s+called\s+(?:prior|before)|must\s+not\s+be\s+called\s+(?:prior|before)|cannot\s+be\s+called\s+(?:before|prior)"),
+    ("UserSpace",          r"in\s+user\s+space|user\s+space\s+memory|must\s+be\s+in\s+user\s+space|from_user_space|user\s+space"),
+    ("XorAccess",          r"mutual\s+exclusive|mutually\s+exclusive|exclusively\s+(?:access|write)|exclusive\s+(?:write|access)\s+to|must\s+be\s+(?:the\s+)?exclusive|not\s+be\s+(?:accessed|written)\s+by\s+others"),
+    ("Forgotten",          r"forgotten|mem::forget|ManuallyDrop|into_raw|must\s+be\s+forgotten|previously\s+forgotten|was\s+forgotten|had\s+been\s+forgotten"),
+
+
 ]
 
 

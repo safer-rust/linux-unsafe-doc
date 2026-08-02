@@ -81,7 +81,7 @@
     "source_path": "alloc/kvec.rs",
     "source_line": 550,
     "api_link": "https://github.com/Rust-for-Linux/linux/blob/rust-next/rust/kernel/alloc/kvec.rs#L550",
-    "tags": "Align, Allocated, InBound, ValidNum, Init"
+    "tags": "Align, Allocated, InBound, ValidNum, Init, Forgotten"
   },
   {
     "index": 8,
@@ -777,7 +777,7 @@
     "source_path": "list.rs",
     "source_line": 343,
     "api_link": "https://github.com/Rust-for-Linux/linux/blob/rust-next/rust/kernel/list.rs#L343",
-    "tags": "Valid, Owning"
+    "tags": "Valid, Owning, XorAccess"
   },
   {
     "index": 66,
@@ -1125,7 +1125,7 @@
     "source_path": "sync/arc.rs",
     "source_line": 288,
     "api_link": "https://github.com/Rust-for-Linux/linux/blob/rust-next/rust/kernel/sync/arc.rs#L288",
-    "tags": "OriginateFrom"
+    "tags": "OriginateFrom, Forgotten"
   },
   {
     "index": 95,
@@ -1137,7 +1137,7 @@
     "source_path": "sync/arc.rs",
     "source_line": 598,
     "api_link": "https://github.com/Rust-for-Linux/linux/blob/rust-next/rust/kernel/sync/arc.rs#L598",
-    "tags": "RefTransfer, OriginateFrom"
+    "tags": "RefTransfer, OriginateFrom, Forgotten"
   },
   {
     "index": 96,
