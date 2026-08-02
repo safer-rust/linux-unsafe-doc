@@ -9,7 +9,7 @@
     "source_path": "alloc.rs",
     "source_line": 159,
     "api_link": "https://github.com/Rust-for-Linux/linux/blob/rust-next/rust/kernel/alloc.rs#L159",
-    "tags": "Allocated, Alive"
+    "tags": "Allocated, Valid, Alive"
   },
   {
     "index": 2,
@@ -45,7 +45,7 @@
     "source_path": "alloc/allocator.rs",
     "source_line": 191,
     "api_link": "https://github.com/Rust-for-Linux/linux/blob/rust-next/rust/kernel/alloc/allocator.rs#L191",
-    "tags": "NonNull, Valid, Alive, NonConcurrent, Invariant"
+    "tags": "NonNull, ValidPtr, Valid, Alive, NonConcurrent, Invariant"
   },
   {
     "index": 5,
@@ -81,7 +81,7 @@
     "source_path": "alloc/kvec.rs",
     "source_line": 550,
     "api_link": "https://github.com/Rust-for-Linux/linux/blob/rust-next/rust/kernel/alloc/kvec.rs#L550",
-    "tags": "Align, Allocated, Init, ValidNum"
+    "tags": "Align, Allocated, InBound, ValidNum, Init"
   },
   {
     "index": 8,
@@ -93,7 +93,7 @@
     "source_path": "bitmap.rs",
     "source_line": 35,
     "api_link": "https://github.com/Rust-for-Linux/linux/blob/rust-next/rust/kernel/bitmap.rs#L35",
-    "tags": "NonNull, Alive, NonConcurrent"
+    "tags": "NonNull, Alive, NonConcurrent, NonDropped"
   },
   {
     "index": 9,
@@ -105,7 +105,7 @@
     "source_path": "bitmap.rs",
     "source_line": 60,
     "api_link": "https://github.com/Rust-for-Linux/linux/blob/rust-next/rust/kernel/bitmap.rs#L60",
-    "tags": "NonNull, Alive, NonConcurrent"
+    "tags": "NonNull, Alive, NonConcurrent, NonDropped"
   },
   {
     "index": 10,
@@ -129,7 +129,7 @@
     "source_path": "configfs.rs",
     "source_line": 219,
     "api_link": "https://github.com/Rust-for-Linux/linux/blob/rust-next/rust/kernel/configfs.rs#L219",
-    "tags": ""
+    "tags": "ContainerOf"
   },
   {
     "index": 12,
@@ -141,7 +141,7 @@
     "source_path": "configfs.rs",
     "source_line": 211,
     "api_link": "https://github.com/Rust-for-Linux/linux/blob/rust-next/rust/kernel/configfs.rs#L211",
-    "tags": ""
+    "tags": "Allocated, Valid"
   },
   {
     "index": 13,
@@ -165,7 +165,7 @@
     "source_path": "cpu.rs",
     "source_line": 56,
     "api_link": "https://github.com/Rust-for-Linux/linux/blob/rust-next/rust/kernel/cpu.rs#L56",
-    "tags": ""
+    "tags": "InBound"
   },
   {
     "index": 15,
@@ -177,7 +177,7 @@
     "source_path": "cpu.rs",
     "source_line": 80,
     "api_link": "https://github.com/Rust-for-Linux/linux/blob/rust-next/rust/kernel/cpu.rs#L80",
-    "tags": ""
+    "tags": "InBound"
   },
   {
     "index": 16,
@@ -189,7 +189,7 @@
     "source_path": "cpufreq.rs",
     "source_line": 234,
     "api_link": "https://github.com/Rust-for-Linux/linux/blob/rust-next/rust/kernel/cpufreq.rs#L234",
-    "tags": "Alive, ValidRead"
+    "tags": "ValidRead, Alive"
   },
   {
     "index": 17,
@@ -201,7 +201,7 @@
     "source_path": "cpufreq.rs",
     "source_line": 424,
     "api_link": "https://github.com/Rust-for-Linux/linux/blob/rust-next/rust/kernel/cpufreq.rs#L424",
-    "tags": "Alive, ValidRead"
+    "tags": "ValidRead, Alive"
   },
   {
     "index": 18,
@@ -213,7 +213,7 @@
     "source_path": "cpufreq.rs",
     "source_line": 140,
     "api_link": "https://github.com/Rust-for-Linux/linux/blob/rust-next/rust/kernel/cpufreq.rs#L140",
-    "tags": "Alive, ValidWrite"
+    "tags": "ValidWrite, Alive"
   },
   {
     "index": 19,
@@ -225,7 +225,7 @@
     "source_path": "cpufreq.rs",
     "source_line": 439,
     "api_link": "https://github.com/Rust-for-Linux/linux/blob/rust-next/rust/kernel/cpufreq.rs#L439",
-    "tags": "Alive, ValidWrite"
+    "tags": "ValidWrite, Alive"
   },
   {
     "index": 20,
@@ -237,7 +237,7 @@
     "source_path": "cpufreq.rs",
     "source_line": 180,
     "api_link": "https://github.com/Rust-for-Linux/linux/blob/rust-next/rust/kernel/cpufreq.rs#L180",
-    "tags": ""
+    "tags": "Valid"
   },
   {
     "index": 21,
@@ -273,7 +273,7 @@
     "source_path": "cpumask.rs",
     "source_line": 72,
     "api_link": "https://github.com/Rust-for-Linux/linux/blob/rust-next/rust/kernel/cpumask.rs#L72",
-    "tags": "Alive, ValidRead"
+    "tags": "ValidRead, Alive"
   },
   {
     "index": 24,
@@ -285,7 +285,7 @@
     "source_path": "cpumask.rs",
     "source_line": 288,
     "api_link": "https://github.com/Rust-for-Linux/linux/blob/rust-next/rust/kernel/cpumask.rs#L288",
-    "tags": "Alive, ValidRead"
+    "tags": "ValidRead, Alive"
   },
   {
     "index": 25,
@@ -297,7 +297,7 @@
     "source_path": "cpumask.rs",
     "source_line": 58,
     "api_link": "https://github.com/Rust-for-Linux/linux/blob/rust-next/rust/kernel/cpumask.rs#L58",
-    "tags": "Alive, ValidWrite"
+    "tags": "ValidWrite, Alive"
   },
   {
     "index": 26,
@@ -309,7 +309,7 @@
     "source_path": "cpumask.rs",
     "source_line": 274,
     "api_link": "https://github.com/Rust-for-Linux/linux/blob/rust-next/rust/kernel/cpumask.rs#L274",
-    "tags": "Alive, ValidWrite"
+    "tags": "ValidWrite, Alive"
   },
   {
     "index": 27,
@@ -333,7 +333,7 @@
     "source_path": "cred.rs",
     "source_line": 47,
     "api_link": "https://github.com/Rust-for-Linux/linux/blob/rust-next/rust/kernel/cred.rs#L47",
-    "tags": "Valid, Alive"
+    "tags": "ValidPtr, Valid, Alive"
   },
   {
     "index": 29,
@@ -357,7 +357,7 @@
     "source_path": "device.rs",
     "source_line": 268,
     "api_link": "https://github.com/Rust-for-Linux/linux/blob/rust-next/rust/kernel/device.rs#L268",
-    "tags": "PostToFunc, Typed, OriginateFrom"
+    "tags": "Typed, Assoc, PostToFunc"
   },
   {
     "index": 31,
@@ -369,7 +369,7 @@
     "source_path": "device.rs",
     "source_line": 369,
     "api_link": "https://github.com/Rust-for-Linux/linux/blob/rust-next/rust/kernel/device.rs#L369",
-    "tags": "NonNull, NonZero, RefTransfer"
+    "tags": "NonNull, RefTransfer, NonZero"
   },
   {
     "index": 32,
@@ -381,7 +381,7 @@
     "source_path": "device.rs",
     "source_line": 183,
     "api_link": "https://github.com/Rust-for-Linux/linux/blob/rust-next/rust/kernel/device.rs#L183",
-    "tags": "NonNull, NonZero, RefTransfer"
+    "tags": "NonNull, RefTransfer, NonZero"
   },
   {
     "index": 33,
@@ -417,7 +417,7 @@
     "source_path": "device_id.rs",
     "source_line": 26,
     "api_link": "https://github.com/Rust-for-Linux/linux/blob/rust-next/rust/kernel/device_id.rs#L26",
-    "tags": ""
+    "tags": "Typed"
   },
   {
     "index": 36,
@@ -429,7 +429,7 @@
     "source_path": "device_id.rs",
     "source_line": 46,
     "api_link": "https://github.com/Rust-for-Linux/linux/blob/rust-next/rust/kernel/device_id.rs#L46",
-    "tags": "ContainerOf"
+    "tags": "Valid"
   },
   {
     "index": 37,
@@ -441,7 +441,7 @@
     "source_path": "dma.rs",
     "source_line": 517,
     "api_link": "https://github.com/Rust-for-Linux/linux/blob/rust-next/rust/kernel/dma.rs#L517",
-    "tags": ""
+    "tags": "NonConcurrent"
   },
   {
     "index": 38,
@@ -453,7 +453,7 @@
     "source_path": "dma.rs",
     "source_line": 537,
     "api_link": "https://github.com/Rust-for-Linux/linux/blob/rust-next/rust/kernel/dma.rs#L537",
-    "tags": ""
+    "tags": "NonConcurrent"
   },
   {
     "index": 39,
@@ -501,7 +501,7 @@
     "source_path": "driver.rs",
     "source_line": 117,
     "api_link": "https://github.com/Rust-for-Linux/linux/blob/rust-next/rust/kernel/driver.rs#L117",
-    "tags": ""
+    "tags": "ContainerOf"
   },
   {
     "index": 43,
@@ -513,7 +513,7 @@
     "source_path": "driver.rs",
     "source_line": 142,
     "api_link": "https://github.com/Rust-for-Linux/linux/blob/rust-next/rust/kernel/driver.rs#L142",
-    "tags": "OriginateFrom"
+    "tags": "PostToFunc"
   },
   {
     "index": 44,
@@ -525,7 +525,7 @@
     "source_path": "driver.rs",
     "source_line": 149,
     "api_link": "https://github.com/Rust-for-Linux/linux/blob/rust-next/rust/kernel/driver.rs#L149",
-    "tags": ""
+    "tags": "Pinned"
   },
   {
     "index": 45,
@@ -549,7 +549,7 @@
     "source_path": "drm/device.rs",
     "source_line": 171,
     "api_link": "https://github.com/Rust-for-Linux/linux/blob/rust-next/rust/kernel/drm/device.rs#L171",
-    "tags": "NonNull, NonZero, RefTransfer"
+    "tags": "NonNull, ContainerOf, RefTransfer, NonZero"
   },
   {
     "index": 47,
@@ -561,7 +561,7 @@
     "source_path": "drm/file.rs",
     "source_line": 35,
     "api_link": "https://github.com/Rust-for-Linux/linux/blob/rust-next/rust/kernel/drm/file.rs#L35",
-    "tags": "Valid"
+    "tags": "ValidPtr, Valid"
   },
   {
     "index": 48,
@@ -585,7 +585,7 @@
     "source_path": "fs/file.rs",
     "source_line": 283,
     "api_link": "https://github.com/Rust-for-Linux/linux/blob/rust-next/rust/kernel/fs/file.rs#L283",
-    "tags": "Valid, CurThread, RefTransfer"
+    "tags": "ValidPtr, Valid, RefTransfer, CurThread"
   },
   {
     "index": 50,
@@ -597,7 +597,7 @@
     "source_path": "fs/file.rs",
     "source_line": 357,
     "api_link": "https://github.com/Rust-for-Linux/linux/blob/rust-next/rust/kernel/fs/file.rs#L357",
-    "tags": "Valid, RefTransfer"
+    "tags": "ValidPtr, Valid, RefTransfer"
   },
   {
     "index": 51,
@@ -633,7 +633,7 @@
     "source_path": "iommu/pgtable.rs",
     "source_line": 166,
     "api_link": "https://github.com/Rust-for-Linux/linux/blob/rust-next/rust/kernel/iommu/pgtable.rs#L166",
-    "tags": "NonZero"
+    "tags": "NonZero, CanFail"
   },
   {
     "index": 54,
@@ -645,7 +645,7 @@
     "source_path": "iommu/pgtable.rs",
     "source_line": 96,
     "api_link": "https://github.com/Rust-for-Linux/linux/blob/rust-next/rust/kernel/iommu/pgtable.rs#L96",
-    "tags": ""
+    "tags": "NonDropped"
   },
   {
     "index": 55,
@@ -681,7 +681,7 @@
     "source_path": "iov.rs",
     "source_line": 63,
     "api_link": "https://github.com/Rust-for-Linux/linux/blob/rust-next/rust/kernel/iov.rs#L63",
-    "tags": ""
+    "tags": "ValidRead"
   },
   {
     "index": 58,
@@ -693,7 +693,7 @@
     "source_path": "iov.rs",
     "source_line": 214,
     "api_link": "https://github.com/Rust-for-Linux/linux/blob/rust-next/rust/kernel/iov.rs#L214",
-    "tags": ""
+    "tags": "ValidWrite"
   },
   {
     "index": 59,
@@ -729,7 +729,7 @@
     "source_path": "list.rs",
     "source_line": 460,
     "api_link": "https://github.com/Rust-for-Linux/linux/blob/rust-next/rust/kernel/list.rs#L460",
-    "tags": ""
+    "tags": "Valid"
   },
   {
     "index": 62,
@@ -777,7 +777,7 @@
     "source_path": "list.rs",
     "source_line": 343,
     "api_link": "https://github.com/Rust-for-Linux/linux/blob/rust-next/rust/kernel/list.rs#L343",
-    "tags": ""
+    "tags": "Valid, Owning"
   },
   {
     "index": 66,
@@ -789,7 +789,7 @@
     "source_path": "list.rs",
     "source_line": 307,
     "api_link": "https://github.com/Rust-for-Linux/linux/blob/rust-next/rust/kernel/list.rs#L307",
-    "tags": ""
+    "tags": "Valid"
   },
   {
     "index": 67,
@@ -801,7 +801,7 @@
     "source_path": "list.rs",
     "source_line": 325,
     "api_link": "https://github.com/Rust-for-Linux/linux/blob/rust-next/rust/kernel/list.rs#L325",
-    "tags": ""
+    "tags": "CallOnce, OriginateFrom"
   },
   {
     "index": 68,
@@ -885,7 +885,7 @@
     "source_path": "list/impl_list_item_mod.rs",
     "source_line": 27,
     "api_link": "https://github.com/Rust-for-Linux/linux/blob/rust-next/rust/kernel/list/impl_list_item_mod.rs#L27",
-    "tags": ""
+    "tags": "Valid"
   },
   {
     "index": 75,
@@ -957,7 +957,7 @@
     "source_path": "opp.rs",
     "source_line": 1086,
     "api_link": "https://github.com/Rust-for-Linux/linux/blob/rust-next/rust/kernel/opp.rs#L1086",
-    "tags": "Valid, Alive, RefTransfer"
+    "tags": "ValidPtr, Valid, Alive, RefTransfer"
   },
   {
     "index": 81,
@@ -969,7 +969,7 @@
     "source_path": "opp.rs",
     "source_line": 1068,
     "api_link": "https://github.com/Rust-for-Linux/linux/blob/rust-next/rust/kernel/opp.rs#L1068",
-    "tags": "Valid, RefTransfer"
+    "tags": "ValidPtr, Valid, RefTransfer"
   },
   {
     "index": 82,
@@ -981,7 +981,7 @@
     "source_path": "page.rs",
     "source_line": 352,
     "api_link": "https://github.com/Rust-for-Linux/linux/blob/rust-next/rust/kernel/page.rs#L352",
-    "tags": "NonData_race"
+    "tags": "NonData_race, NonConcurrent"
   },
   {
     "index": 83,
@@ -993,7 +993,7 @@
     "source_path": "page.rs",
     "source_line": 329,
     "api_link": "https://github.com/Rust-for-Linux/linux/blob/rust-next/rust/kernel/page.rs#L329",
-    "tags": ""
+    "tags": "NonConcurrent"
   },
   {
     "index": 84,
@@ -1017,7 +1017,7 @@
     "source_path": "page.rs",
     "source_line": 287,
     "api_link": "https://github.com/Rust-for-Linux/linux/blob/rust-next/rust/kernel/page.rs#L287",
-    "tags": "ValidWrite"
+    "tags": "ValidWrite, NonConcurrent"
   },
   {
     "index": 86,
@@ -1029,7 +1029,7 @@
     "source_path": "page.rs",
     "source_line": 309,
     "api_link": "https://github.com/Rust-for-Linux/linux/blob/rust-next/rust/kernel/page.rs#L309",
-    "tags": "ValidRead"
+    "tags": "ValidRead, NonConcurrent"
   },
   {
     "index": 87,
@@ -1041,7 +1041,7 @@
     "source_path": "pid_namespace.rs",
     "source_line": 36,
     "api_link": "https://github.com/Rust-for-Linux/linux/blob/rust-next/rust/kernel/pid_namespace.rs#L36",
-    "tags": "Valid, Alive"
+    "tags": "ValidPtr, Valid, Alive"
   },
   {
     "index": 88,
@@ -1053,7 +1053,7 @@
     "source_path": "print.rs",
     "source_line": 105,
     "api_link": "https://github.com/Rust-for-Linux/linux/blob/rust-next/rust/kernel/print.rs#L105",
-    "tags": ""
+    "tags": "ValidCStr"
   },
   {
     "index": 89,
@@ -1113,7 +1113,7 @@
     "source_path": "sync/arc.rs",
     "source_line": 792,
     "api_link": "https://github.com/Rust-for-Linux/linux/blob/rust-next/rust/kernel/sync/arc.rs#L792",
-    "tags": ""
+    "tags": "Init"
   },
   {
     "index": 94,
@@ -1137,7 +1137,7 @@
     "source_path": "sync/arc.rs",
     "source_line": 598,
     "api_link": "https://github.com/Rust-for-Linux/linux/blob/rust-next/rust/kernel/sync/arc.rs#L598",
-    "tags": "RefTransfer"
+    "tags": "RefTransfer, OriginateFrom"
   },
   {
     "index": 96,
@@ -1185,7 +1185,7 @@
     "source_path": "sync/atomic.rs",
     "source_line": 207,
     "api_link": "https://github.com/Rust-for-Linux/linux/blob/rust-next/rust/kernel/sync/atomic.rs#L207",
-    "tags": "InBound, NonData_race, ValidWrite, ValidRead"
+    "tags": "Align, InBound, ValidRead, ValidWrite, NonData_race, NonConcurrent"
   },
   {
     "index": 100,
@@ -1269,7 +1269,7 @@
     "source_path": "sync/lock.rs",
     "source_line": 53,
     "api_link": "https://github.com/Rust-for-Linux/linux/blob/rust-next/rust/kernel/sync/lock.rs#L53",
-    "tags": "Valid, Alive, ValidWrite, ValidRead"
+    "tags": "ValidRead, ValidWrite, Valid, Alive"
   },
   {
     "index": 107,
@@ -1341,7 +1341,7 @@
     "source_path": "sync/poll.rs",
     "source_line": 42,
     "api_link": "https://github.com/Rust-for-Linux/linux/blob/rust-next/rust/kernel/sync/poll.rs#L42",
-    "tags": "Valid"
+    "tags": "ValidPtr, Valid"
   },
   {
     "index": 113,
@@ -1413,7 +1413,7 @@
     "source_path": "time/hrtimer.rs",
     "source_line": 467,
     "api_link": "https://github.com/Rust-for-Linux/linux/blob/rust-next/rust/kernel/time/hrtimer.rs#L467",
-    "tags": "Valid"
+    "tags": "ValidPtr, Valid"
   },
   {
     "index": 119,
@@ -1425,7 +1425,7 @@
     "source_path": "time/hrtimer.rs",
     "source_line": 444,
     "api_link": "https://github.com/Rust-for-Linux/linux/blob/rust-next/rust/kernel/time/hrtimer.rs#L444",
-    "tags": "Valid"
+    "tags": "ValidPtr, Valid"
   },
   {
     "index": 120,
@@ -1521,7 +1521,7 @@
     "source_path": "types.rs",
     "source_line": 126,
     "api_link": "https://github.com/Rust-for-Linux/linux/blob/rust-next/rust/kernel/types.rs#L126",
-    "tags": "NonOverlap, OriginateFrom"
+    "tags": "NonOverlap, NonMutate, OriginateFrom"
   },
   {
     "index": 128,
@@ -1605,7 +1605,7 @@
     "source_path": "workqueue.rs",
     "source_line": 565,
     "api_link": "https://github.com/Rust-for-Linux/linux/blob/rust-next/rust/kernel/workqueue.rs#L565",
-    "tags": "Valid, ContainerOf"
+    "tags": "ValidPtr, Valid, ContainerOf"
   },
   {
     "index": 135,
@@ -1653,7 +1653,7 @@
     "source_path": "workqueue.rs",
     "source_line": 571,
     "api_link": "https://github.com/Rust-for-Linux/linux/blob/rust-next/rust/kernel/workqueue.rs#L571",
-    "tags": ""
+    "tags": "Valid"
   },
   {
     "index": 139,
