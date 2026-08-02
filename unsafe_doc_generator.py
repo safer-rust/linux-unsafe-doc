@@ -17,6 +17,7 @@ class UnsafeItem:
     item_type: str
     full_doc: str
     safety_doc: str
+    tags: str
     source_path: str
     source_line: int
     api_link: str
@@ -239,6 +240,7 @@ def parse_unsafe_items(
                     item_type="trait",
                     full_doc=full_doc,
                     safety_doc=extract_safety_doc_from_full_doc(full_doc),
+                    tags=extract_tags(full_doc),
                     source_path=file_path,
                     source_line=idx + 1,
                     api_link=build_remote_api_link(remote_repo_url, remote_ref, link_source_path, idx + 1),
@@ -278,6 +280,7 @@ def parse_unsafe_items(
                     item_type=item_type,
                     full_doc=full_doc,
                     safety_doc=extract_safety_doc_from_full_doc(full_doc),
+                    tags=extract_tags(full_doc),
                     source_path=file_path,
                     source_line=idx + 1,
                     api_link=build_remote_api_link(remote_repo_url, remote_ref, link_source_path, idx + 1),
@@ -318,6 +321,7 @@ def build_html(items: List[UnsafeItem], source_url: str) -> str:
             f"<td>{escape(item.item_type)}</td>"
             f"<td>{full_doc_html}</td>"
             f"<td>{safety_html}</td>"
+            f"<td>{escape(item.tags)}</td>"
             f"<td><button class=\"confirm-btn\" data-key=\"{escape(item.source_path + ':' + item.api_name + ':' + item.item_type)}\">Confirmed</button></td>"
             "</tr>"
         )
@@ -397,6 +401,7 @@ def build_html(items: List[UnsafeItem], source_url: str) -> str:
                         <th style="width: 120px;">Type</th>
                         <th>Full Doc</th>
                         <th>Safety Doc</th>
+                        <th style="width: 160px;">Tags</th>
                         <th style="width: 120px;">Confirmed</th>
                     </tr>
                 </thead>
@@ -504,6 +509,53 @@ def build_html(items: List[UnsafeItem], source_url: str) -> str:
 </body>
 </html>
 """
+
+
+RUST_SAFETY_TAGS = [
+    ("NonNull",            r"non[-\s]?null|not\s+null|must\s+not\s+be\s+null|must\s+not\s+be\s+0\b"),
+    ("Align",              r"must\s+be\s+aligned|aligned\s+pointer|page\s+aligned|alignment\s+requirements|properly\s+aligned|well\s+aligned|must\s+satisfy.*alignment|alignment\s+of.*\bT\b"),
+    ("Allocated",          r"allocated\s+by|allocated\s+with|have\s+been\s+allocated|memory\s+allocation|been\s+created\s+by\s+.*allocator|allocated\s+object"),
+    ("InBound",            r"in\s+bounds|within\s+the\s+bounds|within.*\bthe\s+bound(?!s\s+of)|single\s+allocated\s+object"),
+    ("NonOverlap",         r"not\s+overlap|must\s+not\s+overlap|must\s+be\s+disjoint|no\s+overlap"),
+    ("Init",               r"must\s+be\s+initialized|fully\s+initialized|initialized\s+state|in\s+an\s+initialized|properly\s+initialized"),
+    ("Valid",              r"must\s+be\s+valid\s+(?:for|pointer|memory|instance|I/O)|valid\s+pointer|must\s+point\s+to\s+a\s+valid"),
+    ("Alive",              r"remains?\s+valid|remain\s+valid|must\s+not\s+be\s+freed|must\s+not\s+be\s+dropped|valid\s+for\s+the\s+duration|valid\s+for\s+the\s+lifetime|must\s+outlive|not\s+been\s+deallocated|not\s+be\s+deallocated|be\s+alive"),
+    ("Owning",             r"sole\s+ownership|exclusive\s+ownership|unique\s+ownership|ownership.*of.*pointer|no\s+other\s+.*\s+owns?\b"),
+    ("ValidNum",           r"valid\s+range|must\s+be\s+less\s+than\s+or\s+equal|must\s+be\s+greater\s+than|does\s+not\s+overflow|must\s+not\s+overflow|within\s+range|must\s+be\s+within\b.*(?:MAX|MIN|max|min)"),
+    ("CallOnce",           r"only\s+once|called\s+once|called\s+only\s+once|called\s+at\s+most\s+once|must\s+be\s+called\s+once"),
+    ("PostToFunc",         r"after\b.*\bhas\s+been\s+called\b|after\b.*\bbefore\b|called\s+before\b.*\bcalled\b|must\s+be\s+called\s+after"),
+    ("LockHold",           r"(?:lock|mutex)\s+(?:is|must\s+be|should\s+be|being)\s+(?:held|acquired|locked)|holding\s+the\s+(?:lock|mutex)"),
+    ("NonData_race",       r"data\s+race|must\s+not\s+cause\s+a\s+data\s+race|no\s+data\s+race"),
+    ("NonConcurrent",      r"concurrent\s+access|concurrently\s+access|must\s+not\s+be\s+(?:accessed|modified)\s+concurrently|no\s+concurrent"),
+    ("NonMutate",          r"must\s+not\s+be\s+modified|must\s+not\s+be\s+mutated|not\s+be\s+mutated|must\s+not\s+mutate|no\s+other.*\bwrites?\b"),
+    ("ValidWrite",         r"valid\s+for\s+writ(?:ing|es?)"),
+    ("ValidRead",          r"valid\s+for\s+read(?:ing|s?)"),
+    ("ValidMemory",        r"valid\s+(?:I/O|MMIO|memory\s+region|memory\s+mapped|physical\s+address|base\s+address)"),
+    ("ContainerOf",        r"container\s*_?\s*of|container\s+of|embedded\s+in.*at\s+(?:byte\s+)?offset|embed\b"),
+    ("CurThread",          r"current\s+thread|calling\s+thread|same\s+thread|on\s+the\s+current\s+CPU|only\s+this\s+thread"),
+    ("NonZero",            r"non[-\s]?zero|not\s+zero|not\s+be\s+zero|greater\s+than\s+zero"),
+    ("NonDropped",         r"not\s+(?:be\s+)?dropped|must\s+not\s+drop|while.*is\s+not\s+dropped"),
+    ("NonAccessable",      r"never\s+again\s+be\s+(?:read|accessed|written)|must\s+not\s+be\s+(?:accessed|used)\s+after|no\s+longer\s+be\s+used"),
+    ("Invariant",          r"type\s+invariant"),
+    ("Typed",              r"type\s+of\s+the\s+.*\s+must\s+be|correct\s+type|type\s+\bT\b\s+must\b|must\s+match\s+the\s+type"),
+    ("RefTransfer",        r"reference\s+count|refcount|ref\s+count|non[-\s]?zero\s+reference\s+count"),
+    ("FlagSet",            r"must\s+already\s+(?:have\s+been|be)\s+set|flag.*must\s+be|bit.*must\s+be\s+set"),
+    ("NonMutRef",          r"no\s+mutable\s+reference|must\s+not\s+create\s+(?:a\s+)?mutable\s+reference"),
+    ("NonInstance",        r"must\s+not\s+exist\b.*\binstance|must\s+not\s+be\s+any\s+instance|no.*instances?\s+(?:may|can|should)\s+exist"),
+    ("Assoc",              r"associated\s+with\b|must\s+be\s+associated\s+with"),
+    ("OriginateFrom",      r"returned\s+by\b.*\bcall\b|must\s+(?:come|be)\s+from\b.*\bcall|must\s+be\s+a\s+preceding\s+call|preceding\s+call\s+to"),
+]
+
+
+def extract_tags(full_doc: str) -> str:
+    if not full_doc:
+        return ""
+    lower = full_doc.lower()
+    matched = []
+    for tag, pattern in RUST_SAFETY_TAGS:
+        if re.search(pattern, lower):
+            matched.append(tag)
+    return ", ".join(matched)
 
 
 def generate_report(

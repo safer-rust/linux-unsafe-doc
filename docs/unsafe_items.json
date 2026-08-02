@@ -8,7 +8,8 @@
     "safety_doc": "# Safety\n\n- A memory allocation returned from an allocator must remain valid until it is explicitly freed.\n\n- Any pointer to a valid memory allocation must be valid to be passed to any other [`Allocator`]\nfunction of the same type.\n\n- Implementers must ensure that all trait functions abide by the guarantees documented in the\n`# Guarantees` sections.",
     "source_path": "alloc.rs",
     "source_line": 159,
-    "api_link": "https://github.com/Rust-for-Linux/linux/blob/rust-next/rust/kernel/alloc.rs#L159"
+    "api_link": "https://github.com/Rust-for-Linux/linux/blob/rust-next/rust/kernel/alloc.rs#L159",
+    "tags": "Allocated, Alive"
   },
   {
     "index": 2,
@@ -19,7 +20,8 @@
     "safety_doc": "# Safety\n\n- `ptr` must point to an existing and valid memory allocation created by this [`Allocator`];\nif `old_layout` is zero-sized `p` does not need to be a pointer returned by this\n[`Allocator`].\n- `layout` must match the `Layout` the allocation has been created with.\n- The memory allocation at `ptr` must never again be read from or written to.",
     "source_path": "alloc.rs",
     "source_line": 247,
-    "api_link": "https://github.com/Rust-for-Linux/linux/blob/rust-next/rust/kernel/alloc.rs#L247"
+    "api_link": "https://github.com/Rust-for-Linux/linux/blob/rust-next/rust/kernel/alloc.rs#L247",
+    "tags": "Allocated, NonAccessable"
   },
   {
     "index": 3,
@@ -30,7 +32,8 @@
     "safety_doc": "# Safety\n\n- If `ptr == Some(p)`, then `p` must point to an existing and valid memory allocation\ncreated by this [`Allocator`]; if `old_layout` is zero-sized `p` does not need to be a\npointer returned by this [`Allocator`].\n- `ptr` is allowed to be `None`; in this case a new memory allocation is created and\n`old_layout` is ignored.\n- `old_layout` must match the `Layout` the allocation has been created with.",
     "source_path": "alloc.rs",
     "source_line": 230,
-    "api_link": "https://github.com/Rust-for-Linux/linux/blob/rust-next/rust/kernel/alloc.rs#L230"
+    "api_link": "https://github.com/Rust-for-Linux/linux/blob/rust-next/rust/kernel/alloc.rs#L230",
+    "tags": "NonNull, Allocated, Alive"
   },
   {
     "index": 4,
@@ -41,7 +44,8 @@
     "safety_doc": "# Safety\n\n- `ptr` must be a valid pointer to a [`Vmalloc`] allocation.\n- `ptr` must remain valid for the entire duration of `'a`.",
     "source_path": "alloc/allocator.rs",
     "source_line": 191,
-    "api_link": "https://github.com/Rust-for-Linux/linux/blob/rust-next/rust/kernel/alloc/allocator.rs#L191"
+    "api_link": "https://github.com/Rust-for-Linux/linux/blob/rust-next/rust/kernel/alloc/allocator.rs#L191",
+    "tags": "NonNull, Valid, Alive, NonConcurrent, Invariant"
   },
   {
     "index": 5,
@@ -52,7 +56,8 @@
     "safety_doc": "# Safety\n\n- `buf` must be a [`page::PAGE_SIZE`] aligned pointer into a [`Vmalloc`] allocation.\n- `buf` must be valid for at least the lifetime of `'a`.\n- `size` must be the number of bytes from `buf` until the end of the [`Vmalloc`] allocation\n`buf` points to.",
     "source_path": "alloc/allocator/iter.rs",
     "source_line": 77,
-    "api_link": "https://github.com/Rust-for-Linux/linux/blob/rust-next/rust/kernel/alloc/allocator/iter.rs#L77"
+    "api_link": "https://github.com/Rust-for-Linux/linux/blob/rust-next/rust/kernel/alloc/allocator/iter.rs#L77",
+    "tags": "Align, Valid"
   },
   {
     "index": 6,
@@ -63,7 +68,8 @@
     "safety_doc": "# Safety\n\nCallers must ensure that the value inside of `b` is in an initialized state.",
     "source_path": "alloc/kbox.rs",
     "source_line": 230,
-    "api_link": "https://github.com/Rust-for-Linux/linux/blob/rust-next/rust/kernel/alloc/kbox.rs#L230"
+    "api_link": "https://github.com/Rust-for-Linux/linux/blob/rust-next/rust/kernel/alloc/kbox.rs#L230",
+    "tags": "Init"
   },
   {
     "index": 7,
@@ -74,7 +80,8 @@
     "safety_doc": "# Safety\n\nIf `T` is a ZST:\n\n- `ptr` must be a dangling, well aligned pointer.\n\nOtherwise:\n\n- `ptr` must have been allocated with the allocator `A`.\n- `ptr` must satisfy or exceed the alignment requirements of `T`.\n- `ptr` must point to memory with a size of at least `size_of::<T>() * capacity` bytes.\n- The allocated size in bytes must not be larger than `isize::MAX`.\n- `length` must be less than or equal to `capacity`.\n- The first `length` elements must be initialized values of type `T`.\n\nIt is also valid to create an empty `Vec` passing a dangling pointer for `ptr` and zero for\n`cap` and `len`.",
     "source_path": "alloc/kvec.rs",
     "source_line": 550,
-    "api_link": "https://github.com/Rust-for-Linux/linux/blob/rust-next/rust/kernel/alloc/kvec.rs#L550"
+    "api_link": "https://github.com/Rust-for-Linux/linux/blob/rust-next/rust/kernel/alloc/kvec.rs#L550",
+    "tags": "Align, Allocated, Init, ValidNum"
   },
   {
     "index": 8,
@@ -85,7 +92,8 @@
     "safety_doc": "# Safety\n\n* `ptr` holds a non-null address of an initialized array of `unsigned long`\nthat is large enough to hold `nbits` bits.\n* the array must not be freed for the lifetime of this [`Bitmap`]\n* concurrent access only happens through atomic operations",
     "source_path": "bitmap.rs",
     "source_line": 35,
-    "api_link": "https://github.com/Rust-for-Linux/linux/blob/rust-next/rust/kernel/bitmap.rs#L35"
+    "api_link": "https://github.com/Rust-for-Linux/linux/blob/rust-next/rust/kernel/bitmap.rs#L35",
+    "tags": "NonNull, Alive, NonConcurrent"
   },
   {
     "index": 9,
@@ -96,7 +104,8 @@
     "safety_doc": "# Safety\n\n* `ptr` holds a non-null address of an initialized array of `unsigned long`\nthat is large enough to hold `nbits` bits.\n* the array must not be freed for the lifetime of this [`Bitmap`]\n* no concurrent access may happen.",
     "source_path": "bitmap.rs",
     "source_line": 60,
-    "api_link": "https://github.com/Rust-for-Linux/linux/blob/rust-next/rust/kernel/bitmap.rs#L60"
+    "api_link": "https://github.com/Rust-for-Linux/linux/blob/rust-next/rust/kernel/bitmap.rs#L60",
+    "tags": "NonNull, Alive, NonConcurrent"
   },
   {
     "index": 10,
@@ -107,7 +116,8 @@
     "safety_doc": "# Safety\n\n- Implementers of this trait must embed a `bindings::config_group`.\n- Methods must be implemented according to method documentation.",
     "source_path": "configfs.rs",
     "source_line": 205,
-    "api_link": "https://github.com/Rust-for-Linux/linux/blob/rust-next/rust/kernel/configfs.rs#L205"
+    "api_link": "https://github.com/Rust-for-Linux/linux/blob/rust-next/rust/kernel/configfs.rs#L205",
+    "tags": "ContainerOf"
   },
   {
     "index": 11,
@@ -118,7 +128,8 @@
     "safety_doc": "# Safety\n\n- `group` must point to the `bindings::config_group` that is embedded in\n[`Self`].",
     "source_path": "configfs.rs",
     "source_line": 219,
-    "api_link": "https://github.com/Rust-for-Linux/linux/blob/rust-next/rust/kernel/configfs.rs#L219"
+    "api_link": "https://github.com/Rust-for-Linux/linux/blob/rust-next/rust/kernel/configfs.rs#L219",
+    "tags": ""
   },
   {
     "index": 12,
@@ -129,7 +140,8 @@
     "safety_doc": "# Safety\n\n- `this` must be a valid allocation of at least the size of [`Self`].",
     "source_path": "configfs.rs",
     "source_line": 211,
-    "api_link": "https://github.com/Rust-for-Linux/linux/blob/rust-next/rust/kernel/configfs.rs#L211"
+    "api_link": "https://github.com/Rust-for-Linux/linux/blob/rust-next/rust/kernel/configfs.rs#L211",
+    "tags": ""
   },
   {
     "index": 13,
@@ -140,7 +152,8 @@
     "safety_doc": "# Safety\n\nReference counting is not implemented for the CPU device in the C code. When a CPU is\nhot-unplugged, the corresponding CPU device is unregistered, but its associated memory\nis not freed.\n\nCallers must ensure that the CPU device is not used after it has been unregistered.\nThis can be achieved, for example, by registering a CPU hotplug notifier and removing\nany references to the CPU device within the notifier's callback.",
     "source_path": "cpu.rs",
     "source_line": 142,
-    "api_link": "https://github.com/Rust-for-Linux/linux/blob/rust-next/rust/kernel/cpu.rs#L142"
+    "api_link": "https://github.com/Rust-for-Linux/linux/blob/rust-next/rust/kernel/cpu.rs#L142",
+    "tags": "RefTransfer"
   },
   {
     "index": 14,
@@ -151,7 +164,8 @@
     "safety_doc": "# Safety\n\nThe caller must ensure that `id` is a valid CPU ID (i.e., `0 <= id < nr_cpu_ids()`).",
     "source_path": "cpu.rs",
     "source_line": 56,
-    "api_link": "https://github.com/Rust-for-Linux/linux/blob/rust-next/rust/kernel/cpu.rs#L56"
+    "api_link": "https://github.com/Rust-for-Linux/linux/blob/rust-next/rust/kernel/cpu.rs#L56",
+    "tags": ""
   },
   {
     "index": 15,
@@ -162,7 +176,8 @@
     "safety_doc": "# Safety\n\nThe caller must ensure that `id` is a valid CPU ID (i.e., `0 <= id < nr_cpu_ids()`).",
     "source_path": "cpu.rs",
     "source_line": 80,
-    "api_link": "https://github.com/Rust-for-Linux/linux/blob/rust-next/rust/kernel/cpu.rs#L80"
+    "api_link": "https://github.com/Rust-for-Linux/linux/blob/rust-next/rust/kernel/cpu.rs#L80",
+    "tags": ""
   },
   {
     "index": 16,
@@ -173,7 +188,8 @@
     "safety_doc": "# Safety\n\nThe caller must ensure that `ptr` is valid for reading and remains valid for the lifetime\nof the returned reference.",
     "source_path": "cpufreq.rs",
     "source_line": 234,
-    "api_link": "https://github.com/Rust-for-Linux/linux/blob/rust-next/rust/kernel/cpufreq.rs#L234"
+    "api_link": "https://github.com/Rust-for-Linux/linux/blob/rust-next/rust/kernel/cpufreq.rs#L234",
+    "tags": "Alive, ValidRead"
   },
   {
     "index": 17,
@@ -184,7 +200,8 @@
     "safety_doc": "# Safety\n\nThe caller must ensure that `ptr` is valid for reading and remains valid for the lifetime\nof the returned reference.",
     "source_path": "cpufreq.rs",
     "source_line": 424,
-    "api_link": "https://github.com/Rust-for-Linux/linux/blob/rust-next/rust/kernel/cpufreq.rs#L424"
+    "api_link": "https://github.com/Rust-for-Linux/linux/blob/rust-next/rust/kernel/cpufreq.rs#L424",
+    "tags": "Alive, ValidRead"
   },
   {
     "index": 18,
@@ -195,7 +212,8 @@
     "safety_doc": "# Safety\n\nThe caller must ensure that `ptr` is valid for writing and remains valid for the lifetime\nof the returned reference.",
     "source_path": "cpufreq.rs",
     "source_line": 140,
-    "api_link": "https://github.com/Rust-for-Linux/linux/blob/rust-next/rust/kernel/cpufreq.rs#L140"
+    "api_link": "https://github.com/Rust-for-Linux/linux/blob/rust-next/rust/kernel/cpufreq.rs#L140",
+    "tags": "Alive, ValidWrite"
   },
   {
     "index": 19,
@@ -206,7 +224,8 @@
     "safety_doc": "# Safety\n\nThe caller must ensure that `ptr` is valid for writing and remains valid for the lifetime\nof the returned reference.",
     "source_path": "cpufreq.rs",
     "source_line": 439,
-    "api_link": "https://github.com/Rust-for-Linux/linux/blob/rust-next/rust/kernel/cpufreq.rs#L439"
+    "api_link": "https://github.com/Rust-for-Linux/linux/blob/rust-next/rust/kernel/cpufreq.rs#L439",
+    "tags": "Alive, ValidWrite"
   },
   {
     "index": 20,
@@ -217,7 +236,8 @@
     "safety_doc": "# Safety\n\nThe caller must ensure that `index` correspond to a valid entry in the [`Table`] it is used\nfor.",
     "source_path": "cpufreq.rs",
     "source_line": 180,
-    "api_link": "https://github.com/Rust-for-Linux/linux/blob/rust-next/rust/kernel/cpufreq.rs#L180"
+    "api_link": "https://github.com/Rust-for-Linux/linux/blob/rust-next/rust/kernel/cpufreq.rs#L180",
+    "tags": ""
   },
   {
     "index": 21,
@@ -228,7 +248,8 @@
     "safety_doc": "# Safety\n\nThe caller must guarantee that the returned [`Clk`] is not dropped while it is getting used\nby the C code.",
     "source_path": "cpufreq.rs",
     "source_line": 555,
-    "api_link": "https://github.com/Rust-for-Linux/linux/blob/rust-next/rust/kernel/cpufreq.rs#L555"
+    "api_link": "https://github.com/Rust-for-Linux/linux/blob/rust-next/rust/kernel/cpufreq.rs#L555",
+    "tags": "NonDropped"
   },
   {
     "index": 22,
@@ -239,7 +260,8 @@
     "safety_doc": "# Safety\n\nThe caller must guarantee that the [`Table`] is not dropped while it is getting used by the\nC code.",
     "source_path": "cpufreq.rs",
     "source_line": 628,
-    "api_link": "https://github.com/Rust-for-Linux/linux/blob/rust-next/rust/kernel/cpufreq.rs#L628"
+    "api_link": "https://github.com/Rust-for-Linux/linux/blob/rust-next/rust/kernel/cpufreq.rs#L628",
+    "tags": "NonDropped"
   },
   {
     "index": 23,
@@ -250,7 +272,8 @@
     "safety_doc": "# Safety\n\nThe caller must ensure that `ptr` is valid for reading and remains valid for the lifetime\nof the returned reference.",
     "source_path": "cpumask.rs",
     "source_line": 72,
-    "api_link": "https://github.com/Rust-for-Linux/linux/blob/rust-next/rust/kernel/cpumask.rs#L72"
+    "api_link": "https://github.com/Rust-for-Linux/linux/blob/rust-next/rust/kernel/cpumask.rs#L72",
+    "tags": "Alive, ValidRead"
   },
   {
     "index": 24,
@@ -261,7 +284,8 @@
     "safety_doc": "# Safety\n\nThe caller must ensure that `ptr` is valid for reading and remains valid for the lifetime\nof the returned reference.",
     "source_path": "cpumask.rs",
     "source_line": 288,
-    "api_link": "https://github.com/Rust-for-Linux/linux/blob/rust-next/rust/kernel/cpumask.rs#L288"
+    "api_link": "https://github.com/Rust-for-Linux/linux/blob/rust-next/rust/kernel/cpumask.rs#L288",
+    "tags": "Alive, ValidRead"
   },
   {
     "index": 25,
@@ -272,7 +296,8 @@
     "safety_doc": "# Safety\n\nThe caller must ensure that `ptr` is valid for writing and remains valid for the lifetime\nof the returned reference.",
     "source_path": "cpumask.rs",
     "source_line": 58,
-    "api_link": "https://github.com/Rust-for-Linux/linux/blob/rust-next/rust/kernel/cpumask.rs#L58"
+    "api_link": "https://github.com/Rust-for-Linux/linux/blob/rust-next/rust/kernel/cpumask.rs#L58",
+    "tags": "Alive, ValidWrite"
   },
   {
     "index": 26,
@@ -283,7 +308,8 @@
     "safety_doc": "# Safety\n\nThe caller must ensure that `ptr` is valid for writing and remains valid for the lifetime\nof the returned reference.",
     "source_path": "cpumask.rs",
     "source_line": 274,
-    "api_link": "https://github.com/Rust-for-Linux/linux/blob/rust-next/rust/kernel/cpumask.rs#L274"
+    "api_link": "https://github.com/Rust-for-Linux/linux/blob/rust-next/rust/kernel/cpumask.rs#L274",
+    "tags": "Alive, ValidWrite"
   },
   {
     "index": 27,
@@ -294,7 +320,8 @@
     "safety_doc": "# Safety\n\nThe caller must ensure that the returned [`CpumaskVar`] is properly initialized before\ngetting used.",
     "source_path": "cpumask.rs",
     "source_line": 250,
-    "api_link": "https://github.com/Rust-for-Linux/linux/blob/rust-next/rust/kernel/cpumask.rs#L250"
+    "api_link": "https://github.com/Rust-for-Linux/linux/blob/rust-next/rust/kernel/cpumask.rs#L250",
+    "tags": "Init"
   },
   {
     "index": 28,
@@ -305,7 +332,8 @@
     "safety_doc": "# Safety\n\nThe caller must ensure that `ptr` is valid and remains valid for the lifetime of the\nreturned [`Credential`] reference.",
     "source_path": "cred.rs",
     "source_line": 47,
-    "api_link": "https://github.com/Rust-for-Linux/linux/blob/rust-next/rust/kernel/cred.rs#L47"
+    "api_link": "https://github.com/Rust-for-Linux/linux/blob/rust-next/rust/kernel/cred.rs#L47",
+    "tags": "Valid, Alive"
   },
   {
     "index": 29,
@@ -316,7 +344,8 @@
     "safety_doc": "# Safety\n\nThe caller is responsible to ensure that the returned [`&Device<Bound>`](Device<Bound>)\nonly lives as long as it can be guaranteed that the [`Device`] is actually bound.",
     "source_path": "device.rs",
     "source_line": 194,
-    "api_link": "https://github.com/Rust-for-Linux/linux/blob/rust-next/rust/kernel/device.rs#L194"
+    "api_link": "https://github.com/Rust-for-Linux/linux/blob/rust-next/rust/kernel/device.rs#L194",
+    "tags": ""
   },
   {
     "index": 30,
@@ -327,7 +356,8 @@
     "safety_doc": "# Safety\n\n- Must only be called after a preceding call to [`Device::set_drvdata`] and before the\ndevice is fully unbound.\n- The type `T` must match the type of the `ForeignOwnable` previously stored by\n[`Device::set_drvdata`].",
     "source_path": "device.rs",
     "source_line": 268,
-    "api_link": "https://github.com/Rust-for-Linux/linux/blob/rust-next/rust/kernel/device.rs#L268"
+    "api_link": "https://github.com/Rust-for-Linux/linux/blob/rust-next/rust/kernel/device.rs#L268",
+    "tags": "PostToFunc, Typed, OriginateFrom"
   },
   {
     "index": 31,
@@ -338,7 +368,8 @@
     "safety_doc": "# Safety\n\nCallers must ensure that `ptr` is valid, non-null, and has a non-zero reference count,\ni.e. it must be ensured that the reference count of the C `struct device` `ptr` points to\ncan't drop to zero, for the duration of this function call and the entire duration when the\nreturned reference exists.",
     "source_path": "device.rs",
     "source_line": 369,
-    "api_link": "https://github.com/Rust-for-Linux/linux/blob/rust-next/rust/kernel/device.rs#L369"
+    "api_link": "https://github.com/Rust-for-Linux/linux/blob/rust-next/rust/kernel/device.rs#L369",
+    "tags": "NonNull, NonZero, RefTransfer"
   },
   {
     "index": 32,
@@ -349,7 +380,8 @@
     "safety_doc": "# Safety\n\nCallers must ensure that `ptr` is valid, non-null, and has a non-zero reference count,\ni.e. it must be ensured that the reference count of the C `struct device` `ptr` points to\ncan't drop to zero, for the duration of this function call.\n\nIt must also be ensured that `bindings::device::release` can be called from any thread.\nWhile not officially documented, this should be the case for any `struct device`.",
     "source_path": "device.rs",
     "source_line": 183,
-    "api_link": "https://github.com/Rust-for-Linux/linux/blob/rust-next/rust/kernel/device.rs#L183"
+    "api_link": "https://github.com/Rust-for-Linux/linux/blob/rust-next/rust/kernel/device.rs#L183",
+    "tags": "NonNull, NonZero, RefTransfer"
   },
   {
     "index": 33,
@@ -360,7 +392,8 @@
     "safety_doc": "# Safety\n\n`AsBusDevice::OFFSET` must be the offset of the embedded base `struct device` field within a\nbus device structure.",
     "source_path": "device.rs",
     "source_line": 622,
-    "api_link": "https://github.com/Rust-for-Linux/linux/blob/rust-next/rust/kernel/device.rs#L622"
+    "api_link": "https://github.com/Rust-for-Linux/linux/blob/rust-next/rust/kernel/device.rs#L622",
+    "tags": ""
   },
   {
     "index": 34,
@@ -371,7 +404,8 @@
     "safety_doc": "# Safety\n\n`dev` must be contained in `Self`.",
     "source_path": "device.rs",
     "source_line": 633,
-    "api_link": "https://github.com/Rust-for-Linux/linux/blob/rust-next/rust/kernel/device.rs#L633"
+    "api_link": "https://github.com/Rust-for-Linux/linux/blob/rust-next/rust/kernel/device.rs#L633",
+    "tags": ""
   },
   {
     "index": 35,
@@ -382,7 +416,8 @@
     "safety_doc": "# Safety\n\nImplementers must ensure that `Self` is layout-compatible with [`RawDeviceId::RawType`];\ni.e. it's safe to transmute to `RawType`.\n\nThis requirement is needed so `IdArray::new` can convert `Self` to `RawType` when building\nthe ID table.\n\nIdeally, this should be achieved using a const function that does conversion instead of\ntransmute; however, const trait functions relies on `const_trait_impl` unstable feature,\nwhich is broken/gone in Rust 1.73.",
     "source_path": "device_id.rs",
     "source_line": 26,
-    "api_link": "https://github.com/Rust-for-Linux/linux/blob/rust-next/rust/kernel/device_id.rs#L26"
+    "api_link": "https://github.com/Rust-for-Linux/linux/blob/rust-next/rust/kernel/device_id.rs#L26",
+    "tags": ""
   },
   {
     "index": 36,
@@ -393,7 +428,8 @@
     "safety_doc": "# Safety\n\nImplementers must ensure that `DRIVER_DATA_OFFSET` is the correct offset (in bytes) to\nthe context/data field (e.g., the `driver_data` field) within the raw device ID structure.\nThis field must be correctly sized to hold a `usize`.\n\nIdeally, the data should be added during `Self` to `RawType` conversion,\nbut there's currently no way to do it when using traits in const.",
     "source_path": "device_id.rs",
     "source_line": 46,
-    "api_link": "https://github.com/Rust-for-Linux/linux/blob/rust-next/rust/kernel/device_id.rs#L46"
+    "api_link": "https://github.com/Rust-for-Linux/linux/blob/rust-next/rust/kernel/device_id.rs#L46",
+    "tags": "ContainerOf"
   },
   {
     "index": 37,
@@ -404,7 +440,8 @@
     "safety_doc": "# Safety\n\n* Callers must ensure that the device does not read/write to/from memory while the returned\nslice is live.\n* Callers must ensure that this call does not race with a write to the same region while\nthe returned slice is live.",
     "source_path": "dma.rs",
     "source_line": 517,
-    "api_link": "https://github.com/Rust-for-Linux/linux/blob/rust-next/rust/kernel/dma.rs#L517"
+    "api_link": "https://github.com/Rust-for-Linux/linux/blob/rust-next/rust/kernel/dma.rs#L517",
+    "tags": ""
   },
   {
     "index": 38,
@@ -415,7 +452,8 @@
     "safety_doc": "# Safety\n\n* Callers must ensure that the device does not read/write to/from memory while the returned\nslice is live.\n* Callers must ensure that this call does not race with a read or write to the same region\nwhile the returned slice is live.",
     "source_path": "dma.rs",
     "source_line": 537,
-    "api_link": "https://github.com/Rust-for-Linux/linux/blob/rust-next/rust/kernel/dma.rs#L537"
+    "api_link": "https://github.com/Rust-for-Linux/linux/blob/rust-next/rust/kernel/dma.rs#L537",
+    "tags": ""
   },
   {
     "index": 39,
@@ -426,7 +464,8 @@
     "safety_doc": "# Safety\n\nThis must be called from the [`dma_read`] macro which ensures that the `field` pointer is\nvalidated beforehand.\n\nPublic but hidden since it should only be used from [`dma_read`] macro.",
     "source_path": "dma.rs",
     "source_line": 610,
-    "api_link": "https://github.com/Rust-for-Linux/linux/blob/rust-next/rust/kernel/dma.rs#L610"
+    "api_link": "https://github.com/Rust-for-Linux/linux/blob/rust-next/rust/kernel/dma.rs#L610",
+    "tags": ""
   },
   {
     "index": 40,
@@ -437,7 +476,8 @@
     "safety_doc": "# Safety\n\nThis must be called from the [`dma_write`] macro which ensures that the `field` pointer is\nvalidated beforehand.\n\nPublic but hidden since it should only be used from [`dma_write`] macro.",
     "source_path": "dma.rs",
     "source_line": 633,
-    "api_link": "https://github.com/Rust-for-Linux/linux/blob/rust-next/rust/kernel/dma.rs#L633"
+    "api_link": "https://github.com/Rust-for-Linux/linux/blob/rust-next/rust/kernel/dma.rs#L633",
+    "tags": ""
   },
   {
     "index": 41,
@@ -448,7 +488,8 @@
     "safety_doc": "# Safety\n\n* Callers must ensure that this call does not race with a read or write to the same region\nthat overlaps with this write.",
     "source_path": "dma.rs",
     "source_line": 567,
-    "api_link": "https://github.com/Rust-for-Linux/linux/blob/rust-next/rust/kernel/dma.rs#L567"
+    "api_link": "https://github.com/Rust-for-Linux/linux/blob/rust-next/rust/kernel/dma.rs#L567",
+    "tags": "NonConcurrent"
   },
   {
     "index": 42,
@@ -459,7 +500,8 @@
     "safety_doc": "# Safety\n\nImplementors must guarantee that:\n- `DriverType` is `repr(C)`,\n- `DriverData` is the type of the driver's device private data.\n- `DriverType` embeds a valid `struct device_driver` at byte offset `DEVICE_DRIVER_OFFSET`.",
     "source_path": "driver.rs",
     "source_line": 117,
-    "api_link": "https://github.com/Rust-for-Linux/linux/blob/rust-next/rust/kernel/driver.rs#L117"
+    "api_link": "https://github.com/Rust-for-Linux/linux/blob/rust-next/rust/kernel/driver.rs#L117",
+    "tags": ""
   },
   {
     "index": 43,
@@ -470,7 +512,8 @@
     "safety_doc": "# Safety\n\nA call to [`RegistrationOps::unregister`] for a given instance of `DriverType` is only valid if\na preceding call to [`RegistrationOps::register`] has been successful.",
     "source_path": "driver.rs",
     "source_line": 142,
-    "api_link": "https://github.com/Rust-for-Linux/linux/blob/rust-next/rust/kernel/driver.rs#L142"
+    "api_link": "https://github.com/Rust-for-Linux/linux/blob/rust-next/rust/kernel/driver.rs#L142",
+    "tags": "OriginateFrom"
   },
   {
     "index": 44,
@@ -481,7 +524,8 @@
     "safety_doc": "# Safety\n\nOn success, `reg` must remain pinned and valid until the matching call to\n[`RegistrationOps::unregister`].",
     "source_path": "driver.rs",
     "source_line": 149,
-    "api_link": "https://github.com/Rust-for-Linux/linux/blob/rust-next/rust/kernel/driver.rs#L149"
+    "api_link": "https://github.com/Rust-for-Linux/linux/blob/rust-next/rust/kernel/driver.rs#L149",
+    "tags": ""
   },
   {
     "index": 45,
@@ -492,7 +536,8 @@
     "safety_doc": "# Safety\n\nMust only be called after a preceding successful call to [`RegistrationOps::register`] for\nthe same `reg`.",
     "source_path": "driver.rs",
     "source_line": 161,
-    "api_link": "https://github.com/Rust-for-Linux/linux/blob/rust-next/rust/kernel/driver.rs#L161"
+    "api_link": "https://github.com/Rust-for-Linux/linux/blob/rust-next/rust/kernel/driver.rs#L161",
+    "tags": ""
   },
   {
     "index": 46,
@@ -503,7 +548,8 @@
     "safety_doc": "# Safety\n\nCallers must ensure that `ptr` is valid, non-null, and has a non-zero reference count,\ni.e. it must be ensured that the reference count of the C `struct drm_device` `ptr` points\nto can't drop to zero, for the duration of this function call and the entire duration when\nthe returned reference exists.\n\nAdditionally, callers must ensure that the `struct device`, `ptr` is pointing to, is\nembedded in `Self`.",
     "source_path": "drm/device.rs",
     "source_line": 171,
-    "api_link": "https://github.com/Rust-for-Linux/linux/blob/rust-next/rust/kernel/drm/device.rs#L171"
+    "api_link": "https://github.com/Rust-for-Linux/linux/blob/rust-next/rust/kernel/drm/device.rs#L171",
+    "tags": "NonNull, NonZero, RefTransfer"
   },
   {
     "index": 47,
@@ -514,7 +560,8 @@
     "safety_doc": "# Safety\n\n`raw_file` must be a valid pointer to an open `struct drm_file`, opened through `T::open`.",
     "source_path": "drm/file.rs",
     "source_line": 35,
-    "api_link": "https://github.com/Rust-for-Linux/linux/blob/rust-next/rust/kernel/drm/file.rs#L35"
+    "api_link": "https://github.com/Rust-for-Linux/linux/blob/rust-next/rust/kernel/drm/file.rs#L35",
+    "tags": "Valid"
   },
   {
     "index": 48,
@@ -525,7 +572,8 @@
     "safety_doc": "# Safety\n\nThere must not be any active `fdget_pos` calls on the current thread.",
     "source_path": "fs/file.rs",
     "source_line": 306,
-    "api_link": "https://github.com/Rust-for-Linux/linux/blob/rust-next/rust/kernel/fs/file.rs#L306"
+    "api_link": "https://github.com/Rust-for-Linux/linux/blob/rust-next/rust/kernel/fs/file.rs#L306",
+    "tags": "NonData_race, CurThread"
   },
   {
     "index": 49,
@@ -536,7 +584,8 @@
     "safety_doc": "# Safety\n\n* The caller must ensure that `ptr` points at a valid file and that the file's refcount is\npositive for the duration of `'a`.\n* The caller must ensure that if there is an active call to `fdget_pos` that did not take\nthe `f_pos_lock` mutex, then that call is on the current thread.",
     "source_path": "fs/file.rs",
     "source_line": 283,
-    "api_link": "https://github.com/Rust-for-Linux/linux/blob/rust-next/rust/kernel/fs/file.rs#L283"
+    "api_link": "https://github.com/Rust-for-Linux/linux/blob/rust-next/rust/kernel/fs/file.rs#L283",
+    "tags": "Valid, CurThread, RefTransfer"
   },
   {
     "index": 50,
@@ -547,7 +596,8 @@
     "safety_doc": "# Safety\n\n* The caller must ensure that `ptr` points at a valid file and that the file's refcount is\npositive for the duration of `'a`.\n* The caller must ensure that if there are active `fdget_pos` calls on this file, then they\ntook the `f_pos_lock` mutex.",
     "source_path": "fs/file.rs",
     "source_line": 357,
-    "api_link": "https://github.com/Rust-for-Linux/linux/blob/rust-next/rust/kernel/fs/file.rs#L357"
+    "api_link": "https://github.com/Rust-for-Linux/linux/blob/rust-next/rust/kernel/fs/file.rs#L357",
+    "tags": "Valid, RefTransfer"
   },
   {
     "index": 51,
@@ -558,7 +608,8 @@
     "safety_doc": "# Safety\n\nThe pointer must reference a valid `struct kiocb` for the duration of `'a`. The private\ndata of the file must be `T`.",
     "source_path": "fs/kiocb.rs",
     "source_line": 35,
-    "api_link": "https://github.com/Rust-for-Linux/linux/blob/rust-next/rust/kernel/fs/kiocb.rs#L35"
+    "api_link": "https://github.com/Rust-for-Linux/linux/blob/rust-next/rust/kernel/fs/kiocb.rs#L35",
+    "tags": ""
   },
   {
     "index": 52,
@@ -569,7 +620,8 @@
     "safety_doc": "# Safety\n\nCallers must ensure that `addr` is the start of a valid I/O mapped memory region of size\n`maxsize`.",
     "source_path": "io.rs",
     "source_line": 611,
-    "api_link": "https://github.com/Rust-for-Linux/linux/blob/rust-next/rust/kernel/io.rs#L611"
+    "api_link": "https://github.com/Rust-for-Linux/linux/blob/rust-next/rust/kernel/io.rs#L611",
+    "tags": ""
   },
   {
     "index": 53,
@@ -580,7 +632,8 @@
     "safety_doc": "# Safety\n\n* No other io-pgtable operation may access the range `iova .. iova+pgsize*pgcount` while\nthis `map_pages` operation executes.\n* This page table must not contain any mapping that overlaps with the mapping created by\nthis call.\n* If this page table is live, then the caller must ensure that it's okay to access the\nphysical address being mapped for the duration in which it is mapped.",
     "source_path": "iommu/pgtable.rs",
     "source_line": 166,
-    "api_link": "https://github.com/Rust-for-Linux/linux/blob/rust-next/rust/kernel/iommu/pgtable.rs#L166"
+    "api_link": "https://github.com/Rust-for-Linux/linux/blob/rust-next/rust/kernel/iommu/pgtable.rs#L166",
+    "tags": "NonZero"
   },
   {
     "index": 54,
@@ -591,7 +644,8 @@
     "safety_doc": "# Safety\n\nIf successful, then the returned `IoPageTable` must be dropped before the device is\nunbound.",
     "source_path": "iommu/pgtable.rs",
     "source_line": 96,
-    "api_link": "https://github.com/Rust-for-Linux/linux/blob/rust-next/rust/kernel/iommu/pgtable.rs#L96"
+    "api_link": "https://github.com/Rust-for-Linux/linux/blob/rust-next/rust/kernel/iommu/pgtable.rs#L96",
+    "tags": ""
   },
   {
     "index": 55,
@@ -602,7 +656,8 @@
     "safety_doc": "# Safety\n\nThe caller must ensure that the device stops using the page table before dropping it.",
     "source_path": "iommu/pgtable.rs",
     "source_line": 268,
-    "api_link": "https://github.com/Rust-for-Linux/linux/blob/rust-next/rust/kernel/iommu/pgtable.rs#L268"
+    "api_link": "https://github.com/Rust-for-Linux/linux/blob/rust-next/rust/kernel/iommu/pgtable.rs#L268",
+    "tags": ""
   },
   {
     "index": 56,
@@ -613,7 +668,8 @@
     "safety_doc": "# Safety\n\n* No other io-pgtable operation may access the range `iova .. iova+pgsize*pgcount` while\nthis `unmap_pages` operation executes.\n* This page table must contain one or more consecutive mappings starting at `iova` whose\ntotal size is `pgcount * pgsize`.",
     "source_path": "iommu/pgtable.rs",
     "source_line": 210,
-    "api_link": "https://github.com/Rust-for-Linux/linux/blob/rust-next/rust/kernel/iommu/pgtable.rs#L210"
+    "api_link": "https://github.com/Rust-for-Linux/linux/blob/rust-next/rust/kernel/iommu/pgtable.rs#L210",
+    "tags": ""
   },
   {
     "index": 57,
@@ -624,7 +680,8 @@
     "safety_doc": "# Safety\n\n* The referenced `struct iov_iter` must be valid and must only be accessed through the\nreturned reference for the duration of `'iov`.\n* The referenced `struct iov_iter` must have `data_source` set to `ITER_SOURCE`.\n* For the duration of `'data`, it must be safe to read from this IO vector using the\nstandard C methods for this purpose.",
     "source_path": "iov.rs",
     "source_line": 63,
-    "api_link": "https://github.com/Rust-for-Linux/linux/blob/rust-next/rust/kernel/iov.rs#L63"
+    "api_link": "https://github.com/Rust-for-Linux/linux/blob/rust-next/rust/kernel/iov.rs#L63",
+    "tags": ""
   },
   {
     "index": 58,
@@ -635,7 +692,8 @@
     "safety_doc": "# Safety\n\n* The referenced `struct iov_iter` must be valid and must only be accessed through the\nreturned reference for the duration of `'iov`.\n* The referenced `struct iov_iter` must have `data_source` set to `ITER_DEST`.\n* For the duration of `'data`, it must be safe to write to this IO vector using the\nstandard C methods for this purpose.",
     "source_path": "iov.rs",
     "source_line": 214,
-    "api_link": "https://github.com/Rust-for-Linux/linux/blob/rust-next/rust/kernel/iov.rs#L214"
+    "api_link": "https://github.com/Rust-for-Linux/linux/blob/rust-next/rust/kernel/iov.rs#L214",
+    "tags": ""
   },
   {
     "index": 59,
@@ -646,7 +704,8 @@
     "safety_doc": "# Safety\n\nThe IO vector must not be reverted to before its beginning.",
     "source_path": "iov.rs",
     "source_line": 119,
-    "api_link": "https://github.com/Rust-for-Linux/linux/blob/rust-next/rust/kernel/iov.rs#L119"
+    "api_link": "https://github.com/Rust-for-Linux/linux/blob/rust-next/rust/kernel/iov.rs#L119",
+    "tags": ""
   },
   {
     "index": 60,
@@ -657,7 +716,8 @@
     "safety_doc": "# Safety\n\nThe IO vector must not be reverted to before its beginning.",
     "source_path": "iov.rs",
     "source_line": 270,
-    "api_link": "https://github.com/Rust-for-Linux/linux/blob/rust-next/rust/kernel/iov.rs#L270"
+    "api_link": "https://github.com/Rust-for-Linux/linux/blob/rust-next/rust/kernel/iov.rs#L270",
+    "tags": ""
   },
   {
     "index": 61,
@@ -668,7 +728,8 @@
     "safety_doc": "# Safety\n\nThe provided pointer must point at a valid struct of type `Self`.",
     "source_path": "list.rs",
     "source_line": 460,
-    "api_link": "https://github.com/Rust-for-Linux/linux/blob/rust-next/rust/kernel/list.rs#L460"
+    "api_link": "https://github.com/Rust-for-Linux/linux/blob/rust-next/rust/kernel/list.rs#L460",
+    "tags": ""
   },
   {
     "index": 62,
@@ -679,7 +740,8 @@
     "safety_doc": "# Safety\n\n`item` must not be in a different linked list (with the same id).",
     "source_path": "list.rs",
     "source_line": 585,
-    "api_link": "https://github.com/Rust-for-Linux/linux/blob/rust-next/rust/kernel/list.rs#L585"
+    "api_link": "https://github.com/Rust-for-Linux/linux/blob/rust-next/rust/kernel/list.rs#L585",
+    "tags": ""
   },
   {
     "index": 63,
@@ -690,7 +752,8 @@
     "safety_doc": "# Safety\n\nImplementers must ensure that they provide the guarantees documented on methods provided by\nthis trait.\n\n[`ListArc<Self>`]: ListArc",
     "source_path": "list.rs",
     "source_line": 293,
-    "api_link": "https://github.com/Rust-for-Linux/linux/blob/rust-next/rust/kernel/list.rs#L293"
+    "api_link": "https://github.com/Rust-for-Linux/linux/blob/rust-next/rust/kernel/list.rs#L293",
+    "tags": ""
   },
   {
     "index": 64,
@@ -701,7 +764,8 @@
     "safety_doc": "# Safety\n\nThe provided pointer must be the pointer returned by the most recent call to\n`prepare_to_insert`.",
     "source_path": "list.rs",
     "source_line": 355,
-    "api_link": "https://github.com/Rust-for-Linux/linux/blob/rust-next/rust/kernel/list.rs#L355"
+    "api_link": "https://github.com/Rust-for-Linux/linux/blob/rust-next/rust/kernel/list.rs#L355",
+    "tags": "OriginateFrom"
   },
   {
     "index": 65,
@@ -712,7 +776,8 @@
     "safety_doc": "# Safety\n\n* The provided pointer must point at a valid value in an [`Arc`].\n* Calls to `prepare_to_insert` and `post_remove` on the same value must alternate.\n* The caller must own the [`ListArc`] for this value.\n* The caller must not give up ownership of the [`ListArc`] unless `post_remove` has been\ncalled after this call to `prepare_to_insert`.\n\n[`Arc`]: crate::sync::Arc",
     "source_path": "list.rs",
     "source_line": 343,
-    "api_link": "https://github.com/Rust-for-Linux/linux/blob/rust-next/rust/kernel/list.rs#L343"
+    "api_link": "https://github.com/Rust-for-Linux/linux/blob/rust-next/rust/kernel/list.rs#L343",
+    "tags": ""
   },
   {
     "index": 66,
@@ -723,7 +788,8 @@
     "safety_doc": "# Safety\n\nThe provided pointer must point at a valid value. (It need not be in an `Arc`.)",
     "source_path": "list.rs",
     "source_line": 307,
-    "api_link": "https://github.com/Rust-for-Linux/linux/blob/rust-next/rust/kernel/list.rs#L307"
+    "api_link": "https://github.com/Rust-for-Linux/linux/blob/rust-next/rust/kernel/list.rs#L307",
+    "tags": ""
   },
   {
     "index": 67,
@@ -734,7 +800,8 @@
     "safety_doc": "# Safety\n\n* The provided pointer must originate from the most recent call to `prepare_to_insert`, or\nfrom a call to `view_links` that happened after the most recent call to\n`prepare_to_insert`.\n* Since the most recent call to `prepare_to_insert`, the `post_remove` method must not have\nbeen called.",
     "source_path": "list.rs",
     "source_line": 325,
-    "api_link": "https://github.com/Rust-for-Linux/linux/blob/rust-next/rust/kernel/list.rs#L325"
+    "api_link": "https://github.com/Rust-for-Linux/linux/blob/rust-next/rust/kernel/list.rs#L325",
+    "tags": ""
   },
   {
     "index": 68,
@@ -745,7 +812,8 @@
     "safety_doc": "# Safety\n\n* `ptr` must satisfy the safety requirements of [`Arc::from_raw`].\n* The value must not already have a `ListArc` reference.\n* The tracking inside `T` must think that there is a `ListArc` reference.",
     "source_path": "list/arc.rs",
     "source_line": 361,
-    "api_link": "https://github.com/Rust-for-Linux/linux/blob/rust-next/rust/kernel/list/arc.rs#L361"
+    "api_link": "https://github.com/Rust-for-Linux/linux/blob/rust-next/rust/kernel/list/arc.rs#L361",
+    "tags": "Owning"
   },
   {
     "index": 69,
@@ -756,7 +824,8 @@
     "safety_doc": "# Safety\n\nThe guarantees of `try_new_list_arc` must be upheld.",
     "source_path": "list/arc.rs",
     "source_line": 57,
-    "api_link": "https://github.com/Rust-for-Linux/linux/blob/rust-next/rust/kernel/list/arc.rs#L57"
+    "api_link": "https://github.com/Rust-for-Linux/linux/blob/rust-next/rust/kernel/list/arc.rs#L57",
+    "tags": ""
   },
   {
     "index": 70,
@@ -767,7 +836,8 @@
     "safety_doc": "# Safety\n\nThe caller must have mutable access to the `ListArc<ID>` containing the struct with this\nfield for the duration of the returned reference.",
     "source_path": "list/arc_field.rs",
     "source_line": 60,
-    "api_link": "https://github.com/Rust-for-Linux/linux/blob/rust-next/rust/kernel/list/arc_field.rs#L60"
+    "api_link": "https://github.com/Rust-for-Linux/linux/blob/rust-next/rust/kernel/list/arc_field.rs#L60",
+    "tags": ""
   },
   {
     "index": 71,
@@ -778,7 +848,8 @@
     "safety_doc": "# Safety\n\nThe caller must have shared access to the `ListArc<ID>` containing the struct with this\nfield for the duration of the returned reference.",
     "source_path": "list/arc_field.rs",
     "source_line": 47,
-    "api_link": "https://github.com/Rust-for-Linux/linux/blob/rust-next/rust/kernel/list/arc_field.rs#L47"
+    "api_link": "https://github.com/Rust-for-Linux/linux/blob/rust-next/rust/kernel/list/arc_field.rs#L47",
+    "tags": ""
   },
   {
     "index": 72,
@@ -789,7 +860,8 @@
     "safety_doc": "# Safety\n\nThe methods on this trait must have exactly the behavior that the definitions given below have.\n\n[`ListLinks<ID>`]: crate::list::ListLinks\n[`ListItem`]: crate::list::ListItem",
     "source_path": "list/impl_list_item_mod.rs",
     "source_line": 19,
-    "api_link": "https://github.com/Rust-for-Linux/linux/blob/rust-next/rust/kernel/list/impl_list_item_mod.rs#L19"
+    "api_link": "https://github.com/Rust-for-Linux/linux/blob/rust-next/rust/kernel/list/impl_list_item_mod.rs#L19",
+    "tags": ""
   },
   {
     "index": 73,
@@ -800,7 +872,8 @@
     "safety_doc": "# Safety\n\nThe [`ListLinks<ID>`] field of this struct at [`HasListLinks<ID>::raw_get_list_links`] must be\ninside a [`ListLinksSelfPtr<T, ID>`].\n\n[`ListLinks<ID>`]: crate::list::ListLinks\n[`ListLinksSelfPtr<T, ID>`]: crate::list::ListLinksSelfPtr",
     "source_path": "list/impl_list_item_mod.rs",
     "source_line": 69,
-    "api_link": "https://github.com/Rust-for-Linux/linux/blob/rust-next/rust/kernel/list/impl_list_item_mod.rs#L69"
+    "api_link": "https://github.com/Rust-for-Linux/linux/blob/rust-next/rust/kernel/list/impl_list_item_mod.rs#L69",
+    "tags": ""
   },
   {
     "index": 74,
@@ -811,7 +884,8 @@
     "safety_doc": "# Safety\n\nThe provided pointer must point at a valid struct of type `Self`.\n\n[`ListLinks<ID>`]: crate::list::ListLinks",
     "source_path": "list/impl_list_item_mod.rs",
     "source_line": 27,
-    "api_link": "https://github.com/Rust-for-Linux/linux/blob/rust-next/rust/kernel/list/impl_list_item_mod.rs#L27"
+    "api_link": "https://github.com/Rust-for-Linux/linux/blob/rust-next/rust/kernel/list/impl_list_item_mod.rs#L27",
+    "tags": ""
   },
   {
     "index": 75,
@@ -822,7 +896,8 @@
     "safety_doc": "# Safety\n\nThe caller must ensure that `ptr` points at an `mm_struct`, and that it is not deallocated\nduring the lifetime 'a.",
     "source_path": "mm.rs",
     "source_line": 133,
-    "api_link": "https://github.com/Rust-for-Linux/linux/blob/rust-next/rust/kernel/mm.rs#L133"
+    "api_link": "https://github.com/Rust-for-Linux/linux/blob/rust-next/rust/kernel/mm.rs#L133",
+    "tags": ""
   },
   {
     "index": 76,
@@ -833,7 +908,8 @@
     "safety_doc": "# Safety\n\nThe caller must ensure that `ptr` points at an `mm_struct`, and that `mm_users` remains\nnon-zero for the duration of the lifetime 'a.",
     "source_path": "mm.rs",
     "source_line": 163,
-    "api_link": "https://github.com/Rust-for-Linux/linux/blob/rust-next/rust/kernel/mm.rs#L163"
+    "api_link": "https://github.com/Rust-for-Linux/linux/blob/rust-next/rust/kernel/mm.rs#L163",
+    "tags": "NonZero"
   },
   {
     "index": 77,
@@ -844,7 +920,8 @@
     "safety_doc": "# Safety\n\nCallers must ensure that `vma` is valid for the duration of 'a, and that the mmap or vma\nread lock (or stronger) is held for at least the duration of 'a.",
     "source_path": "mm/virt.rs",
     "source_line": 49,
-    "api_link": "https://github.com/Rust-for-Linux/linux/blob/rust-next/rust/kernel/mm/virt.rs#L49"
+    "api_link": "https://github.com/Rust-for-Linux/linux/blob/rust-next/rust/kernel/mm/virt.rs#L49",
+    "tags": "Alive"
   },
   {
     "index": 78,
@@ -855,7 +932,8 @@
     "safety_doc": "# Safety\n\nCallers must ensure that `vma` is valid for the duration of 'a, and that the mmap read lock\n(or stronger) is held for at least the duration of 'a. The `VM_MIXEDMAP` flag must be set.",
     "source_path": "mm/virt.rs",
     "source_line": 185,
-    "api_link": "https://github.com/Rust-for-Linux/linux/blob/rust-next/rust/kernel/mm/virt.rs#L185"
+    "api_link": "https://github.com/Rust-for-Linux/linux/blob/rust-next/rust/kernel/mm/virt.rs#L185",
+    "tags": "Alive, FlagSet"
   },
   {
     "index": 79,
@@ -866,7 +944,8 @@
     "safety_doc": "# Safety\n\nCallers must ensure that `vma` is undergoing initial vma setup for the duration of 'a.",
     "source_path": "mm/virt.rs",
     "source_line": 234,
-    "api_link": "https://github.com/Rust-for-Linux/linux/blob/rust-next/rust/kernel/mm/virt.rs#L234"
+    "api_link": "https://github.com/Rust-for-Linux/linux/blob/rust-next/rust/kernel/mm/virt.rs#L234",
+    "tags": ""
   },
   {
     "index": 80,
@@ -877,7 +956,8 @@
     "safety_doc": "# Safety\n\nThe caller must ensure that `ptr` is valid and remains valid for the duration of `'a`.",
     "source_path": "opp.rs",
     "source_line": 1086,
-    "api_link": "https://github.com/Rust-for-Linux/linux/blob/rust-next/rust/kernel/opp.rs#L1086"
+    "api_link": "https://github.com/Rust-for-Linux/linux/blob/rust-next/rust/kernel/opp.rs#L1086",
+    "tags": "Valid, Alive, RefTransfer"
   },
   {
     "index": 81,
@@ -888,7 +968,8 @@
     "safety_doc": "# Safety\n\nThe caller must ensure that `ptr` is valid and the refcount of the [`OPP`] is incremented.\nThe caller must also ensure that it doesn't explicitly drop the refcount of the [`OPP`], as\nthe returned [`ARef`] object takes over the refcount increment on the underlying object and\nthe same will be dropped along with it.",
     "source_path": "opp.rs",
     "source_line": 1068,
-    "api_link": "https://github.com/Rust-for-Linux/linux/blob/rust-next/rust/kernel/opp.rs#L1068"
+    "api_link": "https://github.com/Rust-for-Linux/linux/blob/rust-next/rust/kernel/opp.rs#L1068",
+    "tags": "Valid, RefTransfer"
   },
   {
     "index": 82,
@@ -899,7 +980,8 @@
     "safety_doc": "# Safety\n\nCallers must ensure that this call does not race with a read or write to the same page that\noverlaps with this write.",
     "source_path": "page.rs",
     "source_line": 352,
-    "api_link": "https://github.com/Rust-for-Linux/linux/blob/rust-next/rust/kernel/page.rs#L352"
+    "api_link": "https://github.com/Rust-for-Linux/linux/blob/rust-next/rust/kernel/page.rs#L352",
+    "tags": "NonData_race"
   },
   {
     "index": 83,
@@ -910,7 +992,8 @@
     "safety_doc": "# Safety\n\nCallers must ensure that this call does not race with a read or write to the same page that\noverlaps with this write.",
     "source_path": "page.rs",
     "source_line": 329,
-    "api_link": "https://github.com/Rust-for-Linux/linux/blob/rust-next/rust/kernel/page.rs#L329"
+    "api_link": "https://github.com/Rust-for-Linux/linux/blob/rust-next/rust/kernel/page.rs#L329",
+    "tags": ""
   },
   {
     "index": 84,
@@ -921,7 +1004,8 @@
     "safety_doc": "# Safety\n\n- `ptr` must point to a valid `bindings::page`.\n- `ptr` must remain valid for the entire lifetime `'a`.",
     "source_path": "page.rs",
     "source_line": 111,
-    "api_link": "https://github.com/Rust-for-Linux/linux/blob/rust-next/rust/kernel/page.rs#L111"
+    "api_link": "https://github.com/Rust-for-Linux/linux/blob/rust-next/rust/kernel/page.rs#L111",
+    "tags": "Valid, Alive"
   },
   {
     "index": 85,
@@ -932,7 +1016,8 @@
     "safety_doc": "# Safety\n\n* Callers must ensure that `dst` is valid for writing `len` bytes.\n* Callers must ensure that this call does not race with a write to the same page that\noverlaps with this read.",
     "source_path": "page.rs",
     "source_line": 287,
-    "api_link": "https://github.com/Rust-for-Linux/linux/blob/rust-next/rust/kernel/page.rs#L287"
+    "api_link": "https://github.com/Rust-for-Linux/linux/blob/rust-next/rust/kernel/page.rs#L287",
+    "tags": "ValidWrite"
   },
   {
     "index": 86,
@@ -943,7 +1028,8 @@
     "safety_doc": "# Safety\n\n* Callers must ensure that `src` is valid for reading `len` bytes.\n* Callers must ensure that this call does not race with a read or write to the same page\nthat overlaps with this write.",
     "source_path": "page.rs",
     "source_line": 309,
-    "api_link": "https://github.com/Rust-for-Linux/linux/blob/rust-next/rust/kernel/page.rs#L309"
+    "api_link": "https://github.com/Rust-for-Linux/linux/blob/rust-next/rust/kernel/page.rs#L309",
+    "tags": "ValidRead"
   },
   {
     "index": 87,
@@ -954,7 +1040,8 @@
     "safety_doc": "# Safety\n\nThe caller must ensure that `ptr` is valid and remains valid for the lifetime of the\nreturned [`PidNamespace`] reference.",
     "source_path": "pid_namespace.rs",
     "source_line": 36,
-    "api_link": "https://github.com/Rust-for-Linux/linux/blob/rust-next/rust/kernel/pid_namespace.rs#L36"
+    "api_link": "https://github.com/Rust-for-Linux/linux/blob/rust-next/rust/kernel/pid_namespace.rs#L36",
+    "tags": "Valid, Alive"
   },
   {
     "index": 88,
@@ -965,7 +1052,8 @@
     "safety_doc": "# Safety\n\nThe format string must be one of the ones in [`format_strings`], and\nthe module name must be null-terminated.\n\n[`_printk`]: srctree/include/linux/_printk.h",
     "source_path": "print.rs",
     "source_line": 105,
-    "api_link": "https://github.com/Rust-for-Linux/linux/blob/rust-next/rust/kernel/print.rs#L105"
+    "api_link": "https://github.com/Rust-for-Linux/linux/blob/rust-next/rust/kernel/print.rs#L105",
+    "tags": ""
   },
   {
     "index": 89,
@@ -976,7 +1064,8 @@
     "safety_doc": "# Safety\n\nThe caller must ensure this [`Revocable`] instance hasn't been revoked and won't be revoked\nas long as the returned `&T` lives.",
     "source_path": "revocable.rs",
     "source_line": 150,
-    "api_link": "https://github.com/Rust-for-Linux/linux/blob/rust-next/rust/kernel/revocable.rs#L150"
+    "api_link": "https://github.com/Rust-for-Linux/linux/blob/rust-next/rust/kernel/revocable.rs#L150",
+    "tags": ""
   },
   {
     "index": 90,
@@ -987,7 +1076,8 @@
     "safety_doc": "# Safety\n\nCallers must ensure that there are no more concurrent users of the revocable object.",
     "source_path": "revocable.rs",
     "source_line": 187,
-    "api_link": "https://github.com/Rust-for-Linux/linux/blob/rust-next/rust/kernel/revocable.rs#L187"
+    "api_link": "https://github.com/Rust-for-Linux/linux/blob/rust-next/rust/kernel/revocable.rs#L187",
+    "tags": "NonConcurrent"
   },
   {
     "index": 91,
@@ -998,7 +1088,8 @@
     "safety_doc": "# Safety\n\nCallers must ensure that:\n\n- the `struct sg_table` pointed to by `ptr` is valid for the entire lifetime of `'a`,\n- the data behind `ptr` is not modified concurrently for the duration of `'a`.",
     "source_path": "scatterlist.rs",
     "source_line": 145,
-    "api_link": "https://github.com/Rust-for-Linux/linux/blob/rust-next/rust/kernel/scatterlist.rs#L145"
+    "api_link": "https://github.com/Rust-for-Linux/linux/blob/rust-next/rust/kernel/scatterlist.rs#L145",
+    "tags": ""
   },
   {
     "index": 92,
@@ -1009,7 +1100,8 @@
     "safety_doc": "# Safety\n\nThe caller must ensure that for the duration of `'a` the following is satisfied:\n* The pointer points at a valid `struct seq_file`.\n* The `struct seq_file` is not accessed from any other thread.",
     "source_path": "seq_file.rs",
     "source_line": 24,
-    "api_link": "https://github.com/Rust-for-Linux/linux/blob/rust-next/rust/kernel/seq_file.rs#L24"
+    "api_link": "https://github.com/Rust-for-Linux/linux/blob/rust-next/rust/kernel/seq_file.rs#L24",
+    "tags": ""
   },
   {
     "index": 93,
@@ -1020,7 +1112,8 @@
     "safety_doc": "# Safety\n\nThe caller guarantees that the value behind this pointer has been initialized. It is\n*immediate* UB to call this when the value is not initialized.",
     "source_path": "sync/arc.rs",
     "source_line": 792,
-    "api_link": "https://github.com/Rust-for-Linux/linux/blob/rust-next/rust/kernel/sync/arc.rs#L792"
+    "api_link": "https://github.com/Rust-for-Linux/linux/blob/rust-next/rust/kernel/sync/arc.rs#L792",
+    "tags": ""
   },
   {
     "index": 94,
@@ -1031,7 +1124,8 @@
     "safety_doc": "# Safety\n\n`ptr` must have been returned by a previous call to [`Arc::into_raw`]. Additionally, it\nmust not be called more than once for each previous call to [`Arc::into_raw`].",
     "source_path": "sync/arc.rs",
     "source_line": 288,
-    "api_link": "https://github.com/Rust-for-Linux/linux/blob/rust-next/rust/kernel/sync/arc.rs#L288"
+    "api_link": "https://github.com/Rust-for-Linux/linux/blob/rust-next/rust/kernel/sync/arc.rs#L288",
+    "tags": "OriginateFrom"
   },
   {
     "index": 95,
@@ -1042,7 +1136,8 @@
     "safety_doc": "# Safety\n\n* The provided pointer must originate from a call to [`Arc::into_raw`] or [`Arc::as_ptr`].\n* For the duration of the lifetime annotated on this `ArcBorrow`, the reference count must\nnot hit zero.\n* For the duration of the lifetime annotated on this `ArcBorrow`, there must not be a\n[`UniqueArc`] reference to this value.",
     "source_path": "sync/arc.rs",
     "source_line": 598,
-    "api_link": "https://github.com/Rust-for-Linux/linux/blob/rust-next/rust/kernel/sync/arc.rs#L598"
+    "api_link": "https://github.com/Rust-for-Linux/linux/blob/rust-next/rust/kernel/sync/arc.rs#L598",
+    "tags": "RefTransfer"
   },
   {
     "index": 96,
@@ -1053,7 +1148,8 @@
     "safety_doc": "# Safety\n\nCallers must ensure that the reference count was incremented at least once, and that they\nare properly relinquishing one increment. That is, if there is only one increment, callers\nmust not use the underlying object anymore -- it is only safe to do so via the newly\ncreated [`ARef`].",
     "source_path": "sync/aref.rs",
     "source_line": 100,
-    "api_link": "https://github.com/Rust-for-Linux/linux/blob/rust-next/rust/kernel/sync/aref.rs#L100"
+    "api_link": "https://github.com/Rust-for-Linux/linux/blob/rust-next/rust/kernel/sync/aref.rs#L100",
+    "tags": "RefTransfer"
   },
   {
     "index": 97,
@@ -1064,7 +1160,8 @@
     "safety_doc": "# Safety\n\nImplementers must ensure that increments to the reference count keep the object alive in memory\nat least until matching decrements are performed.\n\nImplementers must also ensure that all instances are reference-counted. (Otherwise they\nwon't be able to honour the requirement that [`AlwaysRefCounted::inc_ref`] keep the object\nalive.)",
     "source_path": "sync/aref.rs",
     "source_line": 40,
-    "api_link": "https://github.com/Rust-for-Linux/linux/blob/rust-next/rust/kernel/sync/aref.rs#L40"
+    "api_link": "https://github.com/Rust-for-Linux/linux/blob/rust-next/rust/kernel/sync/aref.rs#L40",
+    "tags": "RefTransfer"
   },
   {
     "index": 98,
@@ -1075,7 +1172,8 @@
     "safety_doc": "# Safety\n\nCallers must ensure that there was a previous matching increment to the reference count,\nand that the object is no longer used after its reference count is decremented (as it may\nresult in the object being freed), unless the caller owns another increment on the refcount\n(e.g., it calls [`AlwaysRefCounted::inc_ref`] twice, then calls\n[`AlwaysRefCounted::dec_ref`] once).",
     "source_path": "sync/aref.rs",
     "source_line": 55,
-    "api_link": "https://github.com/Rust-for-Linux/linux/blob/rust-next/rust/kernel/sync/aref.rs#L55"
+    "api_link": "https://github.com/Rust-for-Linux/linux/blob/rust-next/rust/kernel/sync/aref.rs#L55",
+    "tags": "RefTransfer"
   },
   {
     "index": 99,
@@ -1086,7 +1184,8 @@
     "safety_doc": "# Safety\n\n- `ptr` is aligned to `align_of::<T>()`.\n- `ptr` is valid for reads and writes for `'a`.\n- For the duration of `'a`, other accesses to `*ptr` must not cause data races (defined\nby [`LKMM`]) against atomic operations on the returned reference. Note that if all other\naccesses are atomic, then this safety requirement is trivially fulfilled.\n\n[`LKMM`]: srctree/tools/memory-model",
     "source_path": "sync/atomic.rs",
     "source_line": 207,
-    "api_link": "https://github.com/Rust-for-Linux/linux/blob/rust-next/rust/kernel/sync/atomic.rs#L207"
+    "api_link": "https://github.com/Rust-for-Linux/linux/blob/rust-next/rust/kernel/sync/atomic.rs#L207",
+    "tags": "InBound, NonData_race, ValidWrite, ValidRead"
   },
   {
     "index": 100,
@@ -1097,7 +1196,8 @@
     "safety_doc": "# Safety\n\nTODO: Properly defines `wrapping_add` in the following comment.\n`wrapping_add` any value of type `Self::Repr::Delta` obtained by [`Self::rhs_into_delta()`] to\nany value of type `Self::Repr` obtained through transmuting a value of type `Self` to must\nyield a value with a bit pattern also valid for `Self`.",
     "source_path": "sync/atomic.rs",
     "source_line": 124,
-    "api_link": "https://github.com/Rust-for-Linux/linux/blob/rust-next/rust/kernel/sync/atomic.rs#L124"
+    "api_link": "https://github.com/Rust-for-Linux/linux/blob/rust-next/rust/kernel/sync/atomic.rs#L124",
+    "tags": ""
   },
   {
     "index": 101,
@@ -1108,7 +1208,8 @@
     "safety_doc": "# Safety\n\n- [`Self`] must have the same size and alignment as [`Self::Repr`].\n- [`Self`] must be [round-trip transmutable] to  [`Self::Repr`].\n\nNote that this is more relaxed than requiring the bi-directional transmutability (i.e.\n[`transmute()`] is always sound between `U` and `T`) because of the support for atomic\nvariables over unit-only enums, see [Examples].",
     "source_path": "sync/atomic.rs",
     "source_line": 111,
-    "api_link": "https://github.com/Rust-for-Linux/linux/blob/rust-next/rust/kernel/sync/atomic.rs#L111"
+    "api_link": "https://github.com/Rust-for-Linux/linux/blob/rust-next/rust/kernel/sync/atomic.rs#L111",
+    "tags": ""
   },
   {
     "index": 102,
@@ -1119,7 +1220,8 @@
     "safety_doc": "# Safety\n\nThe caller promises that `ptr` points to a valid initialised instance of [`State`] during\nthe whole lifetime of `'a`.\n\n[`State`]: Backend::State",
     "source_path": "sync/lock.rs",
     "source_line": 160,
-    "api_link": "https://github.com/Rust-for-Linux/linux/blob/rust-next/rust/kernel/sync/lock.rs#L160"
+    "api_link": "https://github.com/Rust-for-Linux/linux/blob/rust-next/rust/kernel/sync/lock.rs#L160",
+    "tags": ""
   },
   {
     "index": 103,
@@ -1130,7 +1232,8 @@
     "safety_doc": "# Safety\n\nThe caller must ensure that it owns the lock.",
     "source_path": "sync/lock.rs",
     "source_line": 314,
-    "api_link": "https://github.com/Rust-for-Linux/linux/blob/rust-next/rust/kernel/sync/lock.rs#L314"
+    "api_link": "https://github.com/Rust-for-Linux/linux/blob/rust-next/rust/kernel/sync/lock.rs#L314",
+    "tags": ""
   },
   {
     "index": 104,
@@ -1141,7 +1244,8 @@
     "safety_doc": "# Safety\n\n- Implementers must ensure that only one thread/CPU may access the protected data once the lock\nis owned, that is, between calls to [`lock`] and [`unlock`].\n- Implementers must also ensure that [`relock`] uses the same locking method as the original\nlock operation.\n\n[`lock`]: Backend::lock\n[`unlock`]: Backend::unlock\n[`relock`]: Backend::relock",
     "source_path": "sync/lock.rs",
     "source_line": 37,
-    "api_link": "https://github.com/Rust-for-Linux/linux/blob/rust-next/rust/kernel/sync/lock.rs#L37"
+    "api_link": "https://github.com/Rust-for-Linux/linux/blob/rust-next/rust/kernel/sync/lock.rs#L37",
+    "tags": ""
   },
   {
     "index": 105,
@@ -1152,7 +1256,8 @@
     "safety_doc": "# Safety\n\nCallers must ensure that [`Backend::init`] has been previously called.",
     "source_path": "sync/lock.rs",
     "source_line": 97,
-    "api_link": "https://github.com/Rust-for-Linux/linux/blob/rust-next/rust/kernel/sync/lock.rs#L97"
+    "api_link": "https://github.com/Rust-for-Linux/linux/blob/rust-next/rust/kernel/sync/lock.rs#L97",
+    "tags": "LockHold"
   },
   {
     "index": 106,
@@ -1163,7 +1268,8 @@
     "safety_doc": "# Safety\n\n`ptr` must be valid for write for the duration of the call, while `name` and `key` must\nremain valid for read indefinitely.",
     "source_path": "sync/lock.rs",
     "source_line": 53,
-    "api_link": "https://github.com/Rust-for-Linux/linux/blob/rust-next/rust/kernel/sync/lock.rs#L53"
+    "api_link": "https://github.com/Rust-for-Linux/linux/blob/rust-next/rust/kernel/sync/lock.rs#L53",
+    "tags": "Valid, Alive, ValidWrite, ValidRead"
   },
   {
     "index": 107,
@@ -1174,7 +1280,8 @@
     "safety_doc": "# Safety\n\nCallers must ensure that [`Backend::init`] has been previously called.",
     "source_path": "sync/lock.rs",
     "source_line": 65,
-    "api_link": "https://github.com/Rust-for-Linux/linux/blob/rust-next/rust/kernel/sync/lock.rs#L65"
+    "api_link": "https://github.com/Rust-for-Linux/linux/blob/rust-next/rust/kernel/sync/lock.rs#L65",
+    "tags": ""
   },
   {
     "index": 108,
@@ -1185,7 +1292,8 @@
     "safety_doc": "# Safety\n\nCallers must ensure that `guard_state` comes from a previous call to [`Backend::lock`] (or\nvariant) that has been unlocked with [`Backend::unlock`] and will be relocked now.",
     "source_path": "sync/lock.rs",
     "source_line": 87,
-    "api_link": "https://github.com/Rust-for-Linux/linux/blob/rust-next/rust/kernel/sync/lock.rs#L87"
+    "api_link": "https://github.com/Rust-for-Linux/linux/blob/rust-next/rust/kernel/sync/lock.rs#L87",
+    "tags": ""
   },
   {
     "index": 109,
@@ -1196,7 +1304,8 @@
     "safety_doc": "# Safety\n\nCallers must ensure that [`Backend::init`] has been previously called.",
     "source_path": "sync/lock.rs",
     "source_line": 72,
-    "api_link": "https://github.com/Rust-for-Linux/linux/blob/rust-next/rust/kernel/sync/lock.rs#L72"
+    "api_link": "https://github.com/Rust-for-Linux/linux/blob/rust-next/rust/kernel/sync/lock.rs#L72",
+    "tags": ""
   },
   {
     "index": 110,
@@ -1207,7 +1316,8 @@
     "safety_doc": "# Safety\n\nIt must only be called by the current owner of the lock.",
     "source_path": "sync/lock.rs",
     "source_line": 79,
-    "api_link": "https://github.com/Rust-for-Linux/linux/blob/rust-next/rust/kernel/sync/lock.rs#L79"
+    "api_link": "https://github.com/Rust-for-Linux/linux/blob/rust-next/rust/kernel/sync/lock.rs#L79",
+    "tags": ""
   },
   {
     "index": 111,
@@ -1218,7 +1328,8 @@
     "safety_doc": "# Safety\n\nMust not be called more than once on a given lock.",
     "source_path": "sync/lock/global.rs",
     "source_line": 62,
-    "api_link": "https://github.com/Rust-for-Linux/linux/blob/rust-next/rust/kernel/sync/lock/global.rs#L62"
+    "api_link": "https://github.com/Rust-for-Linux/linux/blob/rust-next/rust/kernel/sync/lock/global.rs#L62",
+    "tags": ""
   },
   {
     "index": 112,
@@ -1229,7 +1340,8 @@
     "safety_doc": "# Safety\n\nThe pointer must be null or reference a valid `poll_table` for the duration of `'a`.",
     "source_path": "sync/poll.rs",
     "source_line": 42,
-    "api_link": "https://github.com/Rust-for-Linux/linux/blob/rust-next/rust/kernel/sync/poll.rs#L42"
+    "api_link": "https://github.com/Rust-for-Linux/linux/blob/rust-next/rust/kernel/sync/poll.rs#L42",
+    "tags": "Valid"
   },
   {
     "index": 113,
@@ -1240,7 +1352,8 @@
     "safety_doc": "# Safety\n\nCallers must ensure that the returned object is only used to access a [`CurrentTask`]\nwithin the task context that was active when this function was called. For more details,\nsee the invariants section for [`CurrentTask`].",
     "source_path": "task.rs",
     "source_line": 178,
-    "api_link": "https://github.com/Rust-for-Linux/linux/blob/rust-next/rust/kernel/task.rs#L178"
+    "api_link": "https://github.com/Rust-for-Linux/linux/blob/rust-next/rust/kernel/task.rs#L178",
+    "tags": ""
   },
   {
     "index": 114,
@@ -1251,7 +1364,8 @@
     "safety_doc": "# Safety\n\nImplementers of this trait must ensure that the implementer has a\n[`HrTimer`] field and that all trait methods are implemented according to\ntheir documentation. All the methods of this trait must operate on the same\nfield.",
     "source_path": "time/hrtimer.rs",
     "source_line": 430,
-    "api_link": "https://github.com/Rust-for-Linux/linux/blob/rust-next/rust/kernel/time/hrtimer.rs#L430"
+    "api_link": "https://github.com/Rust-for-Linux/linux/blob/rust-next/rust/kernel/time/hrtimer.rs#L430",
+    "tags": ""
   },
   {
     "index": 115,
@@ -1262,7 +1376,8 @@
     "safety_doc": "# Safety\n\nWhen dropped, the timer represented by this handle must be cancelled, if it\nis running. If the timer handler is running when the handle is dropped, the\ndrop method must wait for the handler to return before returning.\n\nNote: One way to satisfy the safety requirement is to call `Self::cancel` in\nthe drop implementation for `Self.`",
     "source_path": "time/hrtimer.rs",
     "source_line": 407,
-    "api_link": "https://github.com/Rust-for-Linux/linux/blob/rust-next/rust/kernel/time/hrtimer.rs#L407"
+    "api_link": "https://github.com/Rust-for-Linux/linux/blob/rust-next/rust/kernel/time/hrtimer.rs#L407",
+    "tags": ""
   },
   {
     "index": 116,
@@ -1273,7 +1388,8 @@
     "safety_doc": "# Safety\n\nImplementers must ensure that `start_scoped` does not return until the\ntimer is dead and the timer handler is not running.",
     "source_path": "time/hrtimer.rs",
     "source_line": 324,
-    "api_link": "https://github.com/Rust-for-Linux/linux/blob/rust-next/rust/kernel/time/hrtimer.rs#L324"
+    "api_link": "https://github.com/Rust-for-Linux/linux/blob/rust-next/rust/kernel/time/hrtimer.rs#L324",
+    "tags": ""
   },
   {
     "index": 117,
@@ -1284,7 +1400,8 @@
     "safety_doc": "# Safety\n\nImplementers of this trait must ensure that instances of types implementing\n[`UnsafeHrTimerPointer`] outlives any associated [`HrTimerPointer::TimerHandle`]\ninstances.",
     "source_path": "time/hrtimer.rs",
     "source_line": 293,
-    "api_link": "https://github.com/Rust-for-Linux/linux/blob/rust-next/rust/kernel/time/hrtimer.rs#L293"
+    "api_link": "https://github.com/Rust-for-Linux/linux/blob/rust-next/rust/kernel/time/hrtimer.rs#L293",
+    "tags": ""
   },
   {
     "index": 118,
@@ -1295,7 +1412,8 @@
     "safety_doc": "# Safety\n\n`this` must be a valid pointer.",
     "source_path": "time/hrtimer.rs",
     "source_line": 467,
-    "api_link": "https://github.com/Rust-for-Linux/linux/blob/rust-next/rust/kernel/time/hrtimer.rs#L467"
+    "api_link": "https://github.com/Rust-for-Linux/linux/blob/rust-next/rust/kernel/time/hrtimer.rs#L467",
+    "tags": "Valid"
   },
   {
     "index": 119,
@@ -1306,7 +1424,8 @@
     "safety_doc": "# Safety\n\n`this` must be a valid pointer.",
     "source_path": "time/hrtimer.rs",
     "source_line": 444,
-    "api_link": "https://github.com/Rust-for-Linux/linux/blob/rust-next/rust/kernel/time/hrtimer.rs#L444"
+    "api_link": "https://github.com/Rust-for-Linux/linux/blob/rust-next/rust/kernel/time/hrtimer.rs#L444",
+    "tags": "Valid"
   },
   {
     "index": 120,
@@ -1317,7 +1436,8 @@
     "safety_doc": "# Safety\n\n- `this` must point to a valid `Self`.\n- Caller must ensure that the pointee of `this` lives until the timer\nfires or is canceled.",
     "source_path": "time/hrtimer.rs",
     "source_line": 483,
-    "api_link": "https://github.com/Rust-for-Linux/linux/blob/rust-next/rust/kernel/time/hrtimer.rs#L483"
+    "api_link": "https://github.com/Rust-for-Linux/linux/blob/rust-next/rust/kernel/time/hrtimer.rs#L483",
+    "tags": "Valid"
   },
   {
     "index": 121,
@@ -1328,7 +1448,8 @@
     "safety_doc": "# Safety\n\n`ptr` must point to a [`HrTimer<T>`] field in a struct of type `Self`.",
     "source_path": "time/hrtimer.rs",
     "source_line": 455,
-    "api_link": "https://github.com/Rust-for-Linux/linux/blob/rust-next/rust/kernel/time/hrtimer.rs#L455"
+    "api_link": "https://github.com/Rust-for-Linux/linux/blob/rust-next/rust/kernel/time/hrtimer.rs#L455",
+    "tags": ""
   },
   {
     "index": 122,
@@ -1339,7 +1460,8 @@
     "safety_doc": "# Safety\n\nCaller promises keep the timer structure alive until the timer is dead.\nCaller can ensure this by not leaking the returned [`Self::TimerHandle`].",
     "source_path": "time/hrtimer.rs",
     "source_line": 315,
-    "api_link": "https://github.com/Rust-for-Linux/linux/blob/rust-next/rust/kernel/time/hrtimer.rs#L315"
+    "api_link": "https://github.com/Rust-for-Linux/linux/blob/rust-next/rust/kernel/time/hrtimer.rs#L315",
+    "tags": ""
   },
   {
     "index": 123,
@@ -1350,7 +1472,8 @@
     "safety_doc": "# Safety\n\nValues of this type may not contain any uninitialized bytes. This type must not have interior\nmutability.",
     "source_path": "transmute.rs",
     "source_line": 202,
-    "api_link": "https://github.com/Rust-for-Linux/linux/blob/rust-next/rust/kernel/transmute.rs#L202"
+    "api_link": "https://github.com/Rust-for-Linux/linux/blob/rust-next/rust/kernel/transmute.rs#L202",
+    "tags": ""
   },
   {
     "index": 124,
@@ -1361,7 +1484,8 @@
     "safety_doc": "# Safety\n\nAll bit-patterns must be valid for this type. This type must not have interior mutability.",
     "source_path": "transmute.rs",
     "source_line": 38,
-    "api_link": "https://github.com/Rust-for-Linux/linux/blob/rust-next/rust/kernel/transmute.rs#L38"
+    "api_link": "https://github.com/Rust-for-Linux/linux/blob/rust-next/rust/kernel/transmute.rs#L38",
+    "tags": "Valid"
   },
   {
     "index": 125,
@@ -1372,7 +1496,8 @@
     "safety_doc": "# Safety\n\n- Implementations must satisfy the guarantees of [`Self::into_foreign`].",
     "source_path": "types.rs",
     "source_line": 27,
-    "api_link": "https://github.com/Rust-for-Linux/linux/blob/rust-next/rust/kernel/types.rs#L27"
+    "api_link": "https://github.com/Rust-for-Linux/linux/blob/rust-next/rust/kernel/types.rs#L27",
+    "tags": ""
   },
   {
     "index": 126,
@@ -1383,7 +1508,8 @@
     "safety_doc": "# Safety\n\nThe provided pointer must have been returned by a previous call to [`into_foreign`], and if\nthe pointer is ever passed to [`from_foreign`], then that call must happen after the end of\nthe lifetime `'a`.\n\n[`into_foreign`]: Self::into_foreign\n[`from_foreign`]: Self::from_foreign",
     "source_path": "types.rs",
     "source_line": 98,
-    "api_link": "https://github.com/Rust-for-Linux/linux/blob/rust-next/rust/kernel/types.rs#L98"
+    "api_link": "https://github.com/Rust-for-Linux/linux/blob/rust-next/rust/kernel/types.rs#L98",
+    "tags": "OriginateFrom"
   },
   {
     "index": 127,
@@ -1394,7 +1520,8 @@
     "safety_doc": "# Safety\n\nThe provided pointer must have been returned by a previous call to [`into_foreign`], and if\nthe pointer is ever passed to [`from_foreign`], then that call must happen after the end of\nthe lifetime `'a`.\n\nThe lifetime `'a` must not overlap with the lifetime of any other call to [`borrow`] or\n`borrow_mut` on the same object.\n\n[`into_foreign`]: Self::into_foreign\n[`from_foreign`]: Self::from_foreign\n[`borrow`]: Self::borrow\n[`Arc`]: crate::sync::Arc",
     "source_path": "types.rs",
     "source_line": 126,
-    "api_link": "https://github.com/Rust-for-Linux/linux/blob/rust-next/rust/kernel/types.rs#L126"
+    "api_link": "https://github.com/Rust-for-Linux/linux/blob/rust-next/rust/kernel/types.rs#L126",
+    "tags": "NonOverlap, OriginateFrom"
   },
   {
     "index": 128,
@@ -1405,7 +1532,8 @@
     "safety_doc": "# Safety\n\nThe provided pointer must have been returned by a previous call to [`into_foreign`], and it\nmust not be passed to `from_foreign` more than once.\n\n[`into_foreign`]: Self::into_foreign",
     "source_path": "types.rs",
     "source_line": 63,
-    "api_link": "https://github.com/Rust-for-Linux/linux/blob/rust-next/rust/kernel/types.rs#L63"
+    "api_link": "https://github.com/Rust-for-Linux/linux/blob/rust-next/rust/kernel/types.rs#L63",
+    "tags": "OriginateFrom"
   },
   {
     "index": 129,
@@ -1416,7 +1544,8 @@
     "safety_doc": "# Safety\n\n`ptr` must either be null or satisfy the safety requirements for [`from_foreign`].\n\n[`from_foreign`]: Self::from_foreign",
     "source_path": "types.rs",
     "source_line": 75,
-    "api_link": "https://github.com/Rust-for-Linux/linux/blob/rust-next/rust/kernel/types.rs#L75"
+    "api_link": "https://github.com/Rust-for-Linux/linux/blob/rust-next/rust/kernel/types.rs#L75",
+    "tags": ""
   },
   {
     "index": 130,
@@ -1427,7 +1556,8 @@
     "safety_doc": "# Safety\n\nThe caller must ensure that the provided raw pointer is not dangling, that it points at a\nvalid workqueue, and that it remains valid until the end of `'a`.",
     "source_path": "workqueue.rs",
     "source_line": 256,
-    "api_link": "https://github.com/Rust-for-Linux/linux/blob/rust-next/rust/kernel/workqueue.rs#L256"
+    "api_link": "https://github.com/Rust-for-Linux/linux/blob/rust-next/rust/kernel/workqueue.rs#L256",
+    "tags": "Alive"
   },
   {
     "index": 131,
@@ -1438,7 +1568,8 @@
     "safety_doc": "# Safety\n\nThe provided pointer must not be dangling and must be properly aligned. (But the memory\nneed not be initialized.)",
     "source_path": "workqueue.rs",
     "source_line": 712,
-    "api_link": "https://github.com/Rust-for-Linux/linux/blob/rust-next/rust/kernel/workqueue.rs#L712"
+    "api_link": "https://github.com/Rust-for-Linux/linux/blob/rust-next/rust/kernel/workqueue.rs#L712",
+    "tags": "Align"
   },
   {
     "index": 132,
@@ -1449,7 +1580,8 @@
     "safety_doc": "# Safety\n\nThe provided pointer must not be dangling and must be properly aligned. (But the memory\nneed not be initialized.)",
     "source_path": "workqueue.rs",
     "source_line": 526,
-    "api_link": "https://github.com/Rust-for-Linux/linux/blob/rust-next/rust/kernel/workqueue.rs#L526"
+    "api_link": "https://github.com/Rust-for-Linux/linux/blob/rust-next/rust/kernel/workqueue.rs#L526",
+    "tags": "Align"
   },
   {
     "index": 133,
@@ -1460,7 +1592,8 @@
     "safety_doc": "# Safety\n\nThe `HasWork<T, ID>` implementation must return a `work_struct` that is stored in the `work`\nfield of a `delayed_work` with the same access rules as the `work_struct`.",
     "source_path": "workqueue.rs",
     "source_line": 729,
-    "api_link": "https://github.com/Rust-for-Linux/linux/blob/rust-next/rust/kernel/workqueue.rs#L729"
+    "api_link": "https://github.com/Rust-for-Linux/linux/blob/rust-next/rust/kernel/workqueue.rs#L729",
+    "tags": ""
   },
   {
     "index": 134,
@@ -1471,7 +1604,8 @@
     "safety_doc": "# Safety\n\nThe methods [`raw_get_work`] and [`work_container_of`] must return valid pointers and must be\ntrue inverses of each other; that is, they must satisfy the following invariants:\n- `work_container_of(raw_get_work(ptr)) == ptr` for any `ptr: *mut Self`.\n- `raw_get_work(work_container_of(ptr)) == ptr` for any `ptr: *mut Work<T, ID>`.\n\n[`impl_has_work!`]: crate::impl_has_work\n[`raw_get_work`]: HasWork::raw_get_work\n[`work_container_of`]: HasWork::work_container_of",
     "source_path": "workqueue.rs",
     "source_line": 565,
-    "api_link": "https://github.com/Rust-for-Linux/linux/blob/rust-next/rust/kernel/workqueue.rs#L565"
+    "api_link": "https://github.com/Rust-for-Linux/linux/blob/rust-next/rust/kernel/workqueue.rs#L565",
+    "tags": "Valid, ContainerOf"
   },
   {
     "index": 135,
@@ -1482,7 +1616,8 @@
     "safety_doc": "# Safety\n\nIf the `__enqueue` method in the `RawWorkItem` implementation calls the closure, then the\nprovided pointer must point at the `work` field of a valid `delayed_work`, and the guarantees\nthat `__enqueue` provides about accessing the `work_struct` must also apply to the rest of the\n`delayed_work` struct.",
     "source_path": "workqueue.rs",
     "source_line": 424,
-    "api_link": "https://github.com/Rust-for-Linux/linux/blob/rust-next/rust/kernel/workqueue.rs#L424"
+    "api_link": "https://github.com/Rust-for-Linux/linux/blob/rust-next/rust/kernel/workqueue.rs#L424",
+    "tags": ""
   },
   {
     "index": 136,
@@ -1493,7 +1628,8 @@
     "safety_doc": "# Safety\n\nImplementers must ensure that any pointers passed to a `queue_work_on` closure by [`__enqueue`]\nremain valid for the duration specified in the guarantees section of the documentation for\n[`__enqueue`].\n\n[`__enqueue`]: RawWorkItem::__enqueue",
     "source_path": "workqueue.rs",
     "source_line": 389,
-    "api_link": "https://github.com/Rust-for-Linux/linux/blob/rust-next/rust/kernel/workqueue.rs#L389"
+    "api_link": "https://github.com/Rust-for-Linux/linux/blob/rust-next/rust/kernel/workqueue.rs#L389",
+    "tags": "Alive"
   },
   {
     "index": 137,
@@ -1504,7 +1640,8 @@
     "safety_doc": "# Safety\n\nImplementers must ensure that [`__enqueue`] uses a `work_struct` initialized with the [`run`]\nmethod of this trait as the function pointer.\n\n[`__enqueue`]: RawWorkItem::__enqueue\n[`run`]: WorkItemPointer::run",
     "source_path": "workqueue.rs",
     "source_line": 443,
-    "api_link": "https://github.com/Rust-for-Linux/linux/blob/rust-next/rust/kernel/workqueue.rs#L443"
+    "api_link": "https://github.com/Rust-for-Linux/linux/blob/rust-next/rust/kernel/workqueue.rs#L443",
+    "tags": "ContainerOf"
   },
   {
     "index": 138,
@@ -1515,7 +1652,8 @@
     "safety_doc": "# Safety\n\nThe provided pointer must point at a valid struct of type `Self`.",
     "source_path": "workqueue.rs",
     "source_line": 571,
-    "api_link": "https://github.com/Rust-for-Linux/linux/blob/rust-next/rust/kernel/workqueue.rs#L571"
+    "api_link": "https://github.com/Rust-for-Linux/linux/blob/rust-next/rust/kernel/workqueue.rs#L571",
+    "tags": ""
   },
   {
     "index": 139,
@@ -1526,7 +1664,8 @@
     "safety_doc": "# Safety\n\nThe pointer must point at a [`Work<T, ID>`] field in a struct of type `Self`.",
     "source_path": "workqueue.rs",
     "source_line": 578,
-    "api_link": "https://github.com/Rust-for-Linux/linux/blob/rust-next/rust/kernel/workqueue.rs#L578"
+    "api_link": "https://github.com/Rust-for-Linux/linux/blob/rust-next/rust/kernel/workqueue.rs#L578",
+    "tags": ""
   },
   {
     "index": 140,
@@ -1537,6 +1676,7 @@
     "safety_doc": "# Safety\n\nThe provided closure may only return `false` if the `work_struct` is already in a workqueue.\n\nIf the work item type is annotated with any lifetimes, then you must not call the function\npointer after any such lifetime expires. (Never calling the function pointer is okay.)\n\nIf the work item type is not [`Send`], then the function pointer must be called on the same\nthread as the call to `__enqueue`.",
     "source_path": "workqueue.rs",
     "source_line": 411,
-    "api_link": "https://github.com/Rust-for-Linux/linux/blob/rust-next/rust/kernel/workqueue.rs#L411"
+    "api_link": "https://github.com/Rust-for-Linux/linux/blob/rust-next/rust/kernel/workqueue.rs#L411",
+    "tags": "Alive, CurThread"
   }
 ]
