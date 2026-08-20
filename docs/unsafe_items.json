@@ -9,7 +9,7 @@
     "tags": "Allocated, Valid, Alive",
     "source_path": "alloc.rs",
     "source_line": 163,
-    "api_link": "https://github.com/Rust-for-Linux/linux/blob/1200d84f4c0a929a0780180d25063d93773be79c/rust/kernel/alloc.rs#L163"
+    "api_link": "https://github.com/Rust-for-Linux/linux/blob/bd5f485f3f026225b86573e559af0b7254ef4184/rust/kernel/alloc.rs#L163"
   },
   {
     "index": 2,
@@ -21,7 +21,7 @@
     "tags": "Allocated, NonAccessable",
     "source_path": "alloc.rs",
     "source_line": 251,
-    "api_link": "https://github.com/Rust-for-Linux/linux/blob/1200d84f4c0a929a0780180d25063d93773be79c/rust/kernel/alloc.rs#L251"
+    "api_link": "https://github.com/Rust-for-Linux/linux/blob/bd5f485f3f026225b86573e559af0b7254ef4184/rust/kernel/alloc.rs#L251"
   },
   {
     "index": 3,
@@ -33,7 +33,7 @@
     "tags": "NonNull, Allocated, Alive",
     "source_path": "alloc.rs",
     "source_line": 234,
-    "api_link": "https://github.com/Rust-for-Linux/linux/blob/1200d84f4c0a929a0780180d25063d93773be79c/rust/kernel/alloc.rs#L234"
+    "api_link": "https://github.com/Rust-for-Linux/linux/blob/bd5f485f3f026225b86573e559af0b7254ef4184/rust/kernel/alloc.rs#L234"
   },
   {
     "index": 4,
@@ -45,7 +45,7 @@
     "tags": "NonNull, ValidPtr, Valid, Alive, NonConcurrent, Invariant",
     "source_path": "alloc/allocator.rs",
     "source_line": 205,
-    "api_link": "https://github.com/Rust-for-Linux/linux/blob/1200d84f4c0a929a0780180d25063d93773be79c/rust/kernel/alloc/allocator.rs#L205"
+    "api_link": "https://github.com/Rust-for-Linux/linux/blob/bd5f485f3f026225b86573e559af0b7254ef4184/rust/kernel/alloc/allocator.rs#L205"
   },
   {
     "index": 5,
@@ -57,7 +57,7 @@
     "tags": "Align, Valid",
     "source_path": "alloc/allocator/iter.rs",
     "source_line": 75,
-    "api_link": "https://github.com/Rust-for-Linux/linux/blob/1200d84f4c0a929a0780180d25063d93773be79c/rust/kernel/alloc/allocator/iter.rs#L75"
+    "api_link": "https://github.com/Rust-for-Linux/linux/blob/bd5f485f3f026225b86573e559af0b7254ef4184/rust/kernel/alloc/allocator/iter.rs#L75"
   },
   {
     "index": 6,
@@ -69,7 +69,7 @@
     "tags": "Init",
     "source_path": "alloc/kbox.rs",
     "source_line": 228,
-    "api_link": "https://github.com/Rust-for-Linux/linux/blob/1200d84f4c0a929a0780180d25063d93773be79c/rust/kernel/alloc/kbox.rs#L228"
+    "api_link": "https://github.com/Rust-for-Linux/linux/blob/bd5f485f3f026225b86573e559af0b7254ef4184/rust/kernel/alloc/kbox.rs#L228"
   },
   {
     "index": 7,
@@ -81,7 +81,7 @@
     "tags": "Align, Allocated, InBound, ValidNum, Init, Forgotten",
     "source_path": "alloc/kvec.rs",
     "source_line": 576,
-    "api_link": "https://github.com/Rust-for-Linux/linux/blob/1200d84f4c0a929a0780180d25063d93773be79c/rust/kernel/alloc/kvec.rs#L576"
+    "api_link": "https://github.com/Rust-for-Linux/linux/blob/bd5f485f3f026225b86573e559af0b7254ef4184/rust/kernel/alloc/kvec.rs#L576"
   },
   {
     "index": 8,
@@ -93,7 +93,7 @@
     "tags": "Forgotten",
     "source_path": "auxiliary.rs",
     "source_line": 432,
-    "api_link": "https://github.com/Rust-for-Linux/linux/blob/1200d84f4c0a929a0780180d25063d93773be79c/rust/kernel/auxiliary.rs#L432"
+    "api_link": "https://github.com/Rust-for-Linux/linux/blob/bd5f485f3f026225b86573e559af0b7254ef4184/rust/kernel/auxiliary.rs#L432"
   },
   {
     "index": 9,
@@ -105,7 +105,7 @@
     "tags": "NonNull, Alive, NonConcurrent, NonDropped",
     "source_path": "bitmap.rs",
     "source_line": 35,
-    "api_link": "https://github.com/Rust-for-Linux/linux/blob/1200d84f4c0a929a0780180d25063d93773be79c/rust/kernel/bitmap.rs#L35"
+    "api_link": "https://github.com/Rust-for-Linux/linux/blob/bd5f485f3f026225b86573e559af0b7254ef4184/rust/kernel/bitmap.rs#L35"
   },
   {
     "index": 10,
@@ -117,7 +117,7 @@
     "tags": "NonNull, Alive, NonConcurrent, NonDropped",
     "source_path": "bitmap.rs",
     "source_line": 60,
-    "api_link": "https://github.com/Rust-for-Linux/linux/blob/1200d84f4c0a929a0780180d25063d93773be79c/rust/kernel/bitmap.rs#L60"
+    "api_link": "https://github.com/Rust-for-Linux/linux/blob/bd5f485f3f026225b86573e559af0b7254ef4184/rust/kernel/bitmap.rs#L60"
   },
   {
     "index": 11,
@@ -129,7 +129,7 @@
     "tags": "ContainerOf",
     "source_path": "configfs.rs",
     "source_line": 205,
-    "api_link": "https://github.com/Rust-for-Linux/linux/blob/1200d84f4c0a929a0780180d25063d93773be79c/rust/kernel/configfs.rs#L205"
+    "api_link": "https://github.com/Rust-for-Linux/linux/blob/bd5f485f3f026225b86573e559af0b7254ef4184/rust/kernel/configfs.rs#L205"
   },
   {
     "index": 12,
@@ -141,7 +141,7 @@
     "tags": "ContainerOf",
     "source_path": "configfs.rs",
     "source_line": 219,
-    "api_link": "https://github.com/Rust-for-Linux/linux/blob/1200d84f4c0a929a0780180d25063d93773be79c/rust/kernel/configfs.rs#L219"
+    "api_link": "https://github.com/Rust-for-Linux/linux/blob/bd5f485f3f026225b86573e559af0b7254ef4184/rust/kernel/configfs.rs#L219"
   },
   {
     "index": 13,
@@ -153,7 +153,7 @@
     "tags": "Allocated, Valid",
     "source_path": "configfs.rs",
     "source_line": 211,
-    "api_link": "https://github.com/Rust-for-Linux/linux/blob/1200d84f4c0a929a0780180d25063d93773be79c/rust/kernel/configfs.rs#L211"
+    "api_link": "https://github.com/Rust-for-Linux/linux/blob/bd5f485f3f026225b86573e559af0b7254ef4184/rust/kernel/configfs.rs#L211"
   },
   {
     "index": 14,
@@ -165,7 +165,7 @@
     "tags": "RefTransfer",
     "source_path": "cpu.rs",
     "source_line": 142,
-    "api_link": "https://github.com/Rust-for-Linux/linux/blob/1200d84f4c0a929a0780180d25063d93773be79c/rust/kernel/cpu.rs#L142"
+    "api_link": "https://github.com/Rust-for-Linux/linux/blob/bd5f485f3f026225b86573e559af0b7254ef4184/rust/kernel/cpu.rs#L142"
   },
   {
     "index": 15,
@@ -177,7 +177,7 @@
     "tags": "InBound",
     "source_path": "cpu.rs",
     "source_line": 56,
-    "api_link": "https://github.com/Rust-for-Linux/linux/blob/1200d84f4c0a929a0780180d25063d93773be79c/rust/kernel/cpu.rs#L56"
+    "api_link": "https://github.com/Rust-for-Linux/linux/blob/bd5f485f3f026225b86573e559af0b7254ef4184/rust/kernel/cpu.rs#L56"
   },
   {
     "index": 16,
@@ -189,7 +189,7 @@
     "tags": "InBound",
     "source_path": "cpu.rs",
     "source_line": 80,
-    "api_link": "https://github.com/Rust-for-Linux/linux/blob/1200d84f4c0a929a0780180d25063d93773be79c/rust/kernel/cpu.rs#L80"
+    "api_link": "https://github.com/Rust-for-Linux/linux/blob/bd5f485f3f026225b86573e559af0b7254ef4184/rust/kernel/cpu.rs#L80"
   },
   {
     "index": 17,
@@ -201,7 +201,7 @@
     "tags": "ValidRead, Alive",
     "source_path": "cpufreq.rs",
     "source_line": 234,
-    "api_link": "https://github.com/Rust-for-Linux/linux/blob/1200d84f4c0a929a0780180d25063d93773be79c/rust/kernel/cpufreq.rs#L234"
+    "api_link": "https://github.com/Rust-for-Linux/linux/blob/bd5f485f3f026225b86573e559af0b7254ef4184/rust/kernel/cpufreq.rs#L234"
   },
   {
     "index": 18,
@@ -213,7 +213,7 @@
     "tags": "ValidRead, Alive",
     "source_path": "cpufreq.rs",
     "source_line": 430,
-    "api_link": "https://github.com/Rust-for-Linux/linux/blob/1200d84f4c0a929a0780180d25063d93773be79c/rust/kernel/cpufreq.rs#L430"
+    "api_link": "https://github.com/Rust-for-Linux/linux/blob/bd5f485f3f026225b86573e559af0b7254ef4184/rust/kernel/cpufreq.rs#L430"
   },
   {
     "index": 19,
@@ -225,7 +225,7 @@
     "tags": "ValidWrite, Alive",
     "source_path": "cpufreq.rs",
     "source_line": 140,
-    "api_link": "https://github.com/Rust-for-Linux/linux/blob/1200d84f4c0a929a0780180d25063d93773be79c/rust/kernel/cpufreq.rs#L140"
+    "api_link": "https://github.com/Rust-for-Linux/linux/blob/bd5f485f3f026225b86573e559af0b7254ef4184/rust/kernel/cpufreq.rs#L140"
   },
   {
     "index": 20,
@@ -237,7 +237,7 @@
     "tags": "ValidWrite, Alive",
     "source_path": "cpufreq.rs",
     "source_line": 445,
-    "api_link": "https://github.com/Rust-for-Linux/linux/blob/1200d84f4c0a929a0780180d25063d93773be79c/rust/kernel/cpufreq.rs#L445"
+    "api_link": "https://github.com/Rust-for-Linux/linux/blob/bd5f485f3f026225b86573e559af0b7254ef4184/rust/kernel/cpufreq.rs#L445"
   },
   {
     "index": 21,
@@ -249,7 +249,7 @@
     "tags": "Valid",
     "source_path": "cpufreq.rs",
     "source_line": 180,
-    "api_link": "https://github.com/Rust-for-Linux/linux/blob/1200d84f4c0a929a0780180d25063d93773be79c/rust/kernel/cpufreq.rs#L180"
+    "api_link": "https://github.com/Rust-for-Linux/linux/blob/bd5f485f3f026225b86573e559af0b7254ef4184/rust/kernel/cpufreq.rs#L180"
   },
   {
     "index": 22,
@@ -261,7 +261,7 @@
     "tags": "NonDropped",
     "source_path": "cpufreq.rs",
     "source_line": 561,
-    "api_link": "https://github.com/Rust-for-Linux/linux/blob/1200d84f4c0a929a0780180d25063d93773be79c/rust/kernel/cpufreq.rs#L561"
+    "api_link": "https://github.com/Rust-for-Linux/linux/blob/bd5f485f3f026225b86573e559af0b7254ef4184/rust/kernel/cpufreq.rs#L561"
   },
   {
     "index": 23,
@@ -273,7 +273,7 @@
     "tags": "NonDropped",
     "source_path": "cpufreq.rs",
     "source_line": 634,
-    "api_link": "https://github.com/Rust-for-Linux/linux/blob/1200d84f4c0a929a0780180d25063d93773be79c/rust/kernel/cpufreq.rs#L634"
+    "api_link": "https://github.com/Rust-for-Linux/linux/blob/bd5f485f3f026225b86573e559af0b7254ef4184/rust/kernel/cpufreq.rs#L634"
   },
   {
     "index": 24,
@@ -285,7 +285,7 @@
     "tags": "ValidRead, Alive",
     "source_path": "cpumask.rs",
     "source_line": 72,
-    "api_link": "https://github.com/Rust-for-Linux/linux/blob/1200d84f4c0a929a0780180d25063d93773be79c/rust/kernel/cpumask.rs#L72"
+    "api_link": "https://github.com/Rust-for-Linux/linux/blob/bd5f485f3f026225b86573e559af0b7254ef4184/rust/kernel/cpumask.rs#L72"
   },
   {
     "index": 25,
@@ -297,7 +297,7 @@
     "tags": "ValidRead, Alive",
     "source_path": "cpumask.rs",
     "source_line": 288,
-    "api_link": "https://github.com/Rust-for-Linux/linux/blob/1200d84f4c0a929a0780180d25063d93773be79c/rust/kernel/cpumask.rs#L288"
+    "api_link": "https://github.com/Rust-for-Linux/linux/blob/bd5f485f3f026225b86573e559af0b7254ef4184/rust/kernel/cpumask.rs#L288"
   },
   {
     "index": 26,
@@ -309,7 +309,7 @@
     "tags": "ValidWrite, Alive",
     "source_path": "cpumask.rs",
     "source_line": 58,
-    "api_link": "https://github.com/Rust-for-Linux/linux/blob/1200d84f4c0a929a0780180d25063d93773be79c/rust/kernel/cpumask.rs#L58"
+    "api_link": "https://github.com/Rust-for-Linux/linux/blob/bd5f485f3f026225b86573e559af0b7254ef4184/rust/kernel/cpumask.rs#L58"
   },
   {
     "index": 27,
@@ -321,7 +321,7 @@
     "tags": "ValidWrite, Alive",
     "source_path": "cpumask.rs",
     "source_line": 274,
-    "api_link": "https://github.com/Rust-for-Linux/linux/blob/1200d84f4c0a929a0780180d25063d93773be79c/rust/kernel/cpumask.rs#L274"
+    "api_link": "https://github.com/Rust-for-Linux/linux/blob/bd5f485f3f026225b86573e559af0b7254ef4184/rust/kernel/cpumask.rs#L274"
   },
   {
     "index": 28,
@@ -333,7 +333,7 @@
     "tags": "Init",
     "source_path": "cpumask.rs",
     "source_line": 250,
-    "api_link": "https://github.com/Rust-for-Linux/linux/blob/1200d84f4c0a929a0780180d25063d93773be79c/rust/kernel/cpumask.rs#L250"
+    "api_link": "https://github.com/Rust-for-Linux/linux/blob/bd5f485f3f026225b86573e559af0b7254ef4184/rust/kernel/cpumask.rs#L250"
   },
   {
     "index": 29,
@@ -345,7 +345,7 @@
     "tags": "ValidPtr, Valid, Alive",
     "source_path": "cred.rs",
     "source_line": 47,
-    "api_link": "https://github.com/Rust-for-Linux/linux/blob/1200d84f4c0a929a0780180d25063d93773be79c/rust/kernel/cred.rs#L47"
+    "api_link": "https://github.com/Rust-for-Linux/linux/blob/bd5f485f3f026225b86573e559af0b7254ef4184/rust/kernel/cred.rs#L47"
   },
   {
     "index": 30,
@@ -357,7 +357,7 @@
     "tags": "",
     "source_path": "device.rs",
     "source_line": 190,
-    "api_link": "https://github.com/Rust-for-Linux/linux/blob/1200d84f4c0a929a0780180d25063d93773be79c/rust/kernel/device.rs#L190"
+    "api_link": "https://github.com/Rust-for-Linux/linux/blob/bd5f485f3f026225b86573e559af0b7254ef4184/rust/kernel/device.rs#L190"
   },
   {
     "index": 31,
@@ -369,7 +369,7 @@
     "tags": "Typed, Assoc, PostToFunc",
     "source_path": "device.rs",
     "source_line": 247,
-    "api_link": "https://github.com/Rust-for-Linux/linux/blob/1200d84f4c0a929a0780180d25063d93773be79c/rust/kernel/device.rs#L247"
+    "api_link": "https://github.com/Rust-for-Linux/linux/blob/bd5f485f3f026225b86573e559af0b7254ef4184/rust/kernel/device.rs#L247"
   },
   {
     "index": 32,
@@ -381,7 +381,7 @@
     "tags": "NonNull, RefTransfer, NonZero",
     "source_path": "device.rs",
     "source_line": 309,
-    "api_link": "https://github.com/Rust-for-Linux/linux/blob/1200d84f4c0a929a0780180d25063d93773be79c/rust/kernel/device.rs#L309"
+    "api_link": "https://github.com/Rust-for-Linux/linux/blob/bd5f485f3f026225b86573e559af0b7254ef4184/rust/kernel/device.rs#L309"
   },
   {
     "index": 33,
@@ -393,7 +393,7 @@
     "tags": "NonNull, RefTransfer, NonZero",
     "source_path": "device.rs",
     "source_line": 179,
-    "api_link": "https://github.com/Rust-for-Linux/linux/blob/1200d84f4c0a929a0780180d25063d93773be79c/rust/kernel/device.rs#L179"
+    "api_link": "https://github.com/Rust-for-Linux/linux/blob/bd5f485f3f026225b86573e559af0b7254ef4184/rust/kernel/device.rs#L179"
   },
   {
     "index": 34,
@@ -405,7 +405,7 @@
     "tags": "",
     "source_path": "device.rs",
     "source_line": 577,
-    "api_link": "https://github.com/Rust-for-Linux/linux/blob/1200d84f4c0a929a0780180d25063d93773be79c/rust/kernel/device.rs#L577"
+    "api_link": "https://github.com/Rust-for-Linux/linux/blob/bd5f485f3f026225b86573e559af0b7254ef4184/rust/kernel/device.rs#L577"
   },
   {
     "index": 35,
@@ -417,7 +417,7 @@
     "tags": "",
     "source_path": "device.rs",
     "source_line": 588,
-    "api_link": "https://github.com/Rust-for-Linux/linux/blob/1200d84f4c0a929a0780180d25063d93773be79c/rust/kernel/device.rs#L588"
+    "api_link": "https://github.com/Rust-for-Linux/linux/blob/bd5f485f3f026225b86573e559af0b7254ef4184/rust/kernel/device.rs#L588"
   },
   {
     "index": 36,
@@ -429,7 +429,7 @@
     "tags": "Typed",
     "source_path": "device_id.rs",
     "source_line": 26,
-    "api_link": "https://github.com/Rust-for-Linux/linux/blob/1200d84f4c0a929a0780180d25063d93773be79c/rust/kernel/device_id.rs#L26"
+    "api_link": "https://github.com/Rust-for-Linux/linux/blob/bd5f485f3f026225b86573e559af0b7254ef4184/rust/kernel/device_id.rs#L26"
   },
   {
     "index": 37,
@@ -441,7 +441,7 @@
     "tags": "Valid",
     "source_path": "device_id.rs",
     "source_line": 46,
-    "api_link": "https://github.com/Rust-for-Linux/linux/blob/1200d84f4c0a929a0780180d25063d93773be79c/rust/kernel/device_id.rs#L46"
+    "api_link": "https://github.com/Rust-for-Linux/linux/blob/bd5f485f3f026225b86573e559af0b7254ef4184/rust/kernel/device_id.rs#L46"
   },
   {
     "index": 38,
@@ -453,7 +453,7 @@
     "tags": "NonConcurrent",
     "source_path": "dma.rs",
     "source_line": 653,
-    "api_link": "https://github.com/Rust-for-Linux/linux/blob/1200d84f4c0a929a0780180d25063d93773be79c/rust/kernel/dma.rs#L653"
+    "api_link": "https://github.com/Rust-for-Linux/linux/blob/bd5f485f3f026225b86573e559af0b7254ef4184/rust/kernel/dma.rs#L653"
   },
   {
     "index": 39,
@@ -465,7 +465,7 @@
     "tags": "NonConcurrent",
     "source_path": "dma.rs",
     "source_line": 638,
-    "api_link": "https://github.com/Rust-for-Linux/linux/blob/1200d84f4c0a929a0780180d25063d93773be79c/rust/kernel/dma.rs#L638"
+    "api_link": "https://github.com/Rust-for-Linux/linux/blob/bd5f485f3f026225b86573e559af0b7254ef4184/rust/kernel/dma.rs#L638"
   },
   {
     "index": 40,
@@ -477,7 +477,7 @@
     "tags": "",
     "source_path": "dma.rs",
     "source_line": 667,
-    "api_link": "https://github.com/Rust-for-Linux/linux/blob/1200d84f4c0a929a0780180d25063d93773be79c/rust/kernel/dma.rs#L667"
+    "api_link": "https://github.com/Rust-for-Linux/linux/blob/bd5f485f3f026225b86573e559af0b7254ef4184/rust/kernel/dma.rs#L667"
   },
   {
     "index": 41,
@@ -489,7 +489,7 @@
     "tags": "",
     "source_path": "dma.rs",
     "source_line": 690,
-    "api_link": "https://github.com/Rust-for-Linux/linux/blob/1200d84f4c0a929a0780180d25063d93773be79c/rust/kernel/dma.rs#L690"
+    "api_link": "https://github.com/Rust-for-Linux/linux/blob/bd5f485f3f026225b86573e559af0b7254ef4184/rust/kernel/dma.rs#L690"
   },
   {
     "index": 42,
@@ -501,7 +501,7 @@
     "tags": "ContainerOf",
     "source_path": "driver.rs",
     "source_line": 127,
-    "api_link": "https://github.com/Rust-for-Linux/linux/blob/1200d84f4c0a929a0780180d25063d93773be79c/rust/kernel/driver.rs#L127"
+    "api_link": "https://github.com/Rust-for-Linux/linux/blob/bd5f485f3f026225b86573e559af0b7254ef4184/rust/kernel/driver.rs#L127"
   },
   {
     "index": 43,
@@ -513,7 +513,7 @@
     "tags": "PostToFunc",
     "source_path": "driver.rs",
     "source_line": 152,
-    "api_link": "https://github.com/Rust-for-Linux/linux/blob/1200d84f4c0a929a0780180d25063d93773be79c/rust/kernel/driver.rs#L152"
+    "api_link": "https://github.com/Rust-for-Linux/linux/blob/bd5f485f3f026225b86573e559af0b7254ef4184/rust/kernel/driver.rs#L152"
   },
   {
     "index": 44,
@@ -525,7 +525,7 @@
     "tags": "Pinned",
     "source_path": "driver.rs",
     "source_line": 159,
-    "api_link": "https://github.com/Rust-for-Linux/linux/blob/1200d84f4c0a929a0780180d25063d93773be79c/rust/kernel/driver.rs#L159"
+    "api_link": "https://github.com/Rust-for-Linux/linux/blob/bd5f485f3f026225b86573e559af0b7254ef4184/rust/kernel/driver.rs#L159"
   },
   {
     "index": 45,
@@ -537,7 +537,7 @@
     "tags": "",
     "source_path": "driver.rs",
     "source_line": 171,
-    "api_link": "https://github.com/Rust-for-Linux/linux/blob/1200d84f4c0a929a0780180d25063d93773be79c/rust/kernel/driver.rs#L171"
+    "api_link": "https://github.com/Rust-for-Linux/linux/blob/bd5f485f3f026225b86573e559af0b7254ef4184/rust/kernel/driver.rs#L171"
   },
   {
     "index": 46,
@@ -549,7 +549,7 @@
     "tags": "NonNull, ContainerOf, Invariant, RefTransfer, NonZero",
     "source_path": "drm/device.rs",
     "source_line": 325,
-    "api_link": "https://github.com/Rust-for-Linux/linux/blob/1200d84f4c0a929a0780180d25063d93773be79c/rust/kernel/drm/device.rs#L325"
+    "api_link": "https://github.com/Rust-for-Linux/linux/blob/bd5f485f3f026225b86573e559af0b7254ef4184/rust/kernel/drm/device.rs#L325"
   },
   {
     "index": 47,
@@ -561,7 +561,7 @@
     "tags": "ValidPtr, Valid",
     "source_path": "drm/file.rs",
     "source_line": 39,
-    "api_link": "https://github.com/Rust-for-Linux/linux/blob/1200d84f4c0a929a0780180d25063d93773be79c/rust/kernel/drm/file.rs#L39"
+    "api_link": "https://github.com/Rust-for-Linux/linux/blob/bd5f485f3f026225b86573e559af0b7254ef4184/rust/kernel/drm/file.rs#L39"
   },
   {
     "index": 48,
@@ -573,7 +573,7 @@
     "tags": "Alive",
     "source_path": "drm/gpuvm/mod.rs",
     "source_line": 174,
-    "api_link": "https://github.com/Rust-for-Linux/linux/blob/1200d84f4c0a929a0780180d25063d93773be79c/rust/kernel/drm/gpuvm/mod.rs#L174"
+    "api_link": "https://github.com/Rust-for-Linux/linux/blob/bd5f485f3f026225b86573e559af0b7254ef4184/rust/kernel/drm/gpuvm/mod.rs#L174"
   },
   {
     "index": 49,
@@ -585,7 +585,7 @@
     "tags": "Assoc",
     "source_path": "drm/gpuvm/va.rs",
     "source_line": 42,
-    "api_link": "https://github.com/Rust-for-Linux/linux/blob/1200d84f4c0a929a0780180d25063d93773be79c/rust/kernel/drm/gpuvm/va.rs#L42"
+    "api_link": "https://github.com/Rust-for-Linux/linux/blob/bd5f485f3f026225b86573e559af0b7254ef4184/rust/kernel/drm/gpuvm/va.rs#L42"
   },
   {
     "index": 50,
@@ -597,7 +597,7 @@
     "tags": "NonData_race, CurThread",
     "source_path": "fs/file.rs",
     "source_line": 306,
-    "api_link": "https://github.com/Rust-for-Linux/linux/blob/1200d84f4c0a929a0780180d25063d93773be79c/rust/kernel/fs/file.rs#L306"
+    "api_link": "https://github.com/Rust-for-Linux/linux/blob/bd5f485f3f026225b86573e559af0b7254ef4184/rust/kernel/fs/file.rs#L306"
   },
   {
     "index": 51,
@@ -609,7 +609,7 @@
     "tags": "ValidPtr, Valid, RefTransfer, CurThread",
     "source_path": "fs/file.rs",
     "source_line": 283,
-    "api_link": "https://github.com/Rust-for-Linux/linux/blob/1200d84f4c0a929a0780180d25063d93773be79c/rust/kernel/fs/file.rs#L283"
+    "api_link": "https://github.com/Rust-for-Linux/linux/blob/bd5f485f3f026225b86573e559af0b7254ef4184/rust/kernel/fs/file.rs#L283"
   },
   {
     "index": 52,
@@ -621,7 +621,7 @@
     "tags": "ValidPtr, Valid, RefTransfer",
     "source_path": "fs/file.rs",
     "source_line": 357,
-    "api_link": "https://github.com/Rust-for-Linux/linux/blob/1200d84f4c0a929a0780180d25063d93773be79c/rust/kernel/fs/file.rs#L357"
+    "api_link": "https://github.com/Rust-for-Linux/linux/blob/bd5f485f3f026225b86573e559af0b7254ef4184/rust/kernel/fs/file.rs#L357"
   },
   {
     "index": 53,
@@ -633,7 +633,7 @@
     "tags": "",
     "source_path": "fs/kiocb.rs",
     "source_line": 35,
-    "api_link": "https://github.com/Rust-for-Linux/linux/blob/1200d84f4c0a929a0780180d25063d93773be79c/rust/kernel/fs/kiocb.rs#L35"
+    "api_link": "https://github.com/Rust-for-Linux/linux/blob/bd5f485f3f026225b86573e559af0b7254ef4184/rust/kernel/fs/kiocb.rs#L35"
   },
   {
     "index": 54,
@@ -645,7 +645,7 @@
     "tags": "ValidPtr, Valid, Alive, NonMutate",
     "source_path": "interop/list.rs",
     "source_line": 132,
-    "api_link": "https://github.com/Rust-for-Linux/linux/blob/1200d84f4c0a929a0780180d25063d93773be79c/rust/kernel/interop/list.rs#L132"
+    "api_link": "https://github.com/Rust-for-Linux/linux/blob/bd5f485f3f026225b86573e559af0b7254ef4184/rust/kernel/interop/list.rs#L132"
   },
   {
     "index": 55,
@@ -657,10 +657,22 @@
     "tags": "ValidPtr, Valid, Alive, ContainerOf",
     "source_path": "interop/list.rs",
     "source_line": 253,
-    "api_link": "https://github.com/Rust-for-Linux/linux/blob/1200d84f4c0a929a0780180d25063d93773be79c/rust/kernel/interop/list.rs#L253"
+    "api_link": "https://github.com/Rust-for-Linux/linux/blob/bd5f485f3f026225b86573e559af0b7254ef4184/rust/kernel/interop/list.rs#L253"
   },
   {
     "index": 56,
+    "module_path": "crate::interrupt",
+    "api_name": "assume_disabled",
+    "item_type": "method",
+    "full_doc": "Assume that local processor interrupts are disabled on preemptible kernels.\n\nThis can be used for annotating code that is known to be run in contexts where local\nprocessor interrupts are disabled on preemptible kernels. It makes no changes to the local\ninterrupt state on its own.\n\n# Safety\n\nFor the whole life `'a`, local interrupts must be disabled on preemptible kernels. This\ncould be a context like, for example, an interrupt handler.",
+    "safety_doc": "# Safety\n\nFor the whole life `'a`, local interrupts must be disabled on preemptible kernels. This\ncould be a context like, for example, an interrupt handler.",
+    "tags": "",
+    "source_path": "interrupt.rs",
+    "source_line": 80,
+    "api_link": "https://github.com/Rust-for-Linux/linux/blob/bd5f485f3f026225b86573e559af0b7254ef4184/rust/kernel/interrupt.rs#L80"
+  },
+  {
+    "index": 57,
     "module_path": "crate::io",
     "api_name": "from_raw",
     "item_type": "method",
@@ -669,10 +681,10 @@
     "tags": "",
     "source_path": "io.rs",
     "source_line": 787,
-    "api_link": "https://github.com/Rust-for-Linux/linux/blob/1200d84f4c0a929a0780180d25063d93773be79c/rust/kernel/io.rs#L787"
+    "api_link": "https://github.com/Rust-for-Linux/linux/blob/bd5f485f3f026225b86573e559af0b7254ef4184/rust/kernel/io.rs#L787"
   },
   {
-    "index": 57,
+    "index": 58,
     "module_path": "crate::iommu::pgtable",
     "api_name": "map_pages",
     "item_type": "method",
@@ -681,10 +693,10 @@
     "tags": "NonZero, CanFail",
     "source_path": "iommu/pgtable.rs",
     "source_line": 166,
-    "api_link": "https://github.com/Rust-for-Linux/linux/blob/1200d84f4c0a929a0780180d25063d93773be79c/rust/kernel/iommu/pgtable.rs#L166"
+    "api_link": "https://github.com/Rust-for-Linux/linux/blob/bd5f485f3f026225b86573e559af0b7254ef4184/rust/kernel/iommu/pgtable.rs#L166"
   },
   {
-    "index": 58,
+    "index": 59,
     "module_path": "crate::iommu::pgtable",
     "api_name": "new_raw",
     "item_type": "method",
@@ -693,10 +705,10 @@
     "tags": "NonDropped",
     "source_path": "iommu/pgtable.rs",
     "source_line": 96,
-    "api_link": "https://github.com/Rust-for-Linux/linux/blob/1200d84f4c0a929a0780180d25063d93773be79c/rust/kernel/iommu/pgtable.rs#L96"
+    "api_link": "https://github.com/Rust-for-Linux/linux/blob/bd5f485f3f026225b86573e559af0b7254ef4184/rust/kernel/iommu/pgtable.rs#L96"
   },
   {
-    "index": 59,
+    "index": 60,
     "module_path": "crate::iommu::pgtable",
     "api_name": "ttbr",
     "item_type": "method",
@@ -705,10 +717,10 @@
     "tags": "",
     "source_path": "iommu/pgtable.rs",
     "source_line": 268,
-    "api_link": "https://github.com/Rust-for-Linux/linux/blob/1200d84f4c0a929a0780180d25063d93773be79c/rust/kernel/iommu/pgtable.rs#L268"
+    "api_link": "https://github.com/Rust-for-Linux/linux/blob/bd5f485f3f026225b86573e559af0b7254ef4184/rust/kernel/iommu/pgtable.rs#L268"
   },
   {
-    "index": 60,
+    "index": 61,
     "module_path": "crate::iommu::pgtable",
     "api_name": "unmap_pages",
     "item_type": "method",
@@ -717,10 +729,10 @@
     "tags": "",
     "source_path": "iommu/pgtable.rs",
     "source_line": 210,
-    "api_link": "https://github.com/Rust-for-Linux/linux/blob/1200d84f4c0a929a0780180d25063d93773be79c/rust/kernel/iommu/pgtable.rs#L210"
+    "api_link": "https://github.com/Rust-for-Linux/linux/blob/bd5f485f3f026225b86573e559af0b7254ef4184/rust/kernel/iommu/pgtable.rs#L210"
   },
   {
-    "index": 61,
+    "index": 62,
     "module_path": "crate::iov",
     "api_name": "from_raw",
     "item_type": "method",
@@ -729,10 +741,10 @@
     "tags": "ValidRead",
     "source_path": "iov.rs",
     "source_line": 63,
-    "api_link": "https://github.com/Rust-for-Linux/linux/blob/1200d84f4c0a929a0780180d25063d93773be79c/rust/kernel/iov.rs#L63"
+    "api_link": "https://github.com/Rust-for-Linux/linux/blob/bd5f485f3f026225b86573e559af0b7254ef4184/rust/kernel/iov.rs#L63"
   },
   {
-    "index": 62,
+    "index": 63,
     "module_path": "crate::iov",
     "api_name": "from_raw",
     "item_type": "method",
@@ -741,19 +753,7 @@
     "tags": "ValidWrite",
     "source_path": "iov.rs",
     "source_line": 214,
-    "api_link": "https://github.com/Rust-for-Linux/linux/blob/1200d84f4c0a929a0780180d25063d93773be79c/rust/kernel/iov.rs#L214"
-  },
-  {
-    "index": 63,
-    "module_path": "crate::iov",
-    "api_name": "revert",
-    "item_type": "method",
-    "full_doc": "Advance this IO vector backwards by `bytes` bytes.\n\n# Safety\n\nThe IO vector must not be reverted to before its beginning.",
-    "safety_doc": "# Safety\n\nThe IO vector must not be reverted to before its beginning.",
-    "tags": "",
-    "source_path": "iov.rs",
-    "source_line": 119,
-    "api_link": "https://github.com/Rust-for-Linux/linux/blob/1200d84f4c0a929a0780180d25063d93773be79c/rust/kernel/iov.rs#L119"
+    "api_link": "https://github.com/Rust-for-Linux/linux/blob/bd5f485f3f026225b86573e559af0b7254ef4184/rust/kernel/iov.rs#L214"
   },
   {
     "index": 64,
@@ -764,11 +764,23 @@
     "safety_doc": "# Safety\n\nThe IO vector must not be reverted to before its beginning.",
     "tags": "",
     "source_path": "iov.rs",
-    "source_line": 270,
-    "api_link": "https://github.com/Rust-for-Linux/linux/blob/1200d84f4c0a929a0780180d25063d93773be79c/rust/kernel/iov.rs#L270"
+    "source_line": 119,
+    "api_link": "https://github.com/Rust-for-Linux/linux/blob/bd5f485f3f026225b86573e559af0b7254ef4184/rust/kernel/iov.rs#L119"
   },
   {
     "index": 65,
+    "module_path": "crate::iov",
+    "api_name": "revert",
+    "item_type": "method",
+    "full_doc": "Advance this IO vector backwards by `bytes` bytes.\n\n# Safety\n\nThe IO vector must not be reverted to before its beginning.",
+    "safety_doc": "# Safety\n\nThe IO vector must not be reverted to before its beginning.",
+    "tags": "",
+    "source_path": "iov.rs",
+    "source_line": 270,
+    "api_link": "https://github.com/Rust-for-Linux/linux/blob/bd5f485f3f026225b86573e559af0b7254ef4184/rust/kernel/iov.rs#L270"
+  },
+  {
+    "index": 66,
     "module_path": "crate::list",
     "api_name": "raw_get_self_ptr",
     "item_type": "method",
@@ -777,10 +789,10 @@
     "tags": "Valid",
     "source_path": "list.rs",
     "source_line": 476,
-    "api_link": "https://github.com/Rust-for-Linux/linux/blob/1200d84f4c0a929a0780180d25063d93773be79c/rust/kernel/list.rs#L476"
+    "api_link": "https://github.com/Rust-for-Linux/linux/blob/bd5f485f3f026225b86573e559af0b7254ef4184/rust/kernel/list.rs#L476"
   },
   {
-    "index": 66,
+    "index": 67,
     "module_path": "crate::list",
     "api_name": "remove",
     "item_type": "method",
@@ -789,10 +801,10 @@
     "tags": "",
     "source_path": "list.rs",
     "source_line": 601,
-    "api_link": "https://github.com/Rust-for-Linux/linux/blob/1200d84f4c0a929a0780180d25063d93773be79c/rust/kernel/list.rs#L601"
+    "api_link": "https://github.com/Rust-for-Linux/linux/blob/bd5f485f3f026225b86573e559af0b7254ef4184/rust/kernel/list.rs#L601"
   },
   {
-    "index": 67,
+    "index": 68,
     "module_path": "crate::list",
     "api_name": "ListItem",
     "item_type": "trait",
@@ -801,10 +813,10 @@
     "tags": "",
     "source_path": "list.rs",
     "source_line": 309,
-    "api_link": "https://github.com/Rust-for-Linux/linux/blob/1200d84f4c0a929a0780180d25063d93773be79c/rust/kernel/list.rs#L309"
+    "api_link": "https://github.com/Rust-for-Linux/linux/blob/bd5f485f3f026225b86573e559af0b7254ef4184/rust/kernel/list.rs#L309"
   },
   {
-    "index": 68,
+    "index": 69,
     "module_path": "crate::list",
     "api_name": "ListItem::post_remove",
     "item_type": "trait_method",
@@ -813,10 +825,10 @@
     "tags": "OriginateFrom",
     "source_path": "list.rs",
     "source_line": 371,
-    "api_link": "https://github.com/Rust-for-Linux/linux/blob/1200d84f4c0a929a0780180d25063d93773be79c/rust/kernel/list.rs#L371"
+    "api_link": "https://github.com/Rust-for-Linux/linux/blob/bd5f485f3f026225b86573e559af0b7254ef4184/rust/kernel/list.rs#L371"
   },
   {
-    "index": 69,
+    "index": 70,
     "module_path": "crate::list",
     "api_name": "ListItem::prepare_to_insert",
     "item_type": "trait_method",
@@ -825,10 +837,10 @@
     "tags": "Valid, Owning, XorAccess",
     "source_path": "list.rs",
     "source_line": 359,
-    "api_link": "https://github.com/Rust-for-Linux/linux/blob/1200d84f4c0a929a0780180d25063d93773be79c/rust/kernel/list.rs#L359"
+    "api_link": "https://github.com/Rust-for-Linux/linux/blob/bd5f485f3f026225b86573e559af0b7254ef4184/rust/kernel/list.rs#L359"
   },
   {
-    "index": 70,
+    "index": 71,
     "module_path": "crate::list",
     "api_name": "ListItem::view_links",
     "item_type": "trait_method",
@@ -837,10 +849,10 @@
     "tags": "Valid",
     "source_path": "list.rs",
     "source_line": 323,
-    "api_link": "https://github.com/Rust-for-Linux/linux/blob/1200d84f4c0a929a0780180d25063d93773be79c/rust/kernel/list.rs#L323"
+    "api_link": "https://github.com/Rust-for-Linux/linux/blob/bd5f485f3f026225b86573e559af0b7254ef4184/rust/kernel/list.rs#L323"
   },
   {
-    "index": 71,
+    "index": 72,
     "module_path": "crate::list",
     "api_name": "ListItem::view_value",
     "item_type": "trait_method",
@@ -849,10 +861,10 @@
     "tags": "CallOnce, OriginateFrom",
     "source_path": "list.rs",
     "source_line": 341,
-    "api_link": "https://github.com/Rust-for-Linux/linux/blob/1200d84f4c0a929a0780180d25063d93773be79c/rust/kernel/list.rs#L341"
+    "api_link": "https://github.com/Rust-for-Linux/linux/blob/bd5f485f3f026225b86573e559af0b7254ef4184/rust/kernel/list.rs#L341"
   },
   {
-    "index": 72,
+    "index": 73,
     "module_path": "crate::list::arc",
     "api_name": "from_raw",
     "item_type": "method",
@@ -861,10 +873,10 @@
     "tags": "Owning",
     "source_path": "list/arc.rs",
     "source_line": 362,
-    "api_link": "https://github.com/Rust-for-Linux/linux/blob/1200d84f4c0a929a0780180d25063d93773be79c/rust/kernel/list/arc.rs#L362"
+    "api_link": "https://github.com/Rust-for-Linux/linux/blob/bd5f485f3f026225b86573e559af0b7254ef4184/rust/kernel/list/arc.rs#L362"
   },
   {
-    "index": 73,
+    "index": 74,
     "module_path": "crate::list::arc",
     "api_name": "TryNewListArc",
     "item_type": "trait",
@@ -873,10 +885,10 @@
     "tags": "",
     "source_path": "list/arc.rs",
     "source_line": 57,
-    "api_link": "https://github.com/Rust-for-Linux/linux/blob/1200d84f4c0a929a0780180d25063d93773be79c/rust/kernel/list/arc.rs#L57"
+    "api_link": "https://github.com/Rust-for-Linux/linux/blob/bd5f485f3f026225b86573e559af0b7254ef4184/rust/kernel/list/arc.rs#L57"
   },
   {
-    "index": 74,
+    "index": 75,
     "module_path": "crate::list::arc_field",
     "api_name": "assert_mut",
     "item_type": "method",
@@ -885,10 +897,10 @@
     "tags": "",
     "source_path": "list/arc_field.rs",
     "source_line": 60,
-    "api_link": "https://github.com/Rust-for-Linux/linux/blob/1200d84f4c0a929a0780180d25063d93773be79c/rust/kernel/list/arc_field.rs#L60"
+    "api_link": "https://github.com/Rust-for-Linux/linux/blob/bd5f485f3f026225b86573e559af0b7254ef4184/rust/kernel/list/arc_field.rs#L60"
   },
   {
-    "index": 75,
+    "index": 76,
     "module_path": "crate::list::arc_field",
     "api_name": "assert_ref",
     "item_type": "method",
@@ -897,10 +909,10 @@
     "tags": "",
     "source_path": "list/arc_field.rs",
     "source_line": 47,
-    "api_link": "https://github.com/Rust-for-Linux/linux/blob/1200d84f4c0a929a0780180d25063d93773be79c/rust/kernel/list/arc_field.rs#L47"
+    "api_link": "https://github.com/Rust-for-Linux/linux/blob/bd5f485f3f026225b86573e559af0b7254ef4184/rust/kernel/list/arc_field.rs#L47"
   },
   {
-    "index": 76,
+    "index": 77,
     "module_path": "crate::list::impl_list_item_mod",
     "api_name": "HasListLinks",
     "item_type": "trait",
@@ -909,10 +921,10 @@
     "tags": "",
     "source_path": "list/impl_list_item_mod.rs",
     "source_line": 19,
-    "api_link": "https://github.com/Rust-for-Linux/linux/blob/1200d84f4c0a929a0780180d25063d93773be79c/rust/kernel/list/impl_list_item_mod.rs#L19"
+    "api_link": "https://github.com/Rust-for-Linux/linux/blob/bd5f485f3f026225b86573e559af0b7254ef4184/rust/kernel/list/impl_list_item_mod.rs#L19"
   },
   {
-    "index": 77,
+    "index": 78,
     "module_path": "crate::list::impl_list_item_mod",
     "api_name": "HasSelfPtr",
     "item_type": "trait",
@@ -921,10 +933,10 @@
     "tags": "",
     "source_path": "list/impl_list_item_mod.rs",
     "source_line": 70,
-    "api_link": "https://github.com/Rust-for-Linux/linux/blob/1200d84f4c0a929a0780180d25063d93773be79c/rust/kernel/list/impl_list_item_mod.rs#L70"
+    "api_link": "https://github.com/Rust-for-Linux/linux/blob/bd5f485f3f026225b86573e559af0b7254ef4184/rust/kernel/list/impl_list_item_mod.rs#L70"
   },
   {
-    "index": 78,
+    "index": 79,
     "module_path": "crate::list::impl_list_item_mod",
     "api_name": "HasListLinks::raw_get_list_links",
     "item_type": "trait_method",
@@ -933,10 +945,10 @@
     "tags": "Valid",
     "source_path": "list/impl_list_item_mod.rs",
     "source_line": 27,
-    "api_link": "https://github.com/Rust-for-Linux/linux/blob/1200d84f4c0a929a0780180d25063d93773be79c/rust/kernel/list/impl_list_item_mod.rs#L27"
+    "api_link": "https://github.com/Rust-for-Linux/linux/blob/bd5f485f3f026225b86573e559af0b7254ef4184/rust/kernel/list/impl_list_item_mod.rs#L27"
   },
   {
-    "index": 79,
+    "index": 80,
     "module_path": "crate::mm",
     "api_name": "from_raw",
     "item_type": "method",
@@ -945,10 +957,10 @@
     "tags": "",
     "source_path": "mm.rs",
     "source_line": 133,
-    "api_link": "https://github.com/Rust-for-Linux/linux/blob/1200d84f4c0a929a0780180d25063d93773be79c/rust/kernel/mm.rs#L133"
+    "api_link": "https://github.com/Rust-for-Linux/linux/blob/bd5f485f3f026225b86573e559af0b7254ef4184/rust/kernel/mm.rs#L133"
   },
   {
-    "index": 80,
+    "index": 81,
     "module_path": "crate::mm",
     "api_name": "from_raw",
     "item_type": "method",
@@ -957,10 +969,10 @@
     "tags": "NonZero",
     "source_path": "mm.rs",
     "source_line": 163,
-    "api_link": "https://github.com/Rust-for-Linux/linux/blob/1200d84f4c0a929a0780180d25063d93773be79c/rust/kernel/mm.rs#L163"
+    "api_link": "https://github.com/Rust-for-Linux/linux/blob/bd5f485f3f026225b86573e559af0b7254ef4184/rust/kernel/mm.rs#L163"
   },
   {
-    "index": 81,
+    "index": 82,
     "module_path": "crate::mm::virt",
     "api_name": "from_raw",
     "item_type": "method",
@@ -969,10 +981,10 @@
     "tags": "Alive",
     "source_path": "mm/virt.rs",
     "source_line": 49,
-    "api_link": "https://github.com/Rust-for-Linux/linux/blob/1200d84f4c0a929a0780180d25063d93773be79c/rust/kernel/mm/virt.rs#L49"
+    "api_link": "https://github.com/Rust-for-Linux/linux/blob/bd5f485f3f026225b86573e559af0b7254ef4184/rust/kernel/mm/virt.rs#L49"
   },
   {
-    "index": 82,
+    "index": 83,
     "module_path": "crate::mm::virt",
     "api_name": "from_raw",
     "item_type": "method",
@@ -981,10 +993,10 @@
     "tags": "Alive, FlagSet",
     "source_path": "mm/virt.rs",
     "source_line": 183,
-    "api_link": "https://github.com/Rust-for-Linux/linux/blob/1200d84f4c0a929a0780180d25063d93773be79c/rust/kernel/mm/virt.rs#L183"
+    "api_link": "https://github.com/Rust-for-Linux/linux/blob/bd5f485f3f026225b86573e559af0b7254ef4184/rust/kernel/mm/virt.rs#L183"
   },
   {
-    "index": 83,
+    "index": 84,
     "module_path": "crate::mm::virt",
     "api_name": "from_raw",
     "item_type": "method",
@@ -993,10 +1005,10 @@
     "tags": "",
     "source_path": "mm/virt.rs",
     "source_line": 232,
-    "api_link": "https://github.com/Rust-for-Linux/linux/blob/1200d84f4c0a929a0780180d25063d93773be79c/rust/kernel/mm/virt.rs#L232"
+    "api_link": "https://github.com/Rust-for-Linux/linux/blob/bd5f485f3f026225b86573e559af0b7254ef4184/rust/kernel/mm/virt.rs#L232"
   },
   {
-    "index": 84,
+    "index": 85,
     "module_path": "crate::opp",
     "api_name": "from_raw_opp",
     "item_type": "method",
@@ -1005,10 +1017,10 @@
     "tags": "ValidPtr, Valid, Alive, RefTransfer",
     "source_path": "opp.rs",
     "source_line": 1088,
-    "api_link": "https://github.com/Rust-for-Linux/linux/blob/1200d84f4c0a929a0780180d25063d93773be79c/rust/kernel/opp.rs#L1088"
+    "api_link": "https://github.com/Rust-for-Linux/linux/blob/bd5f485f3f026225b86573e559af0b7254ef4184/rust/kernel/opp.rs#L1088"
   },
   {
-    "index": 85,
+    "index": 86,
     "module_path": "crate::opp",
     "api_name": "from_raw_opp_owned",
     "item_type": "method",
@@ -1017,10 +1029,10 @@
     "tags": "ValidPtr, Valid, RefTransfer",
     "source_path": "opp.rs",
     "source_line": 1070,
-    "api_link": "https://github.com/Rust-for-Linux/linux/blob/1200d84f4c0a929a0780180d25063d93773be79c/rust/kernel/opp.rs#L1070"
+    "api_link": "https://github.com/Rust-for-Linux/linux/blob/bd5f485f3f026225b86573e559af0b7254ef4184/rust/kernel/opp.rs#L1070"
   },
   {
-    "index": 86,
+    "index": 87,
     "module_path": "crate::page",
     "api_name": "copy_from_user_slice_raw",
     "item_type": "method",
@@ -1029,10 +1041,10 @@
     "tags": "NonData_race, NonConcurrent",
     "source_path": "page.rs",
     "source_line": 361,
-    "api_link": "https://github.com/Rust-for-Linux/linux/blob/1200d84f4c0a929a0780180d25063d93773be79c/rust/kernel/page.rs#L361"
+    "api_link": "https://github.com/Rust-for-Linux/linux/blob/bd5f485f3f026225b86573e559af0b7254ef4184/rust/kernel/page.rs#L361"
   },
   {
-    "index": 87,
+    "index": 88,
     "module_path": "crate::page",
     "api_name": "fill_zero_raw",
     "item_type": "method",
@@ -1041,10 +1053,10 @@
     "tags": "NonConcurrent",
     "source_path": "page.rs",
     "source_line": 338,
-    "api_link": "https://github.com/Rust-for-Linux/linux/blob/1200d84f4c0a929a0780180d25063d93773be79c/rust/kernel/page.rs#L338"
+    "api_link": "https://github.com/Rust-for-Linux/linux/blob/bd5f485f3f026225b86573e559af0b7254ef4184/rust/kernel/page.rs#L338"
   },
   {
-    "index": 88,
+    "index": 89,
     "module_path": "crate::page",
     "api_name": "from_raw",
     "item_type": "method",
@@ -1053,10 +1065,10 @@
     "tags": "Valid, Alive",
     "source_path": "page.rs",
     "source_line": 119,
-    "api_link": "https://github.com/Rust-for-Linux/linux/blob/1200d84f4c0a929a0780180d25063d93773be79c/rust/kernel/page.rs#L119"
+    "api_link": "https://github.com/Rust-for-Linux/linux/blob/bd5f485f3f026225b86573e559af0b7254ef4184/rust/kernel/page.rs#L119"
   },
   {
-    "index": 89,
+    "index": 90,
     "module_path": "crate::page",
     "api_name": "read_raw",
     "item_type": "method",
@@ -1065,10 +1077,10 @@
     "tags": "ValidWrite, NonConcurrent",
     "source_path": "page.rs",
     "source_line": 296,
-    "api_link": "https://github.com/Rust-for-Linux/linux/blob/1200d84f4c0a929a0780180d25063d93773be79c/rust/kernel/page.rs#L296"
+    "api_link": "https://github.com/Rust-for-Linux/linux/blob/bd5f485f3f026225b86573e559af0b7254ef4184/rust/kernel/page.rs#L296"
   },
   {
-    "index": 90,
+    "index": 91,
     "module_path": "crate::page",
     "api_name": "write_raw",
     "item_type": "method",
@@ -1077,10 +1089,10 @@
     "tags": "ValidRead, NonConcurrent",
     "source_path": "page.rs",
     "source_line": 318,
-    "api_link": "https://github.com/Rust-for-Linux/linux/blob/1200d84f4c0a929a0780180d25063d93773be79c/rust/kernel/page.rs#L318"
+    "api_link": "https://github.com/Rust-for-Linux/linux/blob/bd5f485f3f026225b86573e559af0b7254ef4184/rust/kernel/page.rs#L318"
   },
   {
-    "index": 91,
+    "index": 92,
     "module_path": "crate::pid_namespace",
     "api_name": "from_ptr",
     "item_type": "method",
@@ -1089,10 +1101,10 @@
     "tags": "ValidPtr, Valid, Alive",
     "source_path": "pid_namespace.rs",
     "source_line": 36,
-    "api_link": "https://github.com/Rust-for-Linux/linux/blob/1200d84f4c0a929a0780180d25063d93773be79c/rust/kernel/pid_namespace.rs#L36"
+    "api_link": "https://github.com/Rust-for-Linux/linux/blob/bd5f485f3f026225b86573e559af0b7254ef4184/rust/kernel/pid_namespace.rs#L36"
   },
   {
-    "index": 92,
+    "index": 93,
     "module_path": "crate::print",
     "api_name": "call_printk",
     "item_type": "function",
@@ -1101,10 +1113,10 @@
     "tags": "ValidCStr",
     "source_path": "print.rs",
     "source_line": 105,
-    "api_link": "https://github.com/Rust-for-Linux/linux/blob/1200d84f4c0a929a0780180d25063d93773be79c/rust/kernel/print.rs#L105"
+    "api_link": "https://github.com/Rust-for-Linux/linux/blob/bd5f485f3f026225b86573e559af0b7254ef4184/rust/kernel/print.rs#L105"
   },
   {
-    "index": 93,
+    "index": 94,
     "module_path": "crate::ptr::projection",
     "api_name": "ProjectField",
     "item_type": "trait",
@@ -1113,10 +1125,10 @@
     "tags": "Allocated",
     "source_path": "ptr/projection.rs",
     "source_line": 195,
-    "api_link": "https://github.com/Rust-for-Linux/linux/blob/1200d84f4c0a929a0780180d25063d93773be79c/rust/kernel/ptr/projection.rs#L195"
+    "api_link": "https://github.com/Rust-for-Linux/linux/blob/bd5f485f3f026225b86573e559af0b7254ef4184/rust/kernel/ptr/projection.rs#L195"
   },
   {
-    "index": 94,
+    "index": 95,
     "module_path": "crate::ptr::projection",
     "api_name": "ProjectIndex",
     "item_type": "trait",
@@ -1125,10 +1137,10 @@
     "tags": "",
     "source_path": "ptr/projection.rs",
     "source_line": 39,
-    "api_link": "https://github.com/Rust-for-Linux/linux/blob/1200d84f4c0a929a0780180d25063d93773be79c/rust/kernel/ptr/projection.rs#L39"
+    "api_link": "https://github.com/Rust-for-Linux/linux/blob/bd5f485f3f026225b86573e559af0b7254ef4184/rust/kernel/ptr/projection.rs#L39"
   },
   {
-    "index": 95,
+    "index": 96,
     "module_path": "crate::ptr::projection",
     "api_name": "ProjectField::proj",
     "item_type": "trait_method",
@@ -1137,10 +1149,10 @@
     "tags": "Allocated, InBound",
     "source_path": "ptr/projection.rs",
     "source_line": 207,
-    "api_link": "https://github.com/Rust-for-Linux/linux/blob/1200d84f4c0a929a0780180d25063d93773be79c/rust/kernel/ptr/projection.rs#L207"
+    "api_link": "https://github.com/Rust-for-Linux/linux/blob/bd5f485f3f026225b86573e559af0b7254ef4184/rust/kernel/ptr/projection.rs#L207"
   },
   {
-    "index": 96,
+    "index": 97,
     "module_path": "crate::revocable",
     "api_name": "access",
     "item_type": "method",
@@ -1148,11 +1160,11 @@
     "safety_doc": "# Safety\n\nThe caller must ensure this [`Revocable`] instance hasn't been revoked and won't be revoked\nas long as the returned `&T` lives.",
     "tags": "",
     "source_path": "revocable.rs",
-    "source_line": 150,
-    "api_link": "https://github.com/Rust-for-Linux/linux/blob/1200d84f4c0a929a0780180d25063d93773be79c/rust/kernel/revocable.rs#L150"
+    "source_line": 159,
+    "api_link": "https://github.com/Rust-for-Linux/linux/blob/bd5f485f3f026225b86573e559af0b7254ef4184/rust/kernel/revocable.rs#L159"
   },
   {
-    "index": 97,
+    "index": 98,
     "module_path": "crate::revocable",
     "api_name": "revoke_nosync",
     "item_type": "method",
@@ -1160,11 +1172,11 @@
     "safety_doc": "# Safety\n\nCallers must ensure that there are no more concurrent users of the revocable object.",
     "tags": "NonConcurrent",
     "source_path": "revocable.rs",
-    "source_line": 187,
-    "api_link": "https://github.com/Rust-for-Linux/linux/blob/1200d84f4c0a929a0780180d25063d93773be79c/rust/kernel/revocable.rs#L187"
+    "source_line": 195,
+    "api_link": "https://github.com/Rust-for-Linux/linux/blob/bd5f485f3f026225b86573e559af0b7254ef4184/rust/kernel/revocable.rs#L195"
   },
   {
-    "index": 98,
+    "index": 99,
     "module_path": "crate::scatterlist",
     "api_name": "from_raw",
     "item_type": "method",
@@ -1173,10 +1185,10 @@
     "tags": "",
     "source_path": "scatterlist.rs",
     "source_line": 145,
-    "api_link": "https://github.com/Rust-for-Linux/linux/blob/1200d84f4c0a929a0780180d25063d93773be79c/rust/kernel/scatterlist.rs#L145"
+    "api_link": "https://github.com/Rust-for-Linux/linux/blob/bd5f485f3f026225b86573e559af0b7254ef4184/rust/kernel/scatterlist.rs#L145"
   },
   {
-    "index": 99,
+    "index": 100,
     "module_path": "crate::seq_file",
     "api_name": "from_raw",
     "item_type": "method",
@@ -1185,10 +1197,10 @@
     "tags": "",
     "source_path": "seq_file.rs",
     "source_line": 24,
-    "api_link": "https://github.com/Rust-for-Linux/linux/blob/1200d84f4c0a929a0780180d25063d93773be79c/rust/kernel/seq_file.rs#L24"
+    "api_link": "https://github.com/Rust-for-Linux/linux/blob/bd5f485f3f026225b86573e559af0b7254ef4184/rust/kernel/seq_file.rs#L24"
   },
   {
-    "index": 100,
+    "index": 101,
     "module_path": "crate::sync::arc",
     "api_name": "assume_init",
     "item_type": "method",
@@ -1197,10 +1209,10 @@
     "tags": "Init",
     "source_path": "sync/arc.rs",
     "source_line": 785,
-    "api_link": "https://github.com/Rust-for-Linux/linux/blob/1200d84f4c0a929a0780180d25063d93773be79c/rust/kernel/sync/arc.rs#L785"
+    "api_link": "https://github.com/Rust-for-Linux/linux/blob/bd5f485f3f026225b86573e559af0b7254ef4184/rust/kernel/sync/arc.rs#L785"
   },
   {
-    "index": 101,
+    "index": 102,
     "module_path": "crate::sync::arc",
     "api_name": "from_raw",
     "item_type": "method",
@@ -1209,10 +1221,10 @@
     "tags": "OriginateFrom, Forgotten",
     "source_path": "sync/arc.rs",
     "source_line": 279,
-    "api_link": "https://github.com/Rust-for-Linux/linux/blob/1200d84f4c0a929a0780180d25063d93773be79c/rust/kernel/sync/arc.rs#L279"
+    "api_link": "https://github.com/Rust-for-Linux/linux/blob/bd5f485f3f026225b86573e559af0b7254ef4184/rust/kernel/sync/arc.rs#L279"
   },
   {
-    "index": 102,
+    "index": 103,
     "module_path": "crate::sync::arc",
     "api_name": "from_raw",
     "item_type": "method",
@@ -1221,10 +1233,10 @@
     "tags": "RefTransfer, OriginateFrom, Forgotten",
     "source_path": "sync/arc.rs",
     "source_line": 581,
-    "api_link": "https://github.com/Rust-for-Linux/linux/blob/1200d84f4c0a929a0780180d25063d93773be79c/rust/kernel/sync/arc.rs#L581"
+    "api_link": "https://github.com/Rust-for-Linux/linux/blob/bd5f485f3f026225b86573e559af0b7254ef4184/rust/kernel/sync/arc.rs#L581"
   },
   {
-    "index": 103,
+    "index": 104,
     "module_path": "crate::sync::aref",
     "api_name": "from_raw",
     "item_type": "method",
@@ -1233,10 +1245,10 @@
     "tags": "RefTransfer",
     "source_path": "sync/aref.rs",
     "source_line": 110,
-    "api_link": "https://github.com/Rust-for-Linux/linux/blob/1200d84f4c0a929a0780180d25063d93773be79c/rust/kernel/sync/aref.rs#L110"
+    "api_link": "https://github.com/Rust-for-Linux/linux/blob/bd5f485f3f026225b86573e559af0b7254ef4184/rust/kernel/sync/aref.rs#L110"
   },
   {
-    "index": 104,
+    "index": 105,
     "module_path": "crate::sync::aref",
     "api_name": "AlwaysRefCounted",
     "item_type": "trait",
@@ -1245,10 +1257,10 @@
     "tags": "RefTransfer",
     "source_path": "sync/aref.rs",
     "source_line": 50,
-    "api_link": "https://github.com/Rust-for-Linux/linux/blob/1200d84f4c0a929a0780180d25063d93773be79c/rust/kernel/sync/aref.rs#L50"
+    "api_link": "https://github.com/Rust-for-Linux/linux/blob/bd5f485f3f026225b86573e559af0b7254ef4184/rust/kernel/sync/aref.rs#L50"
   },
   {
-    "index": 105,
+    "index": 106,
     "module_path": "crate::sync::aref",
     "api_name": "AlwaysRefCounted::dec_ref",
     "item_type": "trait_method",
@@ -1257,10 +1269,10 @@
     "tags": "RefTransfer",
     "source_path": "sync/aref.rs",
     "source_line": 65,
-    "api_link": "https://github.com/Rust-for-Linux/linux/blob/1200d84f4c0a929a0780180d25063d93773be79c/rust/kernel/sync/aref.rs#L65"
+    "api_link": "https://github.com/Rust-for-Linux/linux/blob/bd5f485f3f026225b86573e559af0b7254ef4184/rust/kernel/sync/aref.rs#L65"
   },
   {
-    "index": 106,
+    "index": 107,
     "module_path": "crate::sync::atomic",
     "api_name": "atomic_load",
     "item_type": "function",
@@ -1269,10 +1281,10 @@
     "tags": "Align, ValidPtr, Valid",
     "source_path": "sync/atomic.rs",
     "source_line": 762,
-    "api_link": "https://github.com/Rust-for-Linux/linux/blob/1200d84f4c0a929a0780180d25063d93773be79c/rust/kernel/sync/atomic.rs#L762"
+    "api_link": "https://github.com/Rust-for-Linux/linux/blob/bd5f485f3f026225b86573e559af0b7254ef4184/rust/kernel/sync/atomic.rs#L762"
   },
   {
-    "index": 107,
+    "index": 108,
     "module_path": "crate::sync::atomic",
     "api_name": "atomic_store",
     "item_type": "function",
@@ -1281,10 +1293,10 @@
     "tags": "Align, ValidPtr, Valid, NonConcurrent",
     "source_path": "sync/atomic.rs",
     "source_line": 789,
-    "api_link": "https://github.com/Rust-for-Linux/linux/blob/1200d84f4c0a929a0780180d25063d93773be79c/rust/kernel/sync/atomic.rs#L789"
+    "api_link": "https://github.com/Rust-for-Linux/linux/blob/bd5f485f3f026225b86573e559af0b7254ef4184/rust/kernel/sync/atomic.rs#L789"
   },
   {
-    "index": 108,
+    "index": 109,
     "module_path": "crate::sync::atomic",
     "api_name": "cmpxchg",
     "item_type": "function",
@@ -1293,10 +1305,10 @@
     "tags": "Align, ValidPtr, Valid, NonConcurrent",
     "source_path": "sync/atomic.rs",
     "source_line": 837,
-    "api_link": "https://github.com/Rust-for-Linux/linux/blob/1200d84f4c0a929a0780180d25063d93773be79c/rust/kernel/sync/atomic.rs#L837"
+    "api_link": "https://github.com/Rust-for-Linux/linux/blob/bd5f485f3f026225b86573e559af0b7254ef4184/rust/kernel/sync/atomic.rs#L837"
   },
   {
-    "index": 109,
+    "index": 110,
     "module_path": "crate::sync::atomic",
     "api_name": "xchg",
     "item_type": "function",
@@ -1305,10 +1317,10 @@
     "tags": "Align, ValidPtr, Valid, NonConcurrent",
     "source_path": "sync/atomic.rs",
     "source_line": 812,
-    "api_link": "https://github.com/Rust-for-Linux/linux/blob/1200d84f4c0a929a0780180d25063d93773be79c/rust/kernel/sync/atomic.rs#L812"
+    "api_link": "https://github.com/Rust-for-Linux/linux/blob/bd5f485f3f026225b86573e559af0b7254ef4184/rust/kernel/sync/atomic.rs#L812"
   },
   {
-    "index": 110,
+    "index": 111,
     "module_path": "crate::sync::atomic",
     "api_name": "from_ptr",
     "item_type": "method",
@@ -1317,10 +1329,10 @@
     "tags": "Align, InBound, ValidRead, ValidWrite, NonData_race, NonConcurrent",
     "source_path": "sync/atomic.rs",
     "source_line": 217,
-    "api_link": "https://github.com/Rust-for-Linux/linux/blob/1200d84f4c0a929a0780180d25063d93773be79c/rust/kernel/sync/atomic.rs#L217"
+    "api_link": "https://github.com/Rust-for-Linux/linux/blob/bd5f485f3f026225b86573e559af0b7254ef4184/rust/kernel/sync/atomic.rs#L217"
   },
   {
-    "index": 111,
+    "index": 112,
     "module_path": "crate::sync::atomic",
     "api_name": "AtomicAdd",
     "item_type": "trait",
@@ -1329,10 +1341,10 @@
     "tags": "",
     "source_path": "sync/atomic.rs",
     "source_line": 134,
-    "api_link": "https://github.com/Rust-for-Linux/linux/blob/1200d84f4c0a929a0780180d25063d93773be79c/rust/kernel/sync/atomic.rs#L134"
+    "api_link": "https://github.com/Rust-for-Linux/linux/blob/bd5f485f3f026225b86573e559af0b7254ef4184/rust/kernel/sync/atomic.rs#L134"
   },
   {
-    "index": 112,
+    "index": 113,
     "module_path": "crate::sync::atomic",
     "api_name": "AtomicType",
     "item_type": "trait",
@@ -1341,10 +1353,10 @@
     "tags": "NonNull",
     "source_path": "sync/atomic.rs",
     "source_line": 121,
-    "api_link": "https://github.com/Rust-for-Linux/linux/blob/1200d84f4c0a929a0780180d25063d93773be79c/rust/kernel/sync/atomic.rs#L121"
+    "api_link": "https://github.com/Rust-for-Linux/linux/blob/bd5f485f3f026225b86573e559af0b7254ef4184/rust/kernel/sync/atomic.rs#L121"
   },
   {
-    "index": 113,
+    "index": 114,
     "module_path": "crate::sync::lock",
     "api_name": "from_raw",
     "item_type": "method",
@@ -1353,10 +1365,10 @@
     "tags": "",
     "source_path": "sync/lock.rs",
     "source_line": 160,
-    "api_link": "https://github.com/Rust-for-Linux/linux/blob/1200d84f4c0a929a0780180d25063d93773be79c/rust/kernel/sync/lock.rs#L160"
+    "api_link": "https://github.com/Rust-for-Linux/linux/blob/bd5f485f3f026225b86573e559af0b7254ef4184/rust/kernel/sync/lock.rs#L160"
   },
   {
-    "index": 114,
+    "index": 115,
     "module_path": "crate::sync::lock",
     "api_name": "new",
     "item_type": "method",
@@ -1365,10 +1377,10 @@
     "tags": "",
     "source_path": "sync/lock.rs",
     "source_line": 314,
-    "api_link": "https://github.com/Rust-for-Linux/linux/blob/1200d84f4c0a929a0780180d25063d93773be79c/rust/kernel/sync/lock.rs#L314"
+    "api_link": "https://github.com/Rust-for-Linux/linux/blob/bd5f485f3f026225b86573e559af0b7254ef4184/rust/kernel/sync/lock.rs#L314"
   },
   {
-    "index": 115,
+    "index": 116,
     "module_path": "crate::sync::lock",
     "api_name": "Backend",
     "item_type": "trait",
@@ -1377,10 +1389,10 @@
     "tags": "",
     "source_path": "sync/lock.rs",
     "source_line": 37,
-    "api_link": "https://github.com/Rust-for-Linux/linux/blob/1200d84f4c0a929a0780180d25063d93773be79c/rust/kernel/sync/lock.rs#L37"
+    "api_link": "https://github.com/Rust-for-Linux/linux/blob/bd5f485f3f026225b86573e559af0b7254ef4184/rust/kernel/sync/lock.rs#L37"
   },
   {
-    "index": 116,
+    "index": 117,
     "module_path": "crate::sync::lock",
     "api_name": "Backend::assert_is_held",
     "item_type": "trait_method",
@@ -1389,10 +1401,10 @@
     "tags": "LockHold",
     "source_path": "sync/lock.rs",
     "source_line": 97,
-    "api_link": "https://github.com/Rust-for-Linux/linux/blob/1200d84f4c0a929a0780180d25063d93773be79c/rust/kernel/sync/lock.rs#L97"
+    "api_link": "https://github.com/Rust-for-Linux/linux/blob/bd5f485f3f026225b86573e559af0b7254ef4184/rust/kernel/sync/lock.rs#L97"
   },
   {
-    "index": 117,
+    "index": 118,
     "module_path": "crate::sync::lock",
     "api_name": "Backend::init",
     "item_type": "trait_method",
@@ -1401,10 +1413,10 @@
     "tags": "ValidRead, ValidWrite, Valid, Alive",
     "source_path": "sync/lock.rs",
     "source_line": 53,
-    "api_link": "https://github.com/Rust-for-Linux/linux/blob/1200d84f4c0a929a0780180d25063d93773be79c/rust/kernel/sync/lock.rs#L53"
+    "api_link": "https://github.com/Rust-for-Linux/linux/blob/bd5f485f3f026225b86573e559af0b7254ef4184/rust/kernel/sync/lock.rs#L53"
   },
   {
-    "index": 118,
+    "index": 119,
     "module_path": "crate::sync::lock",
     "api_name": "Backend::lock",
     "item_type": "trait_method",
@@ -1413,10 +1425,10 @@
     "tags": "",
     "source_path": "sync/lock.rs",
     "source_line": 65,
-    "api_link": "https://github.com/Rust-for-Linux/linux/blob/1200d84f4c0a929a0780180d25063d93773be79c/rust/kernel/sync/lock.rs#L65"
+    "api_link": "https://github.com/Rust-for-Linux/linux/blob/bd5f485f3f026225b86573e559af0b7254ef4184/rust/kernel/sync/lock.rs#L65"
   },
   {
-    "index": 119,
+    "index": 120,
     "module_path": "crate::sync::lock",
     "api_name": "Backend::relock",
     "item_type": "trait_method",
@@ -1425,10 +1437,10 @@
     "tags": "",
     "source_path": "sync/lock.rs",
     "source_line": 87,
-    "api_link": "https://github.com/Rust-for-Linux/linux/blob/1200d84f4c0a929a0780180d25063d93773be79c/rust/kernel/sync/lock.rs#L87"
+    "api_link": "https://github.com/Rust-for-Linux/linux/blob/bd5f485f3f026225b86573e559af0b7254ef4184/rust/kernel/sync/lock.rs#L87"
   },
   {
-    "index": 120,
+    "index": 121,
     "module_path": "crate::sync::lock",
     "api_name": "Backend::try_lock",
     "item_type": "trait_method",
@@ -1437,10 +1449,10 @@
     "tags": "",
     "source_path": "sync/lock.rs",
     "source_line": 72,
-    "api_link": "https://github.com/Rust-for-Linux/linux/blob/1200d84f4c0a929a0780180d25063d93773be79c/rust/kernel/sync/lock.rs#L72"
+    "api_link": "https://github.com/Rust-for-Linux/linux/blob/bd5f485f3f026225b86573e559af0b7254ef4184/rust/kernel/sync/lock.rs#L72"
   },
   {
-    "index": 121,
+    "index": 122,
     "module_path": "crate::sync::lock",
     "api_name": "Backend::unlock",
     "item_type": "trait_method",
@@ -1449,10 +1461,10 @@
     "tags": "",
     "source_path": "sync/lock.rs",
     "source_line": 79,
-    "api_link": "https://github.com/Rust-for-Linux/linux/blob/1200d84f4c0a929a0780180d25063d93773be79c/rust/kernel/sync/lock.rs#L79"
+    "api_link": "https://github.com/Rust-for-Linux/linux/blob/bd5f485f3f026225b86573e559af0b7254ef4184/rust/kernel/sync/lock.rs#L79"
   },
   {
-    "index": 122,
+    "index": 123,
     "module_path": "crate::sync::lock::global",
     "api_name": "init",
     "item_type": "method",
@@ -1461,10 +1473,10 @@
     "tags": "",
     "source_path": "sync/lock/global.rs",
     "source_line": 62,
-    "api_link": "https://github.com/Rust-for-Linux/linux/blob/1200d84f4c0a929a0780180d25063d93773be79c/rust/kernel/sync/lock/global.rs#L62"
+    "api_link": "https://github.com/Rust-for-Linux/linux/blob/bd5f485f3f026225b86573e559af0b7254ef4184/rust/kernel/sync/lock/global.rs#L62"
   },
   {
-    "index": 123,
+    "index": 124,
     "module_path": "crate::sync::poll",
     "api_name": "from_raw",
     "item_type": "method",
@@ -1472,11 +1484,11 @@
     "safety_doc": "# Safety\n\nThe pointer must be null or reference a valid `poll_table` for the duration of `'a`.",
     "tags": "ValidPtr, Valid",
     "source_path": "sync/poll.rs",
-    "source_line": 42,
-    "api_link": "https://github.com/Rust-for-Linux/linux/blob/1200d84f4c0a929a0780180d25063d93773be79c/rust/kernel/sync/poll.rs#L42"
+    "source_line": 46,
+    "api_link": "https://github.com/Rust-for-Linux/linux/blob/bd5f485f3f026225b86573e559af0b7254ef4184/rust/kernel/sync/poll.rs#L46"
   },
   {
-    "index": 124,
+    "index": 125,
     "module_path": "crate::task",
     "api_name": "current",
     "item_type": "method",
@@ -1485,10 +1497,10 @@
     "tags": "",
     "source_path": "task.rs",
     "source_line": 177,
-    "api_link": "https://github.com/Rust-for-Linux/linux/blob/1200d84f4c0a929a0780180d25063d93773be79c/rust/kernel/task.rs#L177"
+    "api_link": "https://github.com/Rust-for-Linux/linux/blob/bd5f485f3f026225b86573e559af0b7254ef4184/rust/kernel/task.rs#L177"
   },
   {
-    "index": 125,
+    "index": 126,
     "module_path": "crate::time",
     "api_name": "ClockSource",
     "item_type": "trait",
@@ -1497,10 +1509,10 @@
     "tags": "InBound",
     "source_path": "time.rs",
     "source_line": 69,
-    "api_link": "https://github.com/Rust-for-Linux/linux/blob/1200d84f4c0a929a0780180d25063d93773be79c/rust/kernel/time.rs#L69"
+    "api_link": "https://github.com/Rust-for-Linux/linux/blob/bd5f485f3f026225b86573e559af0b7254ef4184/rust/kernel/time.rs#L69"
   },
   {
-    "index": 126,
+    "index": 127,
     "module_path": "crate::time::hrtimer",
     "api_name": "HasHrTimer",
     "item_type": "trait",
@@ -1509,10 +1521,10 @@
     "tags": "",
     "source_path": "time/hrtimer.rs",
     "source_line": 766,
-    "api_link": "https://github.com/Rust-for-Linux/linux/blob/1200d84f4c0a929a0780180d25063d93773be79c/rust/kernel/time/hrtimer.rs#L766"
+    "api_link": "https://github.com/Rust-for-Linux/linux/blob/bd5f485f3f026225b86573e559af0b7254ef4184/rust/kernel/time/hrtimer.rs#L766"
   },
   {
-    "index": 127,
+    "index": 128,
     "module_path": "crate::time::hrtimer",
     "api_name": "HrTimerHandle",
     "item_type": "trait",
@@ -1521,10 +1533,10 @@
     "tags": "",
     "source_path": "time/hrtimer.rs",
     "source_line": 743,
-    "api_link": "https://github.com/Rust-for-Linux/linux/blob/1200d84f4c0a929a0780180d25063d93773be79c/rust/kernel/time/hrtimer.rs#L743"
+    "api_link": "https://github.com/Rust-for-Linux/linux/blob/bd5f485f3f026225b86573e559af0b7254ef4184/rust/kernel/time/hrtimer.rs#L743"
   },
   {
-    "index": 128,
+    "index": 129,
     "module_path": "crate::time::hrtimer",
     "api_name": "ScopedHrTimerPointer",
     "item_type": "trait",
@@ -1533,10 +1545,10 @@
     "tags": "",
     "source_path": "time/hrtimer.rs",
     "source_line": 660,
-    "api_link": "https://github.com/Rust-for-Linux/linux/blob/1200d84f4c0a929a0780180d25063d93773be79c/rust/kernel/time/hrtimer.rs#L660"
+    "api_link": "https://github.com/Rust-for-Linux/linux/blob/bd5f485f3f026225b86573e559af0b7254ef4184/rust/kernel/time/hrtimer.rs#L660"
   },
   {
-    "index": 129,
+    "index": 130,
     "module_path": "crate::time::hrtimer",
     "api_name": "UnsafeHrTimerPointer",
     "item_type": "trait",
@@ -1545,10 +1557,10 @@
     "tags": "",
     "source_path": "time/hrtimer.rs",
     "source_line": 629,
-    "api_link": "https://github.com/Rust-for-Linux/linux/blob/1200d84f4c0a929a0780180d25063d93773be79c/rust/kernel/time/hrtimer.rs#L629"
+    "api_link": "https://github.com/Rust-for-Linux/linux/blob/bd5f485f3f026225b86573e559af0b7254ef4184/rust/kernel/time/hrtimer.rs#L629"
   },
   {
-    "index": 130,
+    "index": 131,
     "module_path": "crate::time::hrtimer",
     "api_name": "HasHrTimer::c_timer_ptr",
     "item_type": "trait_method",
@@ -1557,10 +1569,10 @@
     "tags": "ValidPtr, Valid",
     "source_path": "time/hrtimer.rs",
     "source_line": 803,
-    "api_link": "https://github.com/Rust-for-Linux/linux/blob/1200d84f4c0a929a0780180d25063d93773be79c/rust/kernel/time/hrtimer.rs#L803"
+    "api_link": "https://github.com/Rust-for-Linux/linux/blob/bd5f485f3f026225b86573e559af0b7254ef4184/rust/kernel/time/hrtimer.rs#L803"
   },
   {
-    "index": 131,
+    "index": 132,
     "module_path": "crate::time::hrtimer",
     "api_name": "HasHrTimer::raw_get_timer",
     "item_type": "trait_method",
@@ -1569,10 +1581,10 @@
     "tags": "ValidPtr, Valid",
     "source_path": "time/hrtimer.rs",
     "source_line": 780,
-    "api_link": "https://github.com/Rust-for-Linux/linux/blob/1200d84f4c0a929a0780180d25063d93773be79c/rust/kernel/time/hrtimer.rs#L780"
+    "api_link": "https://github.com/Rust-for-Linux/linux/blob/bd5f485f3f026225b86573e559af0b7254ef4184/rust/kernel/time/hrtimer.rs#L780"
   },
   {
-    "index": 132,
+    "index": 133,
     "module_path": "crate::time::hrtimer",
     "api_name": "HasHrTimer::start",
     "item_type": "trait_method",
@@ -1581,10 +1593,10 @@
     "tags": "Valid",
     "source_path": "time/hrtimer.rs",
     "source_line": 819,
-    "api_link": "https://github.com/Rust-for-Linux/linux/blob/1200d84f4c0a929a0780180d25063d93773be79c/rust/kernel/time/hrtimer.rs#L819"
+    "api_link": "https://github.com/Rust-for-Linux/linux/blob/bd5f485f3f026225b86573e559af0b7254ef4184/rust/kernel/time/hrtimer.rs#L819"
   },
   {
-    "index": 133,
+    "index": 134,
     "module_path": "crate::time::hrtimer",
     "api_name": "HasHrTimer::timer_container_of",
     "item_type": "trait_method",
@@ -1593,10 +1605,10 @@
     "tags": "",
     "source_path": "time/hrtimer.rs",
     "source_line": 791,
-    "api_link": "https://github.com/Rust-for-Linux/linux/blob/1200d84f4c0a929a0780180d25063d93773be79c/rust/kernel/time/hrtimer.rs#L791"
+    "api_link": "https://github.com/Rust-for-Linux/linux/blob/bd5f485f3f026225b86573e559af0b7254ef4184/rust/kernel/time/hrtimer.rs#L791"
   },
   {
-    "index": 134,
+    "index": 135,
     "module_path": "crate::time::hrtimer",
     "api_name": "UnsafeHrTimerPointer::start",
     "item_type": "trait_method",
@@ -1605,10 +1617,10 @@
     "tags": "",
     "source_path": "time/hrtimer.rs",
     "source_line": 651,
-    "api_link": "https://github.com/Rust-for-Linux/linux/blob/1200d84f4c0a929a0780180d25063d93773be79c/rust/kernel/time/hrtimer.rs#L651"
+    "api_link": "https://github.com/Rust-for-Linux/linux/blob/bd5f485f3f026225b86573e559af0b7254ef4184/rust/kernel/time/hrtimer.rs#L651"
   },
   {
-    "index": 135,
+    "index": 136,
     "module_path": "crate::transmute",
     "api_name": "AsBytes",
     "item_type": "trait",
@@ -1617,10 +1629,10 @@
     "tags": "",
     "source_path": "transmute.rs",
     "source_line": 179,
-    "api_link": "https://github.com/Rust-for-Linux/linux/blob/1200d84f4c0a929a0780180d25063d93773be79c/rust/kernel/transmute.rs#L179"
+    "api_link": "https://github.com/Rust-for-Linux/linux/blob/bd5f485f3f026225b86573e559af0b7254ef4184/rust/kernel/transmute.rs#L179"
   },
   {
-    "index": 136,
+    "index": 137,
     "module_path": "crate::transmute",
     "api_name": "FromBytes",
     "item_type": "trait",
@@ -1629,10 +1641,10 @@
     "tags": "Valid",
     "source_path": "transmute.rs",
     "source_line": 38,
-    "api_link": "https://github.com/Rust-for-Linux/linux/blob/1200d84f4c0a929a0780180d25063d93773be79c/rust/kernel/transmute.rs#L38"
+    "api_link": "https://github.com/Rust-for-Linux/linux/blob/bd5f485f3f026225b86573e559af0b7254ef4184/rust/kernel/transmute.rs#L38"
   },
   {
-    "index": 137,
+    "index": 138,
     "module_path": "crate::types",
     "api_name": "ForeignOwnable",
     "item_type": "trait",
@@ -1641,10 +1653,10 @@
     "tags": "",
     "source_path": "types.rs",
     "source_line": 29,
-    "api_link": "https://github.com/Rust-for-Linux/linux/blob/1200d84f4c0a929a0780180d25063d93773be79c/rust/kernel/types.rs#L29"
+    "api_link": "https://github.com/Rust-for-Linux/linux/blob/bd5f485f3f026225b86573e559af0b7254ef4184/rust/kernel/types.rs#L29"
   },
   {
-    "index": 138,
+    "index": 139,
     "module_path": "crate::types",
     "api_name": "ForeignOwnable::borrow",
     "item_type": "trait_method",
@@ -1653,10 +1665,10 @@
     "tags": "OriginateFrom",
     "source_path": "types.rs",
     "source_line": 104,
-    "api_link": "https://github.com/Rust-for-Linux/linux/blob/1200d84f4c0a929a0780180d25063d93773be79c/rust/kernel/types.rs#L104"
+    "api_link": "https://github.com/Rust-for-Linux/linux/blob/bd5f485f3f026225b86573e559af0b7254ef4184/rust/kernel/types.rs#L104"
   },
   {
-    "index": 139,
+    "index": 140,
     "module_path": "crate::types",
     "api_name": "ForeignOwnable::borrow_mut",
     "item_type": "trait_method",
@@ -1665,10 +1677,10 @@
     "tags": "NonOverlap, NonMutate, OriginateFrom",
     "source_path": "types.rs",
     "source_line": 132,
-    "api_link": "https://github.com/Rust-for-Linux/linux/blob/1200d84f4c0a929a0780180d25063d93773be79c/rust/kernel/types.rs#L132"
+    "api_link": "https://github.com/Rust-for-Linux/linux/blob/bd5f485f3f026225b86573e559af0b7254ef4184/rust/kernel/types.rs#L132"
   },
   {
-    "index": 140,
+    "index": 141,
     "module_path": "crate::types",
     "api_name": "ForeignOwnable::from_foreign",
     "item_type": "trait_method",
@@ -1677,10 +1689,10 @@
     "tags": "OriginateFrom",
     "source_path": "types.rs",
     "source_line": 69,
-    "api_link": "https://github.com/Rust-for-Linux/linux/blob/1200d84f4c0a929a0780180d25063d93773be79c/rust/kernel/types.rs#L69"
+    "api_link": "https://github.com/Rust-for-Linux/linux/blob/bd5f485f3f026225b86573e559af0b7254ef4184/rust/kernel/types.rs#L69"
   },
   {
-    "index": 141,
+    "index": 142,
     "module_path": "crate::types",
     "api_name": "ForeignOwnable::try_from_foreign",
     "item_type": "trait_method",
@@ -1689,10 +1701,10 @@
     "tags": "",
     "source_path": "types.rs",
     "source_line": 81,
-    "api_link": "https://github.com/Rust-for-Linux/linux/blob/1200d84f4c0a929a0780180d25063d93773be79c/rust/kernel/types.rs#L81"
+    "api_link": "https://github.com/Rust-for-Linux/linux/blob/bd5f485f3f026225b86573e559af0b7254ef4184/rust/kernel/types.rs#L81"
   },
   {
-    "index": 142,
+    "index": 143,
     "module_path": "crate::types::for_lt",
     "api_name": "ForLt",
     "item_type": "trait",
@@ -1701,10 +1713,10 @@
     "tags": "",
     "source_path": "types/for_lt.rs",
     "source_line": 86,
-    "api_link": "https://github.com/Rust-for-Linux/linux/blob/1200d84f4c0a929a0780180d25063d93773be79c/rust/kernel/types/for_lt.rs#L86"
+    "api_link": "https://github.com/Rust-for-Linux/linux/blob/bd5f485f3f026225b86573e559af0b7254ef4184/rust/kernel/types/for_lt.rs#L86"
   },
   {
-    "index": 143,
+    "index": 144,
     "module_path": "crate::workqueue",
     "api_name": "from_raw",
     "item_type": "method",
@@ -1713,10 +1725,10 @@
     "tags": "Alive",
     "source_path": "workqueue.rs",
     "source_line": 262,
-    "api_link": "https://github.com/Rust-for-Linux/linux/blob/1200d84f4c0a929a0780180d25063d93773be79c/rust/kernel/workqueue.rs#L262"
+    "api_link": "https://github.com/Rust-for-Linux/linux/blob/bd5f485f3f026225b86573e559af0b7254ef4184/rust/kernel/workqueue.rs#L262"
   },
   {
-    "index": 144,
+    "index": 145,
     "module_path": "crate::workqueue",
     "api_name": "raw_as_work",
     "item_type": "method",
@@ -1725,10 +1737,10 @@
     "tags": "Align",
     "source_path": "workqueue.rs",
     "source_line": 719,
-    "api_link": "https://github.com/Rust-for-Linux/linux/blob/1200d84f4c0a929a0780180d25063d93773be79c/rust/kernel/workqueue.rs#L719"
+    "api_link": "https://github.com/Rust-for-Linux/linux/blob/bd5f485f3f026225b86573e559af0b7254ef4184/rust/kernel/workqueue.rs#L719"
   },
   {
-    "index": 145,
+    "index": 146,
     "module_path": "crate::workqueue",
     "api_name": "raw_get",
     "item_type": "method",
@@ -1737,10 +1749,10 @@
     "tags": "Align",
     "source_path": "workqueue.rs",
     "source_line": 533,
-    "api_link": "https://github.com/Rust-for-Linux/linux/blob/1200d84f4c0a929a0780180d25063d93773be79c/rust/kernel/workqueue.rs#L533"
+    "api_link": "https://github.com/Rust-for-Linux/linux/blob/bd5f485f3f026225b86573e559af0b7254ef4184/rust/kernel/workqueue.rs#L533"
   },
   {
-    "index": 146,
+    "index": 147,
     "module_path": "crate::workqueue",
     "api_name": "HasDelayedWork",
     "item_type": "trait",
@@ -1749,10 +1761,10 @@
     "tags": "",
     "source_path": "workqueue.rs",
     "source_line": 736,
-    "api_link": "https://github.com/Rust-for-Linux/linux/blob/1200d84f4c0a929a0780180d25063d93773be79c/rust/kernel/workqueue.rs#L736"
+    "api_link": "https://github.com/Rust-for-Linux/linux/blob/bd5f485f3f026225b86573e559af0b7254ef4184/rust/kernel/workqueue.rs#L736"
   },
   {
-    "index": 147,
+    "index": 148,
     "module_path": "crate::workqueue",
     "api_name": "HasWork",
     "item_type": "trait",
@@ -1761,10 +1773,10 @@
     "tags": "ValidPtr, Valid, ContainerOf",
     "source_path": "workqueue.rs",
     "source_line": 572,
-    "api_link": "https://github.com/Rust-for-Linux/linux/blob/1200d84f4c0a929a0780180d25063d93773be79c/rust/kernel/workqueue.rs#L572"
+    "api_link": "https://github.com/Rust-for-Linux/linux/blob/bd5f485f3f026225b86573e559af0b7254ef4184/rust/kernel/workqueue.rs#L572"
   },
   {
-    "index": 148,
+    "index": 149,
     "module_path": "crate::workqueue",
     "api_name": "RawDelayedWorkItem",
     "item_type": "trait",
@@ -1773,10 +1785,10 @@
     "tags": "",
     "source_path": "workqueue.rs",
     "source_line": 430,
-    "api_link": "https://github.com/Rust-for-Linux/linux/blob/1200d84f4c0a929a0780180d25063d93773be79c/rust/kernel/workqueue.rs#L430"
+    "api_link": "https://github.com/Rust-for-Linux/linux/blob/bd5f485f3f026225b86573e559af0b7254ef4184/rust/kernel/workqueue.rs#L430"
   },
   {
-    "index": 149,
+    "index": 150,
     "module_path": "crate::workqueue",
     "api_name": "RawWorkItem",
     "item_type": "trait",
@@ -1785,10 +1797,10 @@
     "tags": "Alive",
     "source_path": "workqueue.rs",
     "source_line": 395,
-    "api_link": "https://github.com/Rust-for-Linux/linux/blob/1200d84f4c0a929a0780180d25063d93773be79c/rust/kernel/workqueue.rs#L395"
+    "api_link": "https://github.com/Rust-for-Linux/linux/blob/bd5f485f3f026225b86573e559af0b7254ef4184/rust/kernel/workqueue.rs#L395"
   },
   {
-    "index": 150,
+    "index": 151,
     "module_path": "crate::workqueue",
     "api_name": "WorkItemPointer",
     "item_type": "trait",
@@ -1797,10 +1809,10 @@
     "tags": "ContainerOf",
     "source_path": "workqueue.rs",
     "source_line": 450,
-    "api_link": "https://github.com/Rust-for-Linux/linux/blob/1200d84f4c0a929a0780180d25063d93773be79c/rust/kernel/workqueue.rs#L450"
+    "api_link": "https://github.com/Rust-for-Linux/linux/blob/bd5f485f3f026225b86573e559af0b7254ef4184/rust/kernel/workqueue.rs#L450"
   },
   {
-    "index": 151,
+    "index": 152,
     "module_path": "crate::workqueue",
     "api_name": "HasWork::raw_get_work",
     "item_type": "trait_method",
@@ -1809,10 +1821,10 @@
     "tags": "Valid",
     "source_path": "workqueue.rs",
     "source_line": 578,
-    "api_link": "https://github.com/Rust-for-Linux/linux/blob/1200d84f4c0a929a0780180d25063d93773be79c/rust/kernel/workqueue.rs#L578"
+    "api_link": "https://github.com/Rust-for-Linux/linux/blob/bd5f485f3f026225b86573e559af0b7254ef4184/rust/kernel/workqueue.rs#L578"
   },
   {
-    "index": 152,
+    "index": 153,
     "module_path": "crate::workqueue",
     "api_name": "HasWork::work_container_of",
     "item_type": "trait_method",
@@ -1821,10 +1833,10 @@
     "tags": "",
     "source_path": "workqueue.rs",
     "source_line": 585,
-    "api_link": "https://github.com/Rust-for-Linux/linux/blob/1200d84f4c0a929a0780180d25063d93773be79c/rust/kernel/workqueue.rs#L585"
+    "api_link": "https://github.com/Rust-for-Linux/linux/blob/bd5f485f3f026225b86573e559af0b7254ef4184/rust/kernel/workqueue.rs#L585"
   },
   {
-    "index": 153,
+    "index": 154,
     "module_path": "crate::workqueue",
     "api_name": "RawWorkItem::__enqueue",
     "item_type": "trait_method",
@@ -1833,6 +1845,6 @@
     "tags": "Alive, CurThread",
     "source_path": "workqueue.rs",
     "source_line": 417,
-    "api_link": "https://github.com/Rust-for-Linux/linux/blob/1200d84f4c0a929a0780180d25063d93773be79c/rust/kernel/workqueue.rs#L417"
+    "api_link": "https://github.com/Rust-for-Linux/linux/blob/bd5f485f3f026225b86573e559af0b7254ef4184/rust/kernel/workqueue.rs#L417"
   }
 ]
